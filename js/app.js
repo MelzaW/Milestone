@@ -14,6 +14,13 @@ const results = [];
 /* ---------- map ---------- */
 let map, pinMarker, truthMarker, missLine;
 
+/* Pin colours come from the stylesheet so they stay in step with the clue
+   buttons: your guess is the red one, the answer is the green one. */
+const cssVar = (n, fallback) =>
+  (getComputedStyle(document.documentElement).getPropertyValue(n) || '').trim() || fallback;
+const PIN_GUESS  = () => cssVar('--stop', '#E02B1D');
+const PIN_ANSWER = () => cssVar('--go',   '#2E7D4F');
+
 function pinIcon(colour, caption){
   const html = `<svg class="pin-svg" width="30" height="42" viewBox="0 0 30 42">
     <path d="M15,41 C15,41 3,24 3,15 a12,12 0 1 1 24,0 C27,24 15,41 15,41 Z"
@@ -44,7 +51,7 @@ function setPin(latlng){
   if (pinMarker){
     pinMarker.setLatLng(latlng);
   } else {
-    pinMarker = L.marker(latlng, {icon: pinIcon('#1B1E20', 'You'), draggable: true,
+    pinMarker = L.marker(latlng, {icon: pinIcon(PIN_GUESS(), 'You'), draggable: true,
                                   autoPan: true, keyboard: true}).addTo(map);
     pinMarker.on('drag', ()=>{ if (!locked) { pin = [pinMarker.getLatLng().lat,
                                                     pinMarker.getLatLng().lng]; pinNote(); } });
@@ -303,7 +310,7 @@ document.getElementById('submit').addEventListener('click', ()=>{
   noteClues();
 
   if (pinMarker && pinMarker.dragging) pinMarker.dragging.disable();
-  truthMarker = L.marker([b.lat, b.lon], {icon: pinIcon('#9E7C38', b.place)}).addTo(map);
+  truthMarker = L.marker([b.lat, b.lon], {icon: pinIcon(PIN_ANSWER(), b.place)}).addTo(map);
   missLine = L.polyline([pin, [b.lat, b.lon]],
     {color:'#A4442B', weight:2, dashArray:'5 6'}).addTo(map);
   map.fitBounds(L.latLngBounds([pin, [b.lat, b.lon]]).pad(0.35), {maxZoom: 16});
