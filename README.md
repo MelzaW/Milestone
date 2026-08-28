@@ -101,13 +101,13 @@ to 1945, half-decades after. It snaps to whichever grain you are in.
 
 ### The map
 
-Leaflet with OpenStreetMap tiles, zoomable to the doorstep. Place scoring gives
-full marks anywhere within 500 m, and beyond that the falloff is measured from
-the edge of that radius rather than from the building, so it mirrors the way the
-date scoring treats a build range. Half marks at about 31 km. Buildings have
-footprints and streets have width, and nobody should lose marks for landing on
-the wrong side of the churchyard; getting inside 500 m still means zooming in,
-which is what the street-level map is for.
+Leaflet with OpenStreetMap tiles, zoomable to the doorstep. Place scoring is a
+hand-drawn curve rather than a formula, since what a near miss is worth is a
+judgement about the game and not something an exponential happens to get right.
+Full marks anywhere inside 500 m, then 49 at 5 km, 45 at 10, 40 at 15, 35 at 25,
+25 at 50 and 15 at 100, interpolating linearly between. Edit `PLACE_CURVE` in
+`js/scoring.js` to change it. Getting inside 500 m still means zooming in, which
+is what the street-level map is for.
 
 Click to drop the pin, then drag it. Since the last ten marks are won at street
 scale, you want to be able to zoom right in and nudge the pin onto the doorstep

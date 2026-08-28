@@ -24,19 +24,38 @@ function dateScore(guess, range){
   return {pts: Math.round(50*Math.exp(-(err*err)/(2*sigma*sigma))), err, from, to};
 }
 
-/* Buildings have footprints, streets have width, and nobody should lose marks
-   for landing on the wrong side of the churchyard. So place scoring works the
-   way date scoring does: full marks anywhere inside a grace radius, and beyond
-   it the falloff is measured from the edge of that radius rather than from the
-   building itself. Getting inside 500 m still means zooming in, which is the
-   whole reason the map goes to street level. */
-const GRACE_KM = 0.5;
+/* Place scoring is a hand-drawn curve rather than a formula, because what a
+   near miss is worth is a judgement about the game and not something an
+   exponential happens to get right. Full marks anywhere inside the grace
+   radius; between the control points below the score interpolates linearly.
+   Buildings have footprints and streets have width, so nobody should lose
+   marks for landing on the wrong side of the churchyard. */
+const PLACE_CURVE = [
+  [0.5,   50],   /* the grace radius: anywhere inside it is full marks */
+  [5,     49],
+  [10,    45],
+  [15,    40],
+  [25,    35],
+  [50,    25],
+  [100,   15],
+  [200,    8],
+  [500,    2],
+  [1500,   0],   /* further than the length of the country */
+];
+const GRACE_KM = PLACE_CURVE[0][0];
 
 function placeScore(guess, truth){
   const d = haversine(guess, truth);
-  const miss = Math.max(0, d - GRACE_KM);
-  return {pts: Math.round(50*Math.exp(-miss/45)),   /* half marks at about 31 km */
-          km: d, grace: d <= GRACE_KM};
+  let pts = 0;
+  if (d <= GRACE_KM) {
+    pts = PLACE_CURVE[0][1];
+  } else {
+    for (let i = 1; i < PLACE_CURVE.length; i++){
+      const [d0, p0] = PLACE_CURVE[i-1], [d1, p1] = PLACE_CURVE[i];
+      if (d <= d1){ pts = p0 + (p1 - p0)*(d - d0)/(d1 - d0); break; }
+    }
+  }
+  return {pts: Math.round(pts), km: d, grace: d <= GRACE_KM};
 }
 
 function prettyDistance(km){
