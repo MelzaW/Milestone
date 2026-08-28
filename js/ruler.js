@@ -59,9 +59,27 @@ function drawRuler(el, year, truth){
     s += `<line x1="${a.toFixed(1)}" y1="${R_Y-24}" x2="${a.toFixed(1)}" y2="${R_Y+14}" class="truth-line"/>`;
     s += `<circle cx="${a.toFixed(1)}" cy="${R_Y-24}" r="4" fill="var(--accent)"/>`;
   }
+  /* The handle is a little clock. Its hands are not decorative: the long hand
+     sweeps once a century and the short hand once a millennium, so they move as
+     you drag and read the year you are on. */
   const hx = yearToX(year);
+  const cy = R_Y - 27, R = 10;
+  const hand = (turns, len, cls) => {
+    const a = turns*2*Math.PI - Math.PI/2;
+    return `<line x1="${hx.toFixed(1)}" y1="${cy}" x2="${(hx+Math.cos(a)*len).toFixed(1)}"`
+         + ` y2="${(cy+Math.sin(a)*len).toFixed(1)}" class="${cls}"/>`;
+  };
   s += `<line x1="${hx.toFixed(1)}" y1="${R_Y-14}" x2="${hx.toFixed(1)}" y2="${R_Y+14}" class="handle-line"/>`;
-  s += `<path class="handle" d="M${(hx-6).toFixed(1)},${R_Y-14} L${(hx+6).toFixed(1)},${R_Y-14} L${hx.toFixed(1)},${R_Y-4} Z"/>`;
+  s += `<line x1="${hx.toFixed(1)}" y1="${cy+R}" x2="${hx.toFixed(1)}" y2="${R_Y-13}" class="handle-line"/>`;
+  s += `<circle cx="${hx.toFixed(1)}" cy="${cy}" r="${R}" class="clockface"/>`;
+  for (let i = 0; i < 4; i++){                      // quarter marks at 12, 3, 6, 9
+    const a = i*Math.PI/2 - Math.PI/2;
+    s += `<line x1="${(hx+Math.cos(a)*(R-3.2)).toFixed(1)}" y1="${(cy+Math.sin(a)*(R-3.2)).toFixed(1)}"`
+       + ` x2="${(hx+Math.cos(a)*(R-1.2)).toFixed(1)}" y2="${(cy+Math.sin(a)*(R-1.2)).toFixed(1)}" class="clocktick"/>`;
+  }
+  s += hand(((year % 1000) / 1000), R-5.5, 'clockhand short');   // once a millennium
+  s += hand(((year % 100)  / 100),  R-2.5, 'clockhand long');    // once a century
+  s += `<circle cx="${hx.toFixed(1)}" cy="${cy}" r="1.5" class="handle"/>`;
   el.innerHTML = s;
   el.setAttribute('aria-valuenow', year);
   el.setAttribute('aria-valuetext', labelForYear(year));
