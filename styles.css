@@ -191,6 +191,21 @@ header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
 .btn.ghost:hover{border-color:var(--accent);color:var(--accent);background:transparent}
 .hint{font-family:"DM Mono",monospace;font-size:11px;color:var(--lead);letter-spacing:.06em}
 
+/* Commit is the one thing on the page you have to do, and at 12px it was the
+   quietest control on it. Big, wide and dark, and once a pin is down it gets a
+   slow pulse so it is obvious you are being waited on. */
+#submit{font-size:clamp(16px,1.8vw,20px);letter-spacing:.2em;padding:18px 40px;
+  min-width:min(320px,100%);font-weight:500;border-radius:3px;
+  box-shadow:0 6px 18px -10px #00000070}
+#submit:not(:disabled){animation:readypulse 2.4s ease-in-out infinite}
+#submit:hover:not(:disabled){animation:none;transform:translateY(-1px)}
+@keyframes readypulse{
+  0%,100%{box-shadow:0 6px 18px -10px #00000070, 0 0 0 0 var(--accent-dim)}
+  50%    {box-shadow:0 6px 18px -10px #00000070, 0 0 0 8px transparent}
+}
+@media (prefers-reduced-motion:reduce){ #submit:not(:disabled){animation:none} }
+.actions .hint{font-size:12.5px}
+
 /* ---------- reveal ---------- */
 .reveal{background:var(--panel);border:1px solid var(--rule);border-left:3px solid var(--accent);
   border-radius:2px;padding:18px 20px;display:none;flex-direction:column;gap:14px;
