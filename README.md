@@ -101,10 +101,13 @@ to 1945, half-decades after. It snaps to whichever grain you are in.
 
 ### The map
 
-Leaflet with OpenStreetMap tiles, zoomable to the doorstep. Place scoring is in
-two tiers: forty marks fall off gently with distance, so a decent regional guess
-is worth having, and the last ten need you within a few hundred metres of the
-actual building. Without the second tier there is no reason to zoom in at all.
+Leaflet with OpenStreetMap tiles, zoomable to the doorstep. Place scoring gives
+full marks anywhere within 500 m, and beyond that the falloff is measured from
+the edge of that radius rather than from the building, so it mirrors the way the
+date scoring treats a build range. Half marks at about 31 km. Buildings have
+footprints and streets have width, and nobody should lose marks for landing on
+the wrong side of the churchyard; getting inside 500 m still means zooming in,
+which is what the street-level map is for.
 
 Click to drop the pin, then drag it. Since the last ten marks are won at street
 scale, you want to be able to zoom right in and nudge the pin onto the doorstep

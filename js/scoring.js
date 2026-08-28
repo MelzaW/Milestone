@@ -24,15 +24,19 @@ function dateScore(guess, range){
   return {pts: Math.round(50*Math.exp(-(err*err)/(2*sigma*sigma))), err, from, to};
 }
 
-/* Two tiers, because the map now goes to street level. Most of the marks are
-   for knowing roughly where in the country it is; the last ten are for finding
-   the actual building. Without the second tier there is no reason ever to zoom
-   in; without the first, a good regional guess scores nothing. */
+/* Buildings have footprints, streets have width, and nobody should lose marks
+   for landing on the wrong side of the churchyard. So place scoring works the
+   way date scoring does: full marks anywhere inside a grace radius, and beyond
+   it the falloff is measured from the edge of that radius rather than from the
+   building itself. Getting inside 500 m still means zooming in, which is the
+   whole reason the map goes to street level. */
+const GRACE_KM = 0.5;
+
 function placeScore(guess, truth){
   const d = haversine(guess, truth);
-  const region = 40*Math.exp(-d/45);      /* half marks at about 31 km */
-  const site   = 10*Math.exp(-d/0.35);    /* essentially the right building */
-  return {pts: Math.round(region + site), km: d};
+  const miss = Math.max(0, d - GRACE_KM);
+  return {pts: Math.round(50*Math.exp(-miss/45)),   /* half marks at about 31 km */
+          km: d, grace: d <= GRACE_KM};
 }
 
 function prettyDistance(km){
@@ -42,4 +46,4 @@ function prettyDistance(km){
   return Math.round(km) + ' km out';
 }
 
-if (typeof module !== 'undefined') module.exports = {haversine, dateScore, placeScore, prettyDistance};
+if (typeof module !== 'undefined') module.exports = {haversine, dateScore, placeScore, prettyDistance, GRACE_KM};

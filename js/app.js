@@ -299,7 +299,8 @@ document.getElementById('submit').addEventListener('click', ()=>{
     `${d.pts}<span class="den">/50</span><span class="sub">${
       d.err === 0 ? 'inside the build range' : d.err + (d.err===1?' year':' years') + ' out'}</span>`;
   document.getElementById('splace').innerHTML =
-    `${p.pts}<span class="den">/50</span><span class="sub">${prettyDistance(p.km)}</span>`;
+    `${p.pts}<span class="den">/50</span><span class="sub">${
+      p.grace ? `${prettyDistance(p.km)}, inside the 500 m` : prettyDistance(p.km)}</span>`;
   document.getElementById('sround').innerHTML =
     `${total}<span class="den">/100</span><span class="sub">date plus place</span>`;
   document.getElementById('telltext').innerHTML = `<b>How to date it.</b> ${b.tell}`;
