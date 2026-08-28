@@ -96,6 +96,7 @@ def main():
             "lat": float(r["latitude"]), "lon": float(r["longitude"]),
             "dates": r["date"], "range": rng[0], "phases": rng[1:],
             "architect": r["architect"], "materials": r["materials"],
+            "use": r.get("function", ""),
             "grade": r.get("grade", ""), "nhle": r.get("nhle_list_entry", ""),
             "note": r["description"], "tell": r["how_to_date_it"],
             "photo": photo,

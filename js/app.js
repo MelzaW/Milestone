@@ -197,8 +197,8 @@ const redact = (t, b) => {
 };
 
 const CLUES = [
-  {label: 'Fabric',
-   text: b => clip(redact((b.materials || '').split(/,| with /)[0], b), 90) || 'Not recorded'},
+  {label: 'Function',
+   text: b => clip(redact(b.use, b), 60) || 'Not recorded'},
   {label: 'Hand',
    text: b => clip(redact(b.architect, b), 110) || 'Architect unknown'},
   {label: 'Century',

@@ -57,6 +57,7 @@ matter:
 | --- | --- |
 | `no`, `name` | together they make the photo filename stem |
 | `date` | free text; the parser reads the spans out of it |
+| `function` | what the building is for; this is the **Function** clue |
 | `latitude`, `longitude` | where the pin goes, and what place is scored |
 | `location` | the last segment becomes the place label |
 | `description` | shown under the tell on the reveal |
