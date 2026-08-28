@@ -1,0 +1,1536 @@
+[
+ {
+  "id": "01_The_White_Tower_Tower_of_London",
+  "title": "The White Tower, Tower of London",
+  "place": "London",
+  "address": "Tower of London, Tower Hill, London EC3N 4AB",
+  "lat": 51.50807,
+  "lon": -0.07606,
+  "dates": "c.1078 to c.1100",
+  "range": [
+   1078,
+   1100
+  ],
+  "phases": [],
+  "architect": "Attributed to Gundulf, Bishop of Rochester, for William the Conqueror",
+  "materials": "Kentish ragstone rubble with Caen stone dressings, much refaced in Portland stone from the 1630s onward and through the eighteenth century",
+  "grade": "I",
+  "nhle": "1260258",
+  "note": "The great keep of the Tower of London and the most complete surviving example of Norman military building in England. Three storeys over a basement, with walls up to 4.6 metres thick at the base, three square corner turrets and one round one carrying the spiral stair. Within it survives the Chapel of St John the Evangelist, tunnel vaulted, aisled and galleried, with heavy cushion capitals and no carved ornament at all. Its scale was a deliberate statement of conquest, visible from the river and from the Saxon city it was planted beside.",
+  "tell": "Read the wall thickness and the pilaster buttresses that die into the wall rather than stepping. Cushion capitals and plain square abaci mean pre-1100. The large sash-like openings are later refenestration, mostly of the late seventeenth century, not original.",
+  "photo": "photos/01_White_Tower.jpg",
+  "credit": "Tilman2007, CC BY-SA 4.0"
+ },
+ {
+  "id": "02_Durham_Cathedral",
+  "title": "Durham Cathedral",
+  "place": "Durham",
+  "address": "The College, Durham, County Durham DH1 3EH",
+  "lat": 54.77347,
+  "lon": -1.57622,
+  "dates": "1093 to 1133",
+  "range": [
+   1093,
+   1133
+  ],
+  "phases": [],
+  "architect": "Begun for Bishop William of St Calais, continued under Ranulf Flambard",
+  "materials": "Local Coal Measures sandstone ashlar",
+  "grade": "I",
+  "nhle": "1161023",
+  "note": "The most important Romanesque building in Britain and one of the most important in Europe. Its nave carries the earliest large scale pointed rib vault anywhere, completed by 1133, which lets the builders span an oblong bay and effectively begins the structural logic that becomes Gothic. The alternating system of compound piers and vast cylindrical drums is the signature: the drums are incised with chevron, lozenge, fluting and spiral patterns, cut once the stone was in place. The Galilee Chapel of about 1175 adds slender Transitional shafts and waterleaf capitals at the west end.",
+  "tell": "Incised geometric drums, chevron arch orders and cushion capitals are firmly late eleventh to early twelfth century. Pointed transverse arches sitting inside an otherwise round arched building signal the 1130s vault, not later Gothic work.",
+  "photo": "photos/02_Durham_Cathedral.jpg",
+  "credit": "Suicasmo, CC BY-SA 4.0"
+ },
+ {
+  "id": "03_Ely_Cathedral",
+  "title": "Ely Cathedral",
+  "place": "Cambridgeshire",
+  "address": "The College, Ely, Cambridgeshire CB7 4DL",
+  "lat": 52.39887,
+  "lon": 0.26275,
+  "dates": "1083 onward, Octagon 1322 to 1340",
+  "range": [
+   1083,
+   1083
+  ],
+  "phases": [
+   [
+    1322,
+    1340
+   ]
+  ],
+  "architect": "Begun by Abbot Simeon; Octagon devised by Alan of Walsingham, timber lantern by William Hurley",
+  "materials": "Barnack limestone with Purbeck marble shafting, oak lantern sheathed in lead",
+  "grade": "I",
+  "nhle": "1331690",
+  "note": "A Norman abbey church whose crossing tower collapsed in 1322 and was replaced by the most audacious piece of medieval engineering in England. The Octagon spreads the load onto eight piers, and above it William Hurley, the king's carpenter, built a timber lantern weighing around 400 tonnes that appears to float. The nave remains Romanesque, twelve bays of it, with a west tower and transept of about 1170 to 1190 and a richly shafted Galilee porch of 1198 to 1215. The Lady Chapel of 1321 to 1349 has the widest medieval vault in England.",
+  "tell": "Nave: round arches, flat buttresses, plain scallop capitals, so twelfth century. Octagon and Lady Chapel: ogee arches, nodding canopies and flowing curvilinear tracery, which places them squarely in the Decorated phase of about 1320 to 1350.",
+  "photo": "photos/03_Ely_Cathedral.jpg",
+  "credit": "The wub, CC BY-SA 4.0"
+ },
+ {
+  "id": "04_Castle_Rising_Castle",
+  "title": "Castle Rising Castle",
+  "place": "Norfolk",
+  "address": "Castle Rising, near King's Lynn, Norfolk PE31 6AH",
+  "lat": 52.79284,
+  "lon": 0.469,
+  "dates": "c.1138 to 1140",
+  "range": [
+   1138,
+   1140
+  ],
+  "phases": [],
+  "architect": "Built for William d'Albini II, mason unknown",
+  "materials": "Local carstone and flint rubble with Barnack limestone ashlar facing",
+  "grade": "I",
+  "nhle": "1077599",
+  "note": "A hall keep rather than a tower keep, low and broad, set inside enormous earthworks that are as much of the display as the building. The showpiece is the forebuilding, a covered ceremonial stair rising to the first floor entrance, its walls covered in blind arcading and chevron and its vestibule ribbed and shafted with real richness. The keep is a status object for a rising Norman family rather than a serious fortress, and the earth ramparts around it were probably designed to be seen from a distance as much as to be defended.",
+  "tell": "Blind intersecting arcading, chevron and billet mouldings, and cushion or early scallop capitals put it firmly in the second quarter of the twelfth century. Broad low proportions rather than tower height distinguish a hall keep from an earlier donjon.",
+  "photo": "photos/04_Castle_Rising.jpg",
+  "credit": "Michael Garlick, CC BY-SA 2.0"
+ },
+ {
+  "id": "05_Wells_Cathedral",
+  "title": "Wells Cathedral",
+  "place": "Somerset",
+  "address": "Cathedral Green, Wells, Somerset BA5 2UE",
+  "lat": 51.2104,
+  "lon": -2.64347,
+  "dates": "c.1175 to 1310, west front c.1220 to 1260",
+  "range": [
+   1175,
+   1310
+  ],
+  "phases": [
+   [
+    1220,
+    1260
+   ]
+  ],
+  "architect": "Adam Lock and others; west front sculpture under Thomas Norreys; scissor arches by William Joy, 1338 to 1348",
+  "materials": "Doulting oolitic limestone with blue lias and Purbeck marble",
+  "grade": "I",
+  "nhle": "1382901",
+  "note": "The first English cathedral designed from the outset in the Gothic style, with no Romanesque compromise anywhere in the elevation. The nave uses a strongly horizontal three storey design with deeply undercut stiff leaf capitals, foliage carved as though it grew out of the bell of the capital. The west front is a screen rather than a facade, originally holding around 400 figures, of which some 300 survive, and it was designed to be sung through from concealed passages. The scissor arches under the crossing were inserted in the 1330s to stop the new tower from sinking, and are pure structural improvisation.",
+  "tell": "Stiff leaf foliage without naturalistic species identification means roughly 1190 to 1250. Lancets without tracery date the earliest work; the crossing scissor arches are Decorated intrusions and read as visibly later than everything around them.",
+  "photo": "photos/05_Wells_Cathedral.jpg",
+  "credit": "Bill Boaden, CC BY-SA 2.0"
+ },
+ {
+  "id": "06_Salisbury_Cathedral",
+  "title": "Salisbury Cathedral",
+  "place": "Wiltshire",
+  "address": "The Close, Salisbury, Wiltshire SP1 2EJ",
+  "lat": 51.06496,
+  "lon": -1.79728,
+  "dates": "1220 to 1258, spire c.1310 to 1330",
+  "range": [
+   1220,
+   1258
+  ],
+  "phases": [
+   [
+    1310,
+    1330
+   ]
+  ],
+  "architect": "Elias of Dereham and Nicholas of Ely",
+  "materials": "Chilmark limestone with Purbeck marble shafts, lead covered timber spire frame",
+  "grade": "I",
+  "nhle": "1023581",
+  "note": "Almost unique among English cathedrals in being built to one design in one campaign on a virgin site, which makes it the textbook example of Early English Gothic. The elevation is austere and linear: tall lancets, no tracery, dark Purbeck marble shafts set against pale Chilmark stone for contrast, and a strong horizontal emphasis. The spire, added around 1310 to 1330, is the tallest in Britain at 123 metres, and its weight has visibly bent the crossing piers. The detached cloister of the 1260s is the largest in England, and the octagonal chapter house is among the biggest.",
+  "tell": "Uniform lancet windows with no bar tracery anywhere is the giveaway for 1220 to 1260. The spire, which uses bar tracery and ballflower ornament at its base, is obviously a later addition once you look at the join.",
+  "photo": "photos/06_Salisbury_Cathedral.jpg",
+  "credit": "Acediscovery, CC BY-SA 4.0"
+ },
+ {
+  "id": "07_Westminster_Abbey",
+  "title": "Westminster Abbey",
+  "place": "London",
+  "address": "20 Deans Yard, Westminster, London SW1P 3PA",
+  "lat": 51.49939,
+  "lon": -0.12736,
+  "dates": "1245 onward; Henry VII Chapel 1503 to 1512; west towers 1722 to 1745",
+  "range": [
+   1245,
+   1245
+  ],
+  "phases": [
+   [
+    1503,
+    1512
+   ],
+   [
+    1722,
+    1745
+   ]
+  ],
+  "architect": "Henry of Reyns, then John of Gloucester and Robert of Beverley; west towers designed by Nicholas Hawksmoor and completed after his death by John James",
+  "materials": "Reigate and Caen stone, later Portland stone; Purbeck marble shafting",
+  "grade": "I",
+  "nhle": "1291494",
+  "note": "Henry III's rebuilding of the Confessor's abbey as a coronation church and royal mausoleum, and the most French building in England. It has an apse with radiating chapels, bar tracery imported almost immediately from Reims and Amiens, and at 31 metres the tallest Gothic vault in the country. The Henry VII Lady Chapel at the east end is the opposite pole of the same tradition: a Perpendicular casket with a pendant fan vault whose stone cones hang free of any visible support. The west towers are Hawksmoor's, Gothic in outline but classical in proportion.",
+  "tell": "French plan plus early bar tracery equals 1245 to 1270. The Lady Chapel's pendant fan vault and panelled wall surfaces mean about 1500. The west towers, too regular and too crisply cut, are eighteenth century Gothic Survival.",
+  "photo": "photos/07_Westminster_Abbey.jpg",
+  "credit": "Tristan Surtel, CC BY-SA 4.0"
+ },
+ {
+  "id": "08_Exeter_Cathedral",
+  "title": "Exeter Cathedral",
+  "place": "Devon",
+  "address": "1 The Cloisters, Exeter, Devon EX1 1HS",
+  "lat": 50.72253,
+  "lon": -3.52975,
+  "dates": "Norman towers c.1114 to 1133; rebuilt c.1275 to 1360",
+  "range": [
+   1114,
+   1133
+  ],
+  "phases": [
+   [
+    1275,
+    1360
+   ]
+  ],
+  "architect": "Master masons Roger, William Luve, Thomas of Witney and William Joy",
+  "materials": "Salcombe stone with Beer stone for carving and Purbeck marble shafts",
+  "grade": "I",
+  "nhle": "1333352",
+  "note": "The finest Decorated Gothic interior in England, and the only major English cathedral with its towers over the transepts rather than the crossing, a Norman survival from the earlier church. The nave and choir carry the longest uninterrupted medieval vault in the world at around 96 metres, its eleven ribs per springing fanning out so densely that the effect is of an avenue of palm trees. Look for the bishop's throne of 1312 to 1316, a 18 metre oak canopy built without nails, and the minstrels' gallery with its fourteen carved angel musicians.",
+  "tell": "Tierceron vaulting with a ridge rib, curvilinear tracery and ballflower ornament in the mouldings all point to about 1290 to 1350. The two transeptal towers with blind arcading are the surviving Norman fabric of the 1110s to 1130s.",
+  "photo": "photos/08_Exeter_Cathedral.jpg",
+  "credit": "J.Hannan-Briggs, CC BY-SA 2.0"
+ },
+ {
+  "id": "09_Stokesay_Castle",
+  "title": "Stokesay Castle",
+  "place": "Shropshire",
+  "address": "Stokesay, Craven Arms, Shropshire SY7 9AH",
+  "lat": 52.43031,
+  "lon": -2.83151,
+  "dates": "c.1285 to 1305, gatehouse 1640 to 1641",
+  "range": [
+   1285,
+   1305
+  ],
+  "phases": [
+   [
+    1640,
+    1641
+   ]
+  ],
+  "architect": "Built for Laurence of Ludlow, wool merchant; mason unknown",
+  "materials": "Local sandstone rubble with ashlar dressings; oak timber framed gatehouse and upper stages",
+  "grade": "I",
+  "nhle": "1269939",
+  "note": "The best preserved fortified manor house in England, built by a wool merchant rather than a baron, which is exactly what makes it valuable. The great hall retains its original open timber roof, its thirteenth century window shutters and a wooden staircase of about 1290, all rare survivals. The crenellations are largely for show, licensed in 1291, and the moat was ornamental. The timber framed gatehouse is a Jacobean addition of 1640 to 1641, with lively carved figures, and the contrast between the two builds is a lesson in reading phases on one site.",
+  "tell": "Cusped lancets and plate tracery in the hall, plus a roof of crucks and tie beams without wind bracing, indicate the late thirteenth century. The close studded, jettied and carved gatehouse is unmistakably seventeenth century.",
+  "photo": "photos/09_Stokesay_Castle.jpg",
+  "credit": "Michael Garlick, CC BY-SA 2.0"
+ },
+ {
+  "id": "10_Gloucester_Cathedral",
+  "title": "Gloucester Cathedral",
+  "place": "Gloucester",
+  "address": "12 College Green, Gloucester GL1 2LX",
+  "lat": 51.86732,
+  "lon": -2.24654,
+  "dates": "Nave 1089 to 1121; choir remodelled 1337 to 1360; cloister c.1351 to 1412",
+  "range": [
+   1089,
+   1121
+  ],
+  "phases": [
+   [
+    1337,
+    1360
+   ],
+   [
+    1351,
+    1412
+   ]
+  ],
+  "architect": "Norman work under Abbot Serlo; choir remodelling attributed to a royal mason, possibly William Ramsey's circle",
+  "materials": "Oolitic limestone from Painswick and the Cotswolds",
+  "grade": "I",
+  "nhle": "1245952",
+  "note": "The birthplace of the Perpendicular style. The Norman nave, with its immense cylindrical piers, was left intact while the choir was cased in a cage of vertical stone panelling in the 1330s and 1340s, paid for by pilgrims visiting the tomb of Edward II. The Great East Window of about 1350 is the size of a tennis court and was the largest in the world when built. The cloister carries the earliest true fan vaulting anywhere, begun about 1351, and it changes English architecture for the next 200 years.",
+  "tell": "If Norman piers are visible behind a screen of thin vertical mullions running unbroken from floor to vault, you are looking at a Perpendicular recasing of about 1330 to 1360. Fan vaulting before 1360 only exists here.",
+  "photo": "photos/10_Gloucester_Cathedral.jpg",
+  "credit": "Rijksmuseum, CC0"
+ },
+ {
+  "id": "11_Bodiam_Castle",
+  "title": "Bodiam Castle",
+  "place": "East Sussex",
+  "address": "Bodiam, Robertsbridge, East Sussex TN32 5UA",
+  "lat": 51.00249,
+  "lon": 0.54347,
+  "dates": "1385 to c.1390",
+  "range": [
+   1385,
+   1390
+  ],
+  "phases": [],
+  "architect": "Built for Sir Edward Dallingridge, mason unknown",
+  "materials": "Ashlar sandstone quarried locally, on a rubble core",
+  "grade": "I",
+  "nhle": "1044134",
+  "note": "A quadrangular castle built in one campaign after a licence to crenellate of 1385, ostensibly against French raiding. Modern scholarship reads it as a knight's retirement showpiece: the moat is shallow and ornamental, the gunports are decorative as much as functional, and the whole was designed to be approached along a processional causeway with the reflection doing the work. Internally the ranges are laid out around a courtyard with separate suites for household and retinue, a very late fourteenth century concern with privacy. The keyhole gunloops are among the earliest in England.",
+  "tell": "One build, no phasing, square plan with round corner towers and square intermediate towers. Machicolation over the gatehouse and keyhole gunports together give a window of roughly 1370 to 1400.",
+  "photo": "photos/11_Bodiam_Castle.jpg",
+  "credit": "Tilman2007, CC BY-SA 4.0"
+ },
+ {
+  "id": "12_King_s_College_Chapel_Cambridge",
+  "title": "King's College Chapel, Cambridge",
+  "place": "Cambridge",
+  "address": "King's Parade, Cambridge CB2 1ST",
+  "lat": 52.20478,
+  "lon": 0.1165,
+  "dates": "1446 to 1515",
+  "range": [
+   1446,
+   1515
+  ],
+  "phases": [],
+  "architect": "Reginald Ely, then Simon Clerk and John Wastell; fan vault 1512 to 1515 by Wastell",
+  "materials": "Yorkshire magnesian limestone from Huddleston, later Weldon and Clipsham stone",
+  "grade": "I",
+  "nhle": "1139003",
+  "note": "The climax of English Perpendicular and the largest fan vault in the world, 88 metres long and unsupported by any intermediate pier. Founded by Henry VI in 1441, the work stopped during the Wars of the Roses and was finished under Henry VII and Henry VIII, so the building spans three quarters of a century and two dynasties. The walls are effectively a glass cage between buttresses, with 26 windows of early sixteenth century Flemish glass. The Tudor heraldry on the antechapel screen dates that phase precisely to about 1508 to 1515.",
+  "tell": "Fan vaulting, four centred arches and window mullions running straight into the arch head are Perpendicular. Where the stone changes colour partway up the walls you can see the break between the fifteenth and sixteenth century campaigns.",
+  "photo": "photos/12_Kings_College_Chapel.jpg",
+  "credit": "Rijksmuseum, CC0"
+ },
+ {
+  "id": "13_Little_Moreton_Hall",
+  "title": "Little Moreton Hall",
+  "place": "Cheshire",
+  "address": "Congleton, Cheshire CW12 4SD",
+  "lat": 53.1272,
+  "lon": -2.25179,
+  "dates": "c.1504 to 1610, long gallery c.1560 to 1562",
+  "range": [
+   1504,
+   1610
+  ],
+  "phases": [
+   [
+    1560,
+    1562
+   ]
+  ],
+  "architect": "Built for the Moreton family; carpenter Richard Dale, named on a 1559 inscription",
+  "materials": "Oak timber frame with wattle and daub infill on a sandstone plinth, stone flag and lead roofs",
+  "grade": "I",
+  "nhle": "1161988",
+  "note": "The most extravagant surviving timber framed manor house in England, added to piecemeal over a century and now visibly sagging in every direction because the long gallery was built on top of a structure that was never designed to carry it. The framing is close studded on the earlier ranges and decorated with quatrefoils, lozenges and chevrons on the later, a display of expensive timber used ornamentally. The gatehouse range of 1559 to 1562 carries a carved inscription naming the carpenter and the patron, which is unusually precise documentary dating.",
+  "tell": "Close studding with narrow panels is early sixteenth century and expensive. Decorative quatrefoil and herringbone panels, jettied upper floors and continuous bay windows indicate the 1550s to 1570s. Dendrochronology has confirmed the sequence.",
+  "photo": "photos/13_Little_Moreton_Hall.jpg",
+  "credit": "Francis C. Franklin, CC BY-SA 4.0"
+ },
+ {
+  "id": "14_Hampton_Court_Palace",
+  "title": "Hampton Court Palace",
+  "place": "Surrey",
+  "address": "East Molesey, Richmond upon Thames, Surrey KT8 9AU",
+  "lat": 51.40338,
+  "lon": -0.3375,
+  "dates": "1515 onward; Baroque ranges 1689 to 1694",
+  "range": [
+   1515,
+   1515
+  ],
+  "phases": [
+   [
+    1689,
+    1694
+   ]
+  ],
+  "architect": "Begun for Cardinal Wolsey; Great Hall 1532 to 1535 under James Nedeham; east and south ranges by Sir Christopher Wren",
+  "materials": "Red brick with dark blue diaper patterning, Reigate and Caen stone dressings; later Portland stone and rubbed red brick",
+  "grade": "I",
+  "nhle": "1193127",
+  "note": "Two palaces in one, and the best place in England to read the difference between Tudor and English Baroque. Wolsey's and Henry VIII's ranges are red brick with diaper diamonds, twisted moulded chimneystacks, crenellation and a great hall with a hammerbeam roof of 1532 to 1535. Wren's east and south fronts of 1689 to 1694 for William and Mary are utterly regular: Portland stone dressings, round headed windows, a giant order of pilasters and a strict horizontal cornice. The join between the two is abrupt and completely unapologetic.",
+  "tell": "Diaper brickwork, moulded terracotta and barley twist chimneys mean 1500 to 1550. Rubbed brick, sash windows, keystones and a balustraded parapet mean the 1690s. The astronomical clock is dated 1540.",
+  "photo": "photos/14_Hampton_Court.jpg",
+  "credit": "APK, CC BY 4.0"
+ },
+ {
+  "id": "15_Layer_Marney_Tower",
+  "title": "Layer Marney Tower",
+  "place": "Essex",
+  "address": "Layer Marney, Colchester, Essex CO5 9US",
+  "lat": 51.82265,
+  "lon": 0.7969,
+  "dates": "c.1520 to 1525",
+  "range": [
+   1520,
+   1525
+  ],
+  "phases": [],
+  "architect": "Built for Henry, 1st Lord Marney; terracotta by Italian trained craftsmen",
+  "materials": "Red brick with moulded terracotta dressings, cresting and window mullions",
+  "grade": "I",
+  "nhle": "1223988",
+  "note": "The tallest Tudor gatehouse in Britain at eight storeys, and an unfinished fragment of a house that was never built because both Lord Marney and his son died within two years. It matters because of the terracotta: the window mullions, the dolphin and shell cresting and the classical detail on the tombs inside the church are among the earliest Renaissance ornament in England, made by craftsmen working in an Italian idiom for an English brick building. The result is a Gothic silhouette wearing Renaissance jewellery, which is exactly what English architecture was doing in the 1520s.",
+  "tell": "Moulded terracotta cresting with dolphins and putti alongside four centred brick arches gives a narrow window of about 1515 to 1530. This combination barely exists in England outside a handful of East Anglian houses.",
+  "photo": "photos/15_Layer_Marney_Tower.jpg",
+  "credit": "Unknown authorUnknown author, Public domain"
+ },
+ {
+  "id": "16_Burghley_House",
+  "title": "Burghley House",
+  "place": "Lincolnshire",
+  "address": "Stamford, Lincolnshire PE9 3JY",
+  "lat": 52.6423,
+  "lon": -0.45292,
+  "dates": "1555 to 1587",
+  "range": [
+   1555,
+   1587
+  ],
+  "phases": [],
+  "architect": "Designed largely by William Cecil, Lord Burghley himself, with masons including John Symonds",
+  "materials": "Barnack and Clipsham limestone ashlar with lead roofs",
+  "grade": "I",
+  "nhle": "1127501",
+  "note": "The largest and grandest house of the first Elizabethan generation, built over 32 years by the Queen's chief minister as a place to entertain her. The roofline is the point: obelisks, strapwork cresting, and chimneys disguised as pairs of Roman Doric columns, with a clock tower carrying an openwork pyramid. The courtyard frontispiece piles up the classical orders in tiers, a Franco Flemish habit picked up from pattern books rather than from Italy directly. Inside, the Baroque painted interiors by Antonio Verrio date from a later campaign of 1686 to 1697.",
+  "tell": "Classical detail applied to a still medieval courtyard plan, strapwork cresting and columnar chimneys place this between 1550 and 1590. Mullioned and transomed windows without any pediment over them confirm Elizabethan rather than Jacobean.",
+  "photo": "photos/16_Burghley_House.jpg",
+  "credit": "Sandra Humphrey, CC BY-SA 2.0"
+ },
+ {
+  "id": "17_Hardwick_Hall",
+  "title": "Hardwick Hall",
+  "place": "Derbyshire",
+  "address": "Doe Lea, Chesterfield, Derbyshire S44 5QJ",
+  "lat": 53.16871,
+  "lon": -1.30879,
+  "dates": "1590 to 1597",
+  "range": [
+   1590,
+   1597
+  ],
+  "phases": [],
+  "architect": "Robert Smythson for Elizabeth Talbot, Countess of Shrewsbury",
+  "materials": "Local sandstone ashlar with lead roofs and enormous areas of glass",
+  "grade": "I",
+  "nhle": "1051617",
+  "note": "More glass than wall, as the rhyme goes, and the first English country house in which a single designing mind controls the whole elevation. Smythson made the windows grow taller storey by storey so the state rooms are announced from outside, and crowned the six towers with openwork stone balustrades spelling out ES for Elizabeth Shrewsbury. The plan is compact and symmetrical, with the hall running through the house rather than across it, which is a decisive break with medieval planning. The High Great Chamber upstairs keeps its original plaster frieze and tapestries.",
+  "tell": "Vast mullioned and transomed windows, a compact symmetrical plan and initials in openwork parapet balustrading are Elizabethan prodigy house features of roughly 1580 to 1600. No pediments, no giant order, no curved gables.",
+  "photo": "photos/17_Hardwick_Hall.jpg",
+  "credit": "Photograph by Mike Peel (www.mikepeel.net)., CC BY-SA 4.0"
+ },
+ {
+  "id": "18_Hatfield_House",
+  "title": "Hatfield House",
+  "place": "Hertfordshire",
+  "address": "Hatfield, Hertfordshire AL9 5HX",
+  "lat": 51.76057,
+  "lon": -0.20884,
+  "dates": "1607 to 1611",
+  "range": [
+   1607,
+   1611
+  ],
+  "phases": [],
+  "architect": "Robert Lyminge, with Simon Basil and probably some input from Inigo Jones",
+  "materials": "Red brick with Portland and Ancaster stone dressings",
+  "grade": "I",
+  "nhle": "1173363",
+  "note": "The definitive Jacobean prodigy house, built by Robert Cecil after he was obliged to swap his own house for the old palace at Hatfield. The plan is a broad E or U with projecting wings, and the centre carries a stone frontispiece of superimposed Doric, Ionic and Corinthian orders above an open loggia, now glazed. Inside, the Grand Staircase of about 1611 has carved newel figures and a lion, and the Marble Hall keeps its original screen. The brick and stone contrast, and the fussy skyline of shaped gables and clock turret, are the period signature.",
+  "tell": "Shaped or Flemish gables, a stone frontispiece with stacked orders on an otherwise brick house, and strapwork carving inside all indicate 1605 to 1625. It is one generation later than Hardwick and looks it.",
+  "photo": "photos/18_Hatfield_House.jpg",
+  "credit": "Acabashi, CC BY-SA 4.0"
+ },
+ {
+  "id": "19_The_Queen_s_House_Greenwich",
+  "title": "The Queen's House, Greenwich",
+  "place": "London",
+  "address": "Romney Road, Greenwich, London SE10 9NF",
+  "lat": 51.48123,
+  "lon": -0.00383,
+  "dates": "1616 to 1619, completed 1629 to 1635",
+  "range": [
+   1616,
+   1619
+  ],
+  "phases": [
+   [
+    1629,
+    1635
+   ]
+  ],
+  "architect": "Inigo Jones for Anne of Denmark and then Henrietta Maria",
+  "materials": "Brick, rendered and painted white in imitation of ashlar, with Portland stone dressings",
+  "grade": "I",
+  "nhle": "1211481",
+  "note": "The first fully classical building in England and the point at which English architecture stops being medieval. Jones had been to Italy, had read Palladio and had bought his drawings, and here he applied the results without dilution: a plain white cube, a rusticated ground floor as a base, a piano nobile with a loggia of Ionic columns, and a balustraded flat roof. There is no gable, no strapwork, no applied ornament of any kind. The Tulip Stairs inside are the first geometric self supporting spiral staircase built in Britain.",
+  "tell": "Absolute symmetry, correct classical proportion, no gables and no decorative skyline in a building of the 1610s or 1630s means Jones or his immediate circle. Almost nothing else in England looks like this before 1660.",
+  "photo": "photos/19_Queens_House.jpg",
+  "credit": "Ввласенко, CC BY-SA 3.0"
+ },
+ {
+  "id": "20_The_Banqueting_House_Whitehall",
+  "title": "The Banqueting House, Whitehall",
+  "place": "London",
+  "address": "Whitehall, Westminster, London SW1A 2ER",
+  "lat": 51.50457,
+  "lon": -0.12594,
+  "dates": "1619 to 1622",
+  "range": [
+   1619,
+   1622
+  ],
+  "phases": [],
+  "architect": "Inigo Jones for James I",
+  "materials": "Originally three types of stone, refaced entirely in Portland stone in 1829 by Sir John Soane",
+  "grade": "I",
+  "nhle": "1357353",
+  "note": "The only substantial survivor of the Palace of Whitehall and the most influential classical facade in England. Jones set superimposed Ionic and Composite orders over a rusticated base, with the columns engaged and the bays defined by pilasters at the ends, producing a facade that could be copied straight into any Georgian town house a century later. The interior is a double cube, 110 by 55 by 55 feet, a single undivided room. Rubens painted the ceiling in 1636 for Charles I, who was executed on a scaffold outside the building in 1649.",
+  "tell": "Two orders correctly superimposed, a rusticated base, alternating segmental and triangular window pediments and a balustraded parapet mark this as the 1620s. The uniform Portland stone surface is Soane's 1829 refacing, not original.",
+  "photo": "photos/20_Banqueting_House.jpg",
+  "credit": "Thomas Forster (1672 - 1722) – Artist (British) Died in London. Details on Google Art Project, Public domain"
+ },
+ {
+  "id": "21_St_Paul_s_Cathedral",
+  "title": "St Paul's Cathedral",
+  "place": "London",
+  "address": "St Paul's Churchyard, City of London EC4M 8AD",
+  "lat": 51.51377,
+  "lon": -0.09852,
+  "dates": "1675 to 1710",
+  "range": [
+   1675,
+   1710
+  ],
+  "phases": [],
+  "architect": "Sir Christopher Wren",
+  "materials": "Portland limestone with a brick cone supporting the dome",
+  "grade": "I",
+  "nhle": "1079157",
+  "note": "The only English cathedral built to a single design by a single architect in his own lifetime, and the great English essay in Baroque classicism restrained by Protestant caution. The dome is structurally three domes: an inner masonry dome for the interior, a hidden brick cone carrying the stone lantern, and an outer timber and lead dome for the skyline. The screen walls along the nave hide flying buttresses and give the building a false second storey, which is a piece of urban stagecraft. The west towers of 1705 to 1708 are Wren at his most Baroque.",
+  "tell": "Portland stone, coupled Corinthian columns, a great drum and dome, and swags and cherub heads carved by Grinling Gibbons and his circle all say 1675 to 1710. Compare the restraint here with Vanbrugh a decade later.",
+  "photo": "photos/21_St_Pauls_Cathedral.jpg",
+  "credit": "Colin, CC BY-SA 4.0"
+ },
+ {
+  "id": "22_Royal_Hospital_Chelsea",
+  "title": "Royal Hospital Chelsea",
+  "place": "London",
+  "address": "Royal Hospital Road, Chelsea, London SW3 4SR",
+  "lat": 51.48741,
+  "lon": -0.15824,
+  "dates": "1682 to 1692",
+  "range": [
+   1682,
+   1692
+  ],
+  "phases": [],
+  "architect": "Sir Christopher Wren for Charles II",
+  "materials": "Red brick with Portland stone dressings, slate roofs",
+  "grade": "I",
+  "nhle": "1226301",
+  "note": "A home for old soldiers, planned around three courts open to the river, and the model for institutional building in England for the next 150 years. Wren's language here is deliberately plain: warm red brick, sparingly used Portland stone, a giant Doric portico at the centre and an octagonal domed lantern over the vestibule. The Great Hall and the Chapel occupy the two arms of the central block and are mirror images of each other. The severity is programmatic, since this is charity architecture, and the effect is dignity achieved through proportion alone.",
+  "tell": "Plain red brick with stone quoins and a giant order confined to a central portico is Wren institutional work of the 1680s. Segmental headed windows with thick glazing bars and a modillion cornice confirm the date.",
+  "photo": "photos/22_Royal_Hospital_Chelsea.jpg",
+  "credit": "Txllxt TxllxT, CC BY-SA 4.0"
+ },
+ {
+  "id": "23_Chatsworth_House",
+  "title": "Chatsworth House",
+  "place": "Derbyshire",
+  "address": "Bakewell, Derbyshire DE45 1PP",
+  "lat": 53.22735,
+  "lon": -1.61167,
+  "dates": "1687 to 1707",
+  "range": [
+   1687,
+   1707
+  ],
+  "phases": [],
+  "architect": "William Talman (south and east fronts), Thomas Archer (north); later remodelling by Sir Jeffry Wyatville, 1820 to 1827",
+  "materials": "Local gritstone ashlar with lead roofs",
+  "grade": "I",
+  "nhle": "1373871",
+  "note": "An Elizabethan house rebuilt front by front around its original courtyard, so the four elevations are of different dates and different tempers. Talman's south front of 1687 is the first fully Baroque facade on an English country house, with a giant Ionic order on a rusticated base and a balustraded parapet carrying urns. Archer's north front of 1705 curves and swaggers by comparison. Wyatville's long north wing of the 1820s adds a Regency sobriety, and reading the joins between these campaigns from the garden is one of the best exercises in phasing in England.",
+  "tell": "Giant order pilasters on a rusticated base with a flat balustraded roofline is English Baroque of about 1690 to 1710. The nineteenth century wing is longer, lower and much more regular, with plate glass in the sashes.",
+  "photo": "photos/23_Chatsworth_House.jpg",
+  "credit": "Paste (talk), CC BY-SA 3.0"
+ },
+ {
+  "id": "24_Castle_Howard",
+  "title": "Castle Howard",
+  "place": "North Yorkshire",
+  "address": "York, North Yorkshire YO60 7DA",
+  "lat": 54.12167,
+  "lon": -0.90547,
+  "dates": "1699 to 1712, west wing completed 1753 to 1759",
+  "range": [
+   1699,
+   1712
+  ],
+  "phases": [
+   [
+    1753,
+    1759
+   ]
+  ],
+  "architect": "Sir John Vanbrugh with Nicholas Hawksmoor for the 3rd Earl of Carlisle; west wing by Sir Thomas Robinson",
+  "materials": "Ashlar limestone with lead and copper dome",
+  "grade": "I",
+  "nhle": "1316030",
+  "note": "Vanbrugh's first building, designed with no architectural training whatsoever, and the first English private house to be crowned with a dome. The composition is theatrical: a domed central block with a giant Corinthian order, flanked by lower quadrant wings that sweep outward to service courts, all set in a designed landscape scattered with a mausoleum, a temple and a pyramid. Hawksmoor supplied the technical competence and much of the detail. The west wing, added half a century later by Sir Thomas Robinson in a cool Palladian manner, deliberately refuses to match, and the clash is instructive.",
+  "tell": "Massive rusticated masonry, a giant order, a dome on a private house and heavy carved trophies and urns are English Baroque of 1700 to 1725. The plainer Palladian wing with its pedimented centre is 1750s.",
+  "photo": "photos/24_Castle_Howard.jpg",
+  "credit": "Tilman2007, CC BY-SA 3.0"
+ },
+ {
+  "id": "25_Blenheim_Palace",
+  "title": "Blenheim Palace",
+  "place": "Oxfordshire",
+  "address": "Woodstock, Oxfordshire OX20 1UL",
+  "lat": 51.84136,
+  "lon": -1.36095,
+  "dates": "1705 to 1722",
+  "range": [
+   1705,
+   1722
+  ],
+  "phases": [],
+  "architect": "Sir John Vanbrugh with Nicholas Hawksmoor for the 1st Duke of Marlborough",
+  "materials": "Oxfordshire limestone ashlar",
+  "grade": "I",
+  "nhle": "1052912",
+  "note": "A house built as a national monument to a military victory, paid for by Parliament and fought over bitterly by the Duchess and her architect. The scale is enormous and the language is deliberately martial: heavy rusticated masonry, a giant Corinthian portico, corner towers carrying finials shaped as inverted fleurs de lys with British lions crushing French cocks. Vanbrugh understood mass and silhouette better than any English architect before or since, and the building is composed to be read from a distance across Capability Brown's later lake, added from 1764.",
+  "tell": "Very heavy rustication, a giant order, dramatic skyline finials and colonnaded quadrant links are Vanbrugh's English Baroque, roughly 1700 to 1725. The naturalistic landscape park with a serpentine lake is a later 1760s overlay.",
+  "photo": "photos/25_Blenheim_Palace.jpg",
+  "credit": "Balon Greyjoy, CC BY-SA 4.0"
+ },
+ {
+  "id": "26_Christ_Church_Spitalfields",
+  "title": "Christ Church, Spitalfields",
+  "place": "London",
+  "address": "Commercial Street, Spitalfields, London E1 6LY",
+  "lat": 51.51911,
+  "lon": -0.07371,
+  "dates": "1714 to 1729",
+  "range": [
+   1714,
+   1729
+  ],
+  "phases": [],
+  "architect": "Nicholas Hawksmoor",
+  "materials": "Portland limestone ashlar with brick to the flanks",
+  "grade": "I",
+  "nhle": "1357795",
+  "note": "One of the churches built under the Fifty New Churches Act of 1711, and the most original of Hawksmoor's six. He fused a Tuscan portico with a tall square tower and a spire, so that from the west the whole front reads as a single triumphal arch with a needle above it. The mouldings are exaggerated, the keystones are oversized, and the proportions are deliberately strange, all of which is Hawksmoor thinking about Roman and primitive architecture rather than about Palladio. The galleried interior was reordered in 1866 and restored to its 1720s state between 1976 and 2004.",
+  "tell": "Portland stone, oversized Tuscan columns, heavy blocky mouldings and a spire growing out of a portico are Hawksmoor and the 1711 Act churches, so 1712 to 1730. Nothing else in London handles classical detail this aggressively.",
+  "photo": "photos/26_Christ_Church_Spitalfields.jpg",
+  "credit": "Diliff, CC BY-SA 3.0"
+ },
+ {
+  "id": "27_Chiswick_House",
+  "title": "Chiswick House",
+  "place": "London",
+  "address": "Burlington Lane, Chiswick, London W4 2RP",
+  "lat": 51.48373,
+  "lon": -0.25869,
+  "dates": "1727 to 1729",
+  "range": [
+   1727,
+   1729
+  ],
+  "phases": [],
+  "architect": "Richard Boyle, 3rd Earl of Burlington, with interiors by William Kent",
+  "materials": "Brick faced in stucco with Portland stone dressings and a slate roof",
+  "grade": "I",
+  "nhle": "1079607",
+  "note": "A villa built not to live in but to house a collection and to make an argument, and the founding document of English Palladianism. Burlington took Palladio's Villa Capra and Scamozzi's Rocca Pisana and produced a compact block with an octagonal domed saloon, a hexastyle Corinthian portico reached by a divided stair, and Venetian and Diocletian windows lifted straight from Roman baths. Kent's interiors are richer and more Baroque than the exterior suggests. The garden, laid out with Charles Bridgeman, is one of the earliest steps away from formal planting toward the English landscape style.",
+  "tell": "A small symmetrical villa with a temple portico, a shallow dome and thermal or Diocletian windows in the drum means English Palladian, 1720 to 1750. Look for obelisk chimneys, a Burlington circle mannerism.",
+  "photo": "photos/27_Chiswick_House.jpg",
+  "credit": "Tilman2007, CC BY-SA 4.0"
+ },
+ {
+  "id": "28_Holkham_Hall",
+  "title": "Holkham Hall",
+  "place": "Norfolk",
+  "address": "Holkham, Wells-next-the-Sea, Norfolk NR23 1AB",
+  "lat": 52.95012,
+  "lon": 0.80304,
+  "dates": "1734 to 1764",
+  "range": [
+   1734,
+   1764
+  ],
+  "phases": [],
+  "architect": "William Kent with Lord Burlington and Matthew Brettingham, for Thomas Coke, 1st Earl of Leicester",
+  "materials": "Locally made pale yellow brick, sometimes called white brick, with slate roofs",
+  "grade": "I",
+  "nhle": "1373659",
+  "note": "Palladianism at full country house scale, built over 30 years and finished after its patron's death. The plan is a central block with four detached pavilions linked by corridors, a strictly Palladian arrangement, and the exterior is austere to the point of severity, with almost no carved ornament and a pale brick that was chosen to imitate ancient stone. The Marble Hall is the great set piece, an apsed space modelled on a Roman basilica, lined in Derbyshire alabaster with a colonnade of fluted Ionic columns and a coffered ceiling.",
+  "tell": "Pale brick, a rigidly symmetrical block and pavilion plan, tripartite Venetian windows and pedimented centrepieces without Baroque movement place this at 1730 to 1765. Compare the flatness here with Vanbrugh's modelling a generation earlier.",
+  "photo": "photos/28_Holkham_Hall.png",
+  "credit": "Brettingham, Matthew, Public domain"
+ },
+ {
+  "id": "29_Strawberry_Hill_House",
+  "title": "Strawberry Hill House",
+  "place": "London",
+  "address": "268 Waldegrave Road, Twickenham, London TW1 4ST",
+  "lat": 51.438,
+  "lon": -0.33512,
+  "dates": "1749 to 1776",
+  "range": [
+   1749,
+   1776
+  ],
+  "phases": [],
+  "architect": "Horace Walpole with his Committee of Taste: John Chute, Richard Bentley and Thomas Pitt; later work by James Essex",
+  "materials": "Brick rendered and lime washed white, with papier mache and plaster vaults imitating stone",
+  "grade": "I",
+  "nhle": "1261987",
+  "note": "The building that launched the Gothic Revival, assembled over 27 years as a deliberately asymmetrical, picturesque accretion so that it would look as though it had grown. Walpole and his friends copied details from tombs, screens and printed antiquarian sources: the library bookcases derive from a tomb in Old St Paul's, the Gallery vault from Henry VII's chapel, executed in papier mache. It is theatrical rather than archaeological, and everything is thin, light and painted. The house directly produced the Gothic novel, since Walpole wrote The Castle of Otranto here in 1764.",
+  "tell": "Gothic detail rendered in plaster, papier mache and whitened render rather than carved stone, applied asymmetrically to a domestic plan, is Georgian Gothick of 1740 to 1790. Victorian Gothic Revival is heavier, structural and archaeologically correct.",
+  "photo": "photos/29_Strawberry_Hill.jpg",
+  "credit": "Rijksmuseum, CC0"
+ },
+ {
+  "id": "30_The_Royal_Crescent_Bath",
+  "title": "The Royal Crescent, Bath",
+  "place": "Somerset",
+  "address": "Royal Crescent, Bath, Somerset BA1 2LR",
+  "lat": 51.38748,
+  "lon": -2.36809,
+  "dates": "1767 to 1774",
+  "range": [
+   1767,
+   1774
+  ],
+  "phases": [],
+  "architect": "John Wood the Younger",
+  "materials": "Bath oolitic limestone ashlar to the front, rubble and brick behind, Welsh slate roofs",
+  "grade": "I",
+  "nhle": "1394736",
+  "note": "Thirty terraced houses treated as one palace facade, curved into a semi ellipse facing open parkland, and the model for speculative urban development across Britain and Ireland for the next 60 years. A giant Ionic order of 114 engaged columns runs the length of the front above a plain rusticated ground floor. The plots behind were sold individually and each owner built to their own plan, which produces the famous Queen Anne front and Mary Anne back: strict uniformity on the show elevation, complete chaos at the rear.",
+  "tell": "Ashlar Bath stone, a giant order over a plain base, sash windows with slim glazing bars and a continuous balustrade or parapet indicate 1760 to 1790. Window proportions diminishing storey by storey is the Georgian tell.",
+  "photo": "photos/30_Royal_Crescent_Bath.jpg",
+  "credit": "Bärbel Miemietz, CC BY-SA 4.0"
+ },
+ {
+  "id": "31_Somerset_House",
+  "title": "Somerset House",
+  "place": "London",
+  "address": "Strand, London WC2R 1LA",
+  "lat": 51.51164,
+  "lon": -0.11759,
+  "dates": "1776 to 1796; wings 1829 to 1834 and 1851 to 1856",
+  "range": [
+   1776,
+   1796
+  ],
+  "phases": [
+   [
+    1829,
+    1834
+   ],
+   [
+    1851,
+    1856
+   ]
+  ],
+  "architect": "Sir William Chambers; later wings by Sir Robert Smirke and Sir James Pennethorne, 1851 to 1856",
+  "materials": "Portland limestone over brick, on brick vaulted river arches",
+  "grade": "I",
+  "nhle": "1237041",
+  "note": "The first purpose built government office block in Britain, housing the Navy Board, the Royal Academy and the Learned Societies around a courtyard, with a river frontage that originally rose straight out of the Thames before the Embankment was built in the 1860s. Chambers was French trained and it shows in the crisp, dry, correct detailing and the rusticated arcades. The Strand front is deliberately modest, an eleven bay palace facade; the river front runs about 150 metres and is monumental. The Seamen's Waiting Hall and the great stairs are the best interiors.",
+  "tell": "Very correct, rather dry neoclassical detail, a rusticated ground storey with round arches, and a giant order above, all in Portland stone, is Chambers in the 1770s and 1780s. Later wings are plainer and use larger panes of glass.",
+  "photo": "photos/31_Somerset_House.jpg",
+  "credit": "Txllxt TxllxT, CC BY-SA 4.0"
+ },
+ {
+  "id": "32_The_Iron_Bridge",
+  "title": "The Iron Bridge",
+  "place": "Shropshire",
+  "address": "Ironbridge, Telford, Shropshire TF8 7JP",
+  "lat": 52.62733,
+  "lon": -2.48545,
+  "dates": "1777 to 1779, opened 1781",
+  "range": [
+   1777,
+   1779
+  ],
+  "phases": [
+   [
+    1781,
+    1781
+   ]
+  ],
+  "architect": "Designed by Thomas Farnolls Pritchard, cast and erected by Abraham Darby III",
+  "materials": "Cast iron, around 378 tonnes of it, on stone abutments",
+  "grade": "I",
+  "nhle": "1038659",
+  "note": "The first arch bridge in the world made of cast iron, spanning 30.6 metres across the Severn gorge, and the founding monument of industrial architecture. What makes it remarkable is that nobody yet knew how to build in iron, so the joints are carpentry joints translated into metal: mortise and tenon, dovetails and blind wedges, with no bolts or rivets anywhere in the main structure. The members are also far heavier than they need to be, because the designers were working without any theory of the material's strength. It gave the surrounding town its name.",
+  "tell": "Cast iron with carpentry style joints and visibly over engineered members means the first generation of iron building, 1775 to 1800. Later nineteenth century ironwork uses bolts, rivets and much thinner sections, and wrought iron after about 1840.",
+  "photo": "photos/32_The_Iron_Bridge.jpg",
+  "credit": "Colin, CC BY-SA 4.0"
+ },
+ {
+  "id": "33_The_Royal_Pavilion_Brighton",
+  "title": "The Royal Pavilion, Brighton",
+  "place": "East Sussex",
+  "address": "4-5 Pavilion Buildings, Brighton, East Sussex BN1 1EE",
+  "lat": 50.82236,
+  "lon": -0.13767,
+  "dates": "1815 to 1823",
+  "range": [
+   1815,
+   1823
+  ],
+  "phases": [],
+  "architect": "John Nash, remodelling Henry Holland's villa of 1787, for the Prince Regent",
+  "materials": "Bath stone facing and stucco over the earlier structure, with a cast iron frame carrying the domes and minarets",
+  "grade": "I",
+  "nhle": "1380680",
+  "note": "A seaside pleasure palace in which an Indian exterior wraps a Chinese interior on a cast iron frame, and one of the great acts of Regency invention. Nash took the onion domes, chattris and pierced screens from published views of Mughal India, then built them in a way no Indian builder would recognise: iron columns disguised as palm trees, and a Great Kitchen with cast iron palm capitals. The Music Room and Banqueting Room interiors by Frederick Crace and Robert Jones are Chinoiserie at its most theatrical. The whole thing cost the Crown a fortune and was sold to Brighton in 1850.",
+  "tell": "Onion domes and minarets in stucco and Bath stone over an iron frame belong to the Regency exotic, 1810 to 1830. Cast iron used structurally but disguised decoratively is a very reliable indicator of this decade.",
+  "photo": "photos/33_Royal_Pavilion.jpg",
+  "credit": "Qmin, CC BY-SA 3.0"
+ },
+ {
+  "id": "34_The_British_Museum",
+  "title": "The British Museum",
+  "place": "London",
+  "address": "Great Russell Street, Bloomsbury, London WC1B 3DG",
+  "lat": 51.51944,
+  "lon": -0.12694,
+  "dates": "1823 to 1852",
+  "range": [
+   1823,
+   1852
+  ],
+  "phases": [],
+  "architect": "Sir Robert Smirke; Great Court roof 2000 by Foster and Partners",
+  "materials": "Portland stone over a brick and cast iron frame; Great Court roof of steel and glass",
+  "grade": "I",
+  "nhle": "1130404",
+  "note": "The largest Greek Revival building in Britain, built round a hollow quadrangle over nearly 30 years. The south front presents 44 giant Ionic columns copied from the Temple of Athena Polias at Priene, with a pediment carved by Sir Richard Westmacott. Smirke was an early and systematic user of concrete foundations and cast iron framing, so the archaeological Greek dress conceals thoroughly modern construction. The Round Reading Room, begun in 1854 by Sydney Smirke and opened in 1857, sits in the courtyard, and Foster's glazed lattice roof of 2000 finally covered the space around it.",
+  "tell": "Correct Greek Ionic columns copied from a named ancient source, a shallow pediment and no arches anywhere means Greek Revival, roughly 1810 to 1840. Roman detail with round arches would push the date earlier or later.",
+  "photo": "photos/34_British_Museum.jpg",
+  "credit": "Dale Cruse from San Francisco, CA, USA, CC BY 2.0"
+ },
+ {
+  "id": "35_Cumberland_Terrace",
+  "title": "Cumberland Terrace",
+  "place": "London",
+  "address": "Regent's Park, London NW1 4HX",
+  "lat": 51.53217,
+  "lon": -0.14611,
+  "dates": "1826, first occupied 1828",
+  "range": [
+   1826,
+   1826
+  ],
+  "phases": [
+   [
+    1828,
+    1828
+   ]
+  ],
+  "architect": "John Nash, detailed by James Thomson, built by William Mountford Nurse",
+  "materials": "Brick faced in painted stucco, with Coade type sculpture and slate roofs",
+  "grade": "I",
+  "nhle": "1067386",
+  "note": "The grandest of the terraces round Regent's Park, designed to be the view from the never built royal palace opposite, and the summit of Nash's picturesque urbanism. It reads as one enormous palace, though it is 31 separate houses with a pedimented Ionic centrepiece, linked by triumphal arches to flanking blocks, behind a single scenic front of speculative building. The pediment sculpture is by George Bubb. The stucco is scored and painted to imitate stone, an economy that defines Regency London and that gave the style its slightly stagey character.",
+  "tell": "Painted stucco scored to look like ashlar, a giant Ionic order, and long horizontal terraces with pediments and triumphal arches indicate Regency, 1815 to 1835. Glazing bars are much thinner than Georgian, and ground floors are often rusticated stucco.",
+  "photo": "photos/35_Cumberland_Terrace.jpg",
+  "credit": "CVB, CC BY-SA 3.0"
+ },
+ {
+  "id": "36_The_Palace_of_Westminster",
+  "title": "The Palace of Westminster",
+  "place": "London",
+  "address": "Westminster, London SW1A 0AA",
+  "lat": 51.49947,
+  "lon": -0.12469,
+  "dates": "1840 to 1870",
+  "range": [
+   1840,
+   1870
+  ],
+  "phases": [],
+  "architect": "Sir Charles Barry with Augustus Welby Northmore Pugin",
+  "materials": "Anston magnesian limestone, later repaired in Clipsham stone; cast iron roof plates",
+  "grade": "I",
+  "nhle": "1226284",
+  "note": "Built after the fire of 1834 to a competition brief that required Gothic or Elizabethan, and the definitive statement of Victorian Gothic Revival as a national style. The genius is in the division of labour: Barry supplied a rigidly symmetrical, almost classical plan and massing, and Pugin covered every surface of it with archaeologically accurate Perpendicular detail, down to the wallpapers, tiles, metalwork and inkstands. Westminster Hall of 1097, remodelled in 1393 to 1399 with Hugh Herland's hammerbeam roof, survives from the medieval palace and is embedded in the complex.",
+  "tell": "Perpendicular panelling and tracery applied uniformly to a symmetrical plan, in crisp machine finished stone, is Victorian Gothic Revival rather than medieval. The Anston stone has decayed in a distinctive blistering way that itself dates the fabric.",
+  "photo": "photos/36_Palace_of_Westminster.jpg",
+  "credit": "Photograph by Mike Peel (www.mikepeel.net)., CC BY-SA 4.0"
+ },
+ {
+  "id": "37_Red_House_Bexleyheath",
+  "title": "Red House, Bexleyheath",
+  "place": "London",
+  "address": "Red House Lane, Bexleyheath, London DA6 8JF",
+  "lat": 51.45545,
+  "lon": 0.13028,
+  "dates": "1859 to 1860",
+  "range": [
+   1859,
+   1860
+  ],
+  "phases": [],
+  "architect": "Philip Webb for William Morris",
+  "materials": "Red brick laid in English bond with red clay tile roofs and oak joinery",
+  "grade": "I",
+  "nhle": "1064203",
+  "note": "A modest suburban house that changed domestic architecture across Europe. Webb refused both classical symmetry and Gothic archaeology, and instead planned the house from the inside out in an L shape around a garden, letting the windows fall where the rooms needed them. Materials are left as they are: bare red brick inside and out, exposed roof timbers, no stucco, no painted graining. The pointed arches and steep tiled roofs are vernacular rather than ecclesiastical. Everything in it was designed for it, which led directly to the founding of Morris and Company in 1861.",
+  "tell": "Asymmetrical plan, unrendered red brick, steep red tiled roofs, sash and casement windows mixed on the same elevation and no applied classical or Gothic ornament indicate the Arts and Crafts beginning, 1855 to 1875.",
+  "photo": "photos/37_Red_House.jpg",
+  "credit": "k7hpn, CC BY 4.0"
+ },
+ {
+  "id": "38_Crossness_Pumping_Station",
+  "title": "Crossness Pumping Station",
+  "place": "London",
+  "address": "Belvedere Road, Abbey Wood, London SE2 9AQ",
+  "lat": 51.50914,
+  "lon": 0.13842,
+  "dates": "1859 to 1865",
+  "range": [
+   1859,
+   1865
+  ],
+  "phases": [],
+  "architect": "Charles Henry Driver, engineer Sir Joseph Bazalgette",
+  "materials": "Yellow London stock brick with red brick banding; ornamental cast iron internally",
+  "grade": "I",
+  "nhle": "1064241",
+  "note": "The southern outfall works of Bazalgette's main drainage scheme, built after the Great Stink of 1858, and proof that Victorian engineers dressed their infrastructure as seriously as their churches. The exterior is a Romanesque brick shed with round arched windows and polychrome banding. Inside, the Beam Engine House holds what is often called the finest cast ironwork in the world: a screen of foliate columns, arcades, brackets and spandrels, painted in reds, greens and golds, surrounding four rotative beam engines named after members of the royal family.",
+  "tell": "Polychrome brickwork with round arches and heavily ornamented structural cast iron is High Victorian, 1855 to 1875. Rotative beam engines with cast iron entablatures were obsolete technology by 1880, which narrows the date further.",
+  "photo": "photos/38_Crossness.jpg",
+  "credit": "JRennocks, CC BY 4.0"
+ },
+ {
+  "id": "39_St_Pancras_Station_and_the_former_Midland_Grand_Hotel",
+  "title": "St Pancras Station and the former Midland Grand Hotel",
+  "place": "London",
+  "address": "Euston Road, London NW1 2QP",
+  "lat": 51.53072,
+  "lon": -0.12572,
+  "dates": "Train shed 1863 to 1868, hotel 1868 to 1876",
+  "range": [
+   1863,
+   1868
+  ],
+  "phases": [
+   [
+    1868,
+    1876
+   ]
+  ],
+  "architect": "Hotel by Sir George Gilbert Scott; train shed engineered by William Henry Barlow with Rowland Mason Ordish",
+  "materials": "Nottingham Gripper red brick, Ancaster stone, Peterhead and Shap granite; wrought iron shed ribs",
+  "grade": "I",
+  "nhle": "1342037",
+  "note": "Two buildings by two different professions, deliberately joined. Barlow's train shed spans 73 metres in a single wrought iron arch, the widest in the world when built, and it is raised on a forest of iron columns spaced to suit the beer barrels stored beneath. Scott then wrapped a Gothic Revival hotel around the front of it, using Venetian, French and English medieval sources at enormous scale in polychrome brick and stone. The combination of undisguised engineering behind and historicist architecture in front is the central Victorian argument in one building.",
+  "tell": "A single span wrought iron arch of this size places the shed at 1860 to 1875. The hotel's polychrome brick, pointed arches, steep dormered roofs and clustered turrets are High Victorian Gothic of the same window.",
+  "photo": "photos/39_St_Pancras.jpg",
+  "credit": "Ad Meskens You are free to use this picture for any purpose as long as you credit its author, Ad Meskens. Example: © Ad Meskens / Wikimedia Commons If you use this work outside of the Wikimedia projects, a message or a copy is very much appreciated. This image is not in the public domain. A statement such as \"From Wikimedia Commons\" or similar is not by itself sufficient. If you do not provide clear attribution to the author you do not comply with the terms of the file's license and you may not use this file. If you are unable or unwilling to provide attribution you should contact Ad Meskens to negotiate a different license., CC BY-SA 4.0"
+ },
+ {
+  "id": "40_Manchester_Town_Hall",
+  "title": "Manchester Town Hall",
+  "place": "Manchester",
+  "address": "Albert Square, Manchester M2 5DB",
+  "lat": 53.47927,
+  "lon": -2.24456,
+  "dates": "1868 to 1877",
+  "range": [
+   1868,
+   1877
+  ],
+  "phases": [],
+  "architect": "Alfred Waterhouse",
+  "materials": "Spinkwell sandstone from Bradford, with granite and internal glazed tile and brick",
+  "grade": "I",
+  "nhle": "1207469",
+  "note": "Won in competition against 137 entries and built to fill a very awkward triangular site, which Waterhouse turned into an asset by making every corner and every angled corridor work. The style is thirteenth century Gothic, but the planning is ruthlessly modern, with a spiral service circulation and daylight reaching almost every room. The 85 metre clock tower dominates Albert Square. The Great Hall holds Ford Madox Brown's twelve Manchester Murals, painted between 1879 and 1893, which tell the city's history from the Romans to John Dalton.",
+  "tell": "Early English and Decorated Gothic detail on a large secular civic building, in gritty local sandstone with a tall asymmetrically placed tower, is municipal Gothic Revival of 1860 to 1880. Machine cut, sharply arrised stonework confirms it is not medieval.",
+  "photo": "photos/40_Manchester_Town_Hall.jpg",
+  "credit": "Michael D Beckwith, CC0"
+ },
+ {
+  "id": "41_Cragside",
+  "title": "Cragside",
+  "place": "Northumberland",
+  "address": "Rothbury, Morpeth, Northumberland NE65 7PX",
+  "lat": 55.31359,
+  "lon": -1.88535,
+  "dates": "1869 to 1885, incorporating a lodge of 1862 to 1864",
+  "range": [
+   1869,
+   1885
+  ],
+  "phases": [
+   [
+    1862,
+    1864
+   ]
+  ],
+  "architect": "Richard Norman Shaw for William Armstrong, 1st Baron Armstrong, enlarging an earlier lodge",
+  "materials": "Local sandstone with half timbering, tile hanging and tall brick and stone chimneystacks",
+  "grade": "I",
+  "nhle": "1042076",
+  "note": "An industrialist's house grown out of a small shooting lodge into a rambling composition that steps down a rocky hillside, and the best surviving example of Shaw's Old English manner. Half timbered gables, tile hung walls, enormous chimneys and irregular massing are all handled picturesquely rather than symmetrically. It was the first house in the world lit by hydroelectric power, from 1878, and it also had hydraulic lifts, a passenger lift, fire alarms and a Turkish bath. The drawing room of 1883 to 1884 has an inglenook chimneypiece in Italian marble weighing 10 tonnes.",
+  "tell": "Half timbering, tile hanging, tall clustered chimneys and deliberate asymmetry on a large Victorian house is Old English or Domestic Revival, 1865 to 1890. Early electric light fittings and service technology are datable in their own right.",
+  "photo": "photos/41_Cragside.jpg",
+  "credit": "ThomasL4321, CC BY-SA 4.0"
+ },
+ {
+  "id": "42_Natural_History_Museum",
+  "title": "Natural History Museum",
+  "place": "London",
+  "address": "Cromwell Road, South Kensington, London SW7 5BD",
+  "lat": 51.49563,
+  "lon": -0.1765,
+  "dates": "1873 to 1881",
+  "range": [
+   1873,
+   1881
+  ],
+  "phases": [],
+  "architect": "Alfred Waterhouse, developing a competition design by Francis Fowke",
+  "materials": "Buff and blue terracotta by Gibbs and Canning of Tamworth, over an iron and steel frame",
+  "grade": "I",
+  "nhle": "1080675",
+  "note": "A cathedral to nature, with a Romanesque round arched vocabulary chosen partly because terracotta moulds could be reused economically across a very long facade. Every surface carries modelled plants and animals, and Richard Owen insisted the living species go in the west wing and the extinct ones in the east. Terracotta was specified because it could be washed clean of London soot, an explicitly modern choice. Behind it the structure is iron framed, so this is a nineteenth century engineered building wearing a twelfth century German skin, and the two are quite openly separate.",
+  "tell": "Buff and blue terracotta with repeated moulded ornament and round arches, on a very long symmetrical facade with twin towers, is 1870 to 1890. Repetition of identical carved detail means moulding, not carving, which itself dates the technique.",
+  "photo": "photos/42_Natural_History_Museum.jpg",
+  "credit": "Daniel Lu (User:dllu), CC BY-SA 4.0"
+ },
+ {
+  "id": "43_Tower_Bridge",
+  "title": "Tower Bridge",
+  "place": "London",
+  "address": "Tower Bridge Road, London SE1 2UP",
+  "lat": 51.50617,
+  "lon": -0.07499,
+  "dates": "1886 to 1894",
+  "range": [
+   1886,
+   1894
+  ],
+  "phases": [],
+  "architect": "Sir Horace Jones, City Architect, completed by George Daniel Stevenson; engineer Sir John Wolfe Barry",
+  "materials": "Steel frame clad in Cornish granite and Portland stone; original hydraulic machinery",
+  "grade": "I",
+  "nhle": "1357515",
+  "note": "A bascule bridge whose real structure is a steel frame, clad in stone in a Gothic manner so that it would sit politely beside the Tower of London. The two 65 metre towers house the lifting mechanism, originally driven by steam pumped hydraulic accumulators, converted to electro hydraulic drive in 1974. The high level walkways were meant for pedestrians crossing while the bascules were raised, but they were closed in 1910 after becoming a haunt for pickpockets. Contemporary critics loathed the historicist cladding, calling it a sham, which it frankly is.",
+  "tell": "Steel framing with applied stone Gothic detail, and hydraulic rather than electric machinery, places this at 1885 to 1900. It was painted red, white and blue for the Silver Jubilee in 1977; the present blue and white dates from the refurbishment begun in 2008. The original was a chocolate brown.",
+  "photo": "photos/43_Tower_Bridge.jpg",
+  "credit": "Aleem Yousaf, CC BY-SA 2.0"
+ },
+ {
+  "id": "44_Michelin_House",
+  "title": "Michelin House",
+  "place": "London",
+  "address": "81 Fulham Road, Chelsea, London SW3 6RD",
+  "lat": 51.49325,
+  "lon": -0.16878,
+  "dates": "1909 to 1911",
+  "range": [
+   1909,
+   1911
+  ],
+  "phases": [],
+  "architect": "Francois Espinasse",
+  "materials": "Early reinforced concrete frame with faience and Carrara ware cladding, and decorative ceramic tile panels",
+  "grade": "II",
+  "nhle": "1080656",
+  "note": "Built as Michelin's first British headquarters and tyre depot, and one of the earliest reinforced concrete framed buildings in London. The style resists classification, borrowing from Art Nouveau, the Secession and Edwardian free style all at once, which is exactly what a French tyre company wanted in order to look modern. Thirty four ceramic tile panels by Gilardoni Fils show early motor races, and the corner cupolas are built as stacks of tyres. The three stained glass windows show Bibendum, the Michelin Man, and were reinstated in the 1980s restoration by Conran and Hamlyn.",
+  "tell": "A reinforced concrete frame with glazed faience cladding and commercial iconography built into the ornament places this at 1900 to 1914. The glossy white ceramic finish was chosen for washability in a sooty city, an Edwardian preoccupation.",
+  "photo": "photos/44_Michelin_House.jpg",
+  "credit": "Fred Romero from Paris, France, CC BY 2.0"
+ },
+ {
+  "id": "45_Battersea_Power_Station",
+  "title": "Battersea Power Station",
+  "place": "London",
+  "address": "188 Kirtling Street, Nine Elms, London SW8 5BP",
+  "lat": 51.4819,
+  "lon": -0.14533,
+  "dates": "Station A 1929 to 1935, Station B 1944 to 1955",
+  "range": [
+   1929,
+   1935
+  ],
+  "phases": [
+   [
+    1944,
+    1955
+   ]
+  ],
+  "architect": "J. Theo Halliday of Halliday and Agate, with Sir Giles Gilbert Scott as consultant for the exterior",
+  "materials": "Around six million bricks over a steel frame, with concrete chimneys clad in brick and stone",
+  "grade": "II*",
+  "nhle": "1357620",
+  "note": "A power station given monumental architectural treatment because it was going to be visible from central London and the public objected to it. Scott was brought in to handle the exterior and produced fluted brick walls handled like a giant order, with the four chimneys acting as the columns of an enormous open air temple. The Art Deco Control Room A survives with its Italian marble and polished parquet. The building was constructed in two halves 20 years apart, so the west half is 1930s and the east half is post war, and the detailing differs.",
+  "tell": "Vertically fluted brickwork used as a giant order, stepped setbacks and Art Deco interior fittings indicate 1928 to 1940. The eastern half is plainer and cheaper, a reliable sign of post war austerity construction.",
+  "photo": "photos/45_Battersea_Power_Station.jpg",
+  "credit": "Aurelien Guichard from London, United Kingdom, CC BY-SA 2.0"
+ },
+ {
+  "id": "46_De_La_Warr_Pavilion",
+  "title": "De La Warr Pavilion",
+  "place": "East Sussex",
+  "address": "Marina, Bexhill-on-Sea, East Sussex TN40 1DP",
+  "lat": 50.83754,
+  "lon": 0.47142,
+  "dates": "1934 to 1935",
+  "range": [
+   1934,
+   1935
+  ],
+  "phases": [],
+  "architect": "Erich Mendelsohn and Serge Chermayeff",
+  "materials": "Welded steel frame with concrete floors, render and very large areas of glass",
+  "grade": "I",
+  "nhle": "1352840",
+  "note": "Won in open competition, and the first major public building in Britain with a welded steel frame, which is what allowed the long horizontal window bands and the cantilevered balconies to exist at all. Mendelsohn had just fled Germany and brought Continental Modernism with him. The semicircular glazed stair tower on the seaward side is the signature element, a helix of steel and glass. It was commissioned by the 9th Earl De La Warr as mayor, as a piece of public leisure architecture for an ordinary seaside town, which was radical in itself.",
+  "tell": "White render, horizontal window bands, flat roofs, cantilevered balconies with tubular steel rails and a glazed drum stair are International Style, 1930 to 1939. Welded rather than riveted steel is an unusually precise technical marker for the mid 1930s.",
+  "photo": "photos/46_De_La_Warr_Pavilion.jpg",
+  "credit": "Chris Mole, CC BY 2.0"
+ },
+ {
+  "id": "47_Royal_Festival_Hall",
+  "title": "Royal Festival Hall",
+  "place": "London",
+  "address": "Belvedere Road, South Bank, London SE1 8XX",
+  "lat": 51.50581,
+  "lon": -0.11679,
+  "dates": "1948 to 1951",
+  "range": [
+   1948,
+   1951
+  ],
+  "phases": [],
+  "architect": "London County Council Architect's Department under Robert Matthew and Leslie Martin, with Peter Moro and Edwin Williams",
+  "materials": "Reinforced concrete frame with Portland stone and glass cladding; interiors in Derbyshire fossil limestone and hardwoods",
+  "grade": "I",
+  "nhle": "1249756",
+  "note": "The only permanent building of the 1951 Festival of Britain, and the first post war building in England to be listed Grade I. Its structural idea is the egg in the box: the auditorium is suspended as a self contained acoustic vessel within the outer structure, with foyers, stairs and bars flowing freely around and underneath it, so that the public spaces are as important as the hall. The acoustics were designed by Hope Bagenal on scientific principles. The river frontage was remodelled in 1962 to 1965, so the exterior you see is largely of that date.",
+  "tell": "A reinforced concrete frame with Portland stone facing, generous glazing and flowing open foyer space is Festival of Britain modernism, 1948 to 1955. The heavier concrete river elevation is a 1960s remodelling and looks it.",
+  "photo": "photos/47_Royal_Festival_Hall.jpg",
+  "credit": "Colin Smith, CC BY-SA 2.0"
+ },
+ {
+  "id": "48_Park_Hill_Sheffield",
+  "title": "Park Hill, Sheffield",
+  "place": "Sheffield",
+  "address": "Duke Street, Sheffield S2 5QP",
+  "lat": 53.37946,
+  "lon": -1.45933,
+  "dates": "1957 to 1961",
+  "range": [
+   1957,
+   1961
+  ],
+  "phases": [],
+  "architect": "Jack Lynn and Ivor Smith under J. Lewis Womersley, Sheffield City Architect",
+  "materials": "In situ reinforced concrete frame with brick infill panels graded from red through orange to yellow",
+  "grade": "II*",
+  "nhle": "1246881",
+  "note": "The largest listed building in Europe and the most complete British attempt at Le Corbusier's ideas about mass housing. The deck access galleries, three metres wide and continuous, were the streets in the sky, wide enough for a milk float, and they follow the falling ground so that every deck meets the hillside at grade somewhere. The roofline is kept level while the ground drops away, so the blocks rise from four to thirteen storeys. Regeneration from 2007 by Hawkins Brown and Studio Egret West replaced the brick infill with coloured anodised aluminium.",
+  "tell": "Board marked or shuttered concrete frame with brick infill, continuous access decks and a level roofline over falling ground is British Brutalist housing, 1955 to 1970. Bright anodised panels indicate the twenty first century refurbishment.",
+  "photo": "photos/48_Park_Hill.jpg",
+  "credit": "Colin Park, CC BY-SA 2.0"
+ },
+ {
+  "id": "49_National_Theatre",
+  "title": "National Theatre",
+  "place": "London",
+  "address": "Upper Ground, South Bank, London SE1 9PX",
+  "lat": 51.5072,
+  "lon": -0.11362,
+  "dates": "1967 to 1976",
+  "range": [
+   1967,
+   1976
+  ],
+  "phases": [],
+  "architect": "Sir Denys Lasdun",
+  "materials": "In situ reinforced concrete, board marked using sawn Douglas fir shuttering laid horizontally",
+  "grade": "II*",
+  "nhle": "1272324",
+  "note": "Lasdun described the building as an urban landscape of strata and terraces rather than a building with a facade, and it is composed as a series of horizontal layers stepping out over the river walk. The two fly towers rise as solid blocks above the terraces. The concrete was poured in situ against rough sawn boards so that the grain of the timber is printed into the finished surface, a deliberate rejection of smooth finish. Three auditoria of different shapes sit inside: the Olivier, the Lyttelton and the small Dorfman, originally the Cottesloe.",
+  "tell": "Board marked in situ concrete with horizontal board grain, projecting terraces and no applied cladding of any kind is British Brutalism at its most confident, 1965 to 1978. The horizontality distinguishes Lasdun from the towers of the same decade.",
+  "photo": "photos/49_National_Theatre.jpg",
+  "credit": "Txllxt TxllxT, CC BY-SA 4.0"
+ },
+ {
+  "id": "50_Lloyd_s_Building",
+  "title": "Lloyd's Building",
+  "place": "London",
+  "address": "1 Lime Street, City of London EC3M 7HA",
+  "lat": 51.51298,
+  "lon": -0.08246,
+  "dates": "1978 to 1986",
+  "range": [
+   1978,
+   1986
+  ],
+  "phases": [],
+  "architect": "Richard Rogers Partnership, with structural engineering by Ove Arup and Partners",
+  "materials": "Precast and in situ concrete frame with stainless steel cladding, triple glazing and external steel service towers",
+  "grade": "I",
+  "nhle": "1405493",
+  "note": "The definitive British High Tech building, and an inside out design in which lifts, staircases, lavatory pods and service ducts are all pushed to the outside so that the interior can be a single uninterrupted space. The Underwriting Room rises through a barrel vaulted atrium 60 metres tall, with the Lutine Bell at its centre. The eighteenth century Adam style Committee Room from Bowood House is installed on the eleventh floor, a deliberate collision. It was listed Grade I in 2011, aged only 25, the youngest building ever to be listed at that grade.",
+  "tell": "Externalised services in stainless steel, exposed structural frame, glazed wall climber lifts and a full height atrium mark High Tech, 1975 to 1990. Stainless steel rather than painted steel and triple glazing point to the 1980s specifically.",
+  "photo": "photos/50_Lloyds_Building.jpg",
+  "credit": "Choinowski, CC BY-SA 4.0"
+ },
+ {
+  "id": "51_Rievaulx_Abbey",
+  "title": "Rievaulx Abbey",
+  "place": "North Yorkshire",
+  "address": "Rievaulx, Helmsley, North Yorkshire YO62 5LB",
+  "lat": 54.25747,
+  "lon": -1.11862,
+  "dates": "c.1225 to 1250, abbey founded 1132, nave c.1135 to 1145",
+  "range": [
+   1225,
+   1250
+  ],
+  "phases": [
+   [
+    1132,
+    1132
+   ],
+   [
+    1135,
+    1145
+   ]
+  ],
+  "architect": "Cistercian masons, patron unknown",
+  "materials": "Local sandstone ashlar, roofs long gone",
+  "grade": "I",
+  "nhle": "",
+  "note": "The eastern arm of a Cistercian abbey suppressed in 1538 and left to fall, which is why you can read its structure so clearly. The nave of the 1130s and 40s is the austere early Cistercian building, low and plain. The presbytery standing here is the rebuilding of about 1225 to 1250, three storeys of it, and it abandons Cistercian plainness completely: tall clustered piers, deeply undercut mouldings and lancet windows in tiers. The roofless state is not decay alone but deliberate stripping of the lead at the Dissolution.",
+  "tell": "Read the piers. Clustered shafts with fillets, set close and rising unbroken through the arcade, plus lancets without any bar tracery, put this in the second quarter of the thirteenth century. Cistercian work of the 1130s and 40s next door is squat, round arched and stripped of ornament, so the two phases sit side by side on one site.",
+  "photo": "photos/51_Rievaulx_Abbey.jpg",
+  "credit": ""
+ },
+ {
+  "id": "52_Whitby_Abbey",
+  "title": "Whitby Abbey",
+  "place": "North Yorkshire",
+  "address": "Abbey Lane, Whitby, North Yorkshire YO22 4JT",
+  "lat": 54.48845,
+  "lon": -0.6077,
+  "dates": "c.1220 to 1250, north transept later 13th century, Anglian monastery founded 657",
+  "range": [
+   1220,
+   1250
+  ],
+  "phases": [],
+  "architect": "Benedictine masons, patron the de Percy family",
+  "materials": "Local sandstone ashlar, roofless since the Dissolution",
+  "grade": "I",
+  "nhle": "",
+  "note": "The gaunt shell of a Benedictine church on the headland above the harbour, standing on the site of the double monastery founded in 657 where Caedmon sang and the Synod of Whitby met in 664. Nothing of the Anglian house survives above ground. What you see is the thirteenth century rebuilding: a tall presbytery of three storeys with lancets in tiers, then a north transept in a slightly later and more elaborate manner. The nave fell in 1763, the central tower in 1830, and the west front was shelled by German battlecruisers in 1914.",
+  "tell": "Tiers of tall narrow lancets with no bar tracery, clustered shafts and dogtooth ornament in the mouldings are Early English, roughly 1200 to 1260. Where the tracery becomes geometrical, with circles and foiled shapes in the window head, you have moved into the later thirteenth century work.",
+  "photo": "photos/52_Whitby_Abbey.jpg",
+  "credit": ""
+ },
+ {
+  "id": "53_Radcliffe_Camera",
+  "title": "Radcliffe Camera",
+  "place": "Oxford",
+  "address": "Radcliffe Square, Oxford OX1 3BG",
+  "lat": 51.7536,
+  "lon": -1.2541,
+  "dates": "1737 to 1749",
+  "range": [
+   1737,
+   1749
+  ],
+  "phases": [],
+  "architect": "James Gibbs for the trustees of Dr John Radcliffe",
+  "materials": "Headington and Burford limestone ashlar with a lead covered timber dome",
+  "grade": "I",
+  "nhle": "",
+  "note": "England's first round library, and the building that gives central Oxford its silhouette. Gibbs set a rusticated octagonal base under a circular upper storey ringed with paired Corinthian columns, then a balustrade, then a lead dome on a drum. It is a Baroque composition built at a moment when fashionable London had already moved on to cool Palladian correctness, which is why it feels theatrical next to Holkham or Chiswick of the same decade. The reading room inside is a single domed rotunda.",
+  "tell": "Paired columns, deep rustication and a dome on a drum are Baroque, but the crisp dry cutting and the absence of Vanbrugh's weight place this a generation later, in the 1730s and 40s. Gibbs was Scottish, Rome trained and Catholic, and stayed Baroque long after Burlington's circle had abandoned it.",
+  "photo": "photos/53_Radcliffe_Camera.jpg",
+  "credit": ""
+ },
+ {
+  "id": "54_Kensington_Palace",
+  "title": "Kensington Palace",
+  "place": "London",
+  "address": "Kensington Gardens, London W8 4PX",
+  "lat": 51.505,
+  "lon": -0.1877,
+  "dates": "1689 to 1696, state apartments 1718 to 1722",
+  "range": [
+   1689,
+   1696
+  ],
+  "phases": [
+   [
+    1718,
+    1722
+   ]
+  ],
+  "architect": "Sir Christopher Wren for William III and Mary II; later work by Colen Campbell and William Benson",
+  "materials": "Red and brown brick with rubbed brick dressings, Portland stone and a lead roof",
+  "grade": "I",
+  "nhle": "",
+  "note": "Not a palace built as one, but a Jacobean merchant's house at Kensington that William III bought in 1689 because Whitehall's river air ruined his asthma. Wren wrapped pavilions round it at speed, in brick rather than stone, because the King wanted a private house and not a state one. The result is domestic in scale and materials and set the tone for English court building for a generation. The south front here carries giant brick pilasters against darker stock brick, a dentilled cornice and an attic centrepiece with urns.",
+  "tell": "Brick doing the work of a stone order, giant pilasters in rubbed red brick against browner stock, and a wooden dentilled cornice rather than a carved entablature, is the William and Mary court manner of about 1690 to 1700. Beware the windows: many of these sashes were reglazed later, so the bars are thinner than they should be for the 1690s.",
+  "photo": "photos/54_Kensington_Palace.jpg",
+  "credit": ""
+ },
+ {
+  "id": "55_Oxburgh_Hall",
+  "title": "Oxburgh Hall",
+  "place": "Norfolk",
+  "address": "Oxborough, King's Lynn, Norfolk PE33 9PS",
+  "lat": 52.5876,
+  "lon": 0.5333,
+  "dates": "1482, remodelled 1830s and 1860s to 1870s",
+  "range": [
+   1482,
+   1482
+  ],
+  "phases": [],
+  "architect": "Built for Sir Edmund Bedingfeld; Victorian remodelling by J C Buckler and others",
+  "materials": "Red brick with dark blue diaper patterning and limestone dressings, set in a moat",
+  "grade": "I",
+  "nhle": "",
+  "note": "A moated brick manor house begun in 1482 under a licence to crenellate, and still owned by the family that built it. The gatehouse is the great survival: seven storeys of brick with polygonal turrets, a four centred arch and diaper patterning in burnt headers, built for display rather than defence at the point when brick was still an expensive imported taste in England. Much of the rest was heavily remodelled in the nineteenth century in a Tudor manner, so the house is a lesson in telling real late medieval brick from Victorian sympathy.",
+  "tell": "Late medieval brick shows dark blue diaper patterns made from over burnt headers, four centred arches, moulded brick mullions and crow stepped or shaped gables, with no classical detail anywhere. Victorian Tudor next to it is too even: machine pressed brick of uniform colour, sharp arrises and larger panes of glass.",
+  "photo": "photos/55_Oxburgh_Hall.jpg",
+  "credit": ""
+ },
+ {
+  "id": "56_SIS_Building_Vauxhall_Cross",
+  "title": "SIS Building (Vauxhall Cross)",
+  "place": "London",
+  "address": "85 Albert Embankment, Vauxhall, London SE1 7TP",
+  "lat": 51.4875,
+  "lon": -0.124,
+  "dates": "1988 to 1994",
+  "range": [
+   1988,
+   1994
+  ],
+  "phases": [],
+  "architect": "Terry Farrell and Partners for the Secret Intelligence Service",
+  "materials": "Precast concrete cladding in a sand colour, with green tinted triple glazing and bronze anodised metalwork",
+  "grade": "",
+  "nhle": "",
+  "note": "Farrell's headquarters for MI6 on the south bank at Vauxhall, and the most conspicuous secret building in Britain. The massing is a stepped ziggurat, symmetrical about a central tower, with the setbacks reading as a temple platform borrowed from Mesopotamia by way of nineteen thirties cinema architecture. The green glass and sand coloured precast are chosen for effect rather than structure, and the whole thing is armoured, with blast resistant glazing and a moat like sunken perimeter. It has been blown up on screen more often than any other London building.",
+  "tell": "Stepped ziggurat massing, symmetry, coloured glass and precast panels imitating stone are Postmodernism, roughly 1985 to 1995. It is easily told from High Tech of the same years, which exposes structure and services, and from Brutalism twenty years earlier, which leaves raw concrete poured in place.",
+  "photo": "photos/56_SIS_Building_Vauxhall_Cross.jpg",
+  "credit": ""
+ },
+ {
+  "id": "57_Pierhead_Building",
+  "title": "Pierhead Building",
+  "place": "Cardiff",
+  "address": "Pierhead Street, Cardiff Bay, Cardiff CF10 4PZ",
+  "lat": 51.464,
+  "lon": -3.163,
+  "dates": "1897",
+  "range": [
+   1897,
+   1897
+  ],
+  "phases": [],
+  "architect": "William Frame for the Bute Dock Company",
+  "materials": "Bright red Ruabon terracotta and brick with slate roofs",
+  "grade": "I",
+  "nhle": "",
+  "note": "Built as the headquarters of the Bute Dock Company at the height of Cardiff's coal boom, when the city was shipping more coal than anywhere on earth. William Frame trained under William Burges and the debt shows: a French Gothic Renaissance pile in vivid red terracotta, with a hexagonal clock tower, steep slated roofs, corner turrets and a parade of moulded panels and gargoyles. The clock was known as Baby Big Ben. It survived the docks' collapse and now stands almost alone as the Victorian survivor among the new buildings of Cardiff Bay.",
+  "tell": "Machine moulded terracotta in a uniform bright red, with the same ornament repeated bay after bay, is post 1870 and usually 1880 to 1905. French Gothic detail on a commercial office, rather than a church or a town hall, points to the confident dock and railway companies of the 1890s.",
+  "photo": "photos/57_Pierhead_Building.jpg",
+  "credit": ""
+ },
+ {
+  "id": "58_Eilean_Donan_Castle",
+  "title": "Eilean Donan Castle",
+  "place": "Highland",
+  "address": "Dornie, Kyle of Lochalsh, Highland IV40 8DX",
+  "lat": 57.274,
+  "lon": -5.516,
+  "dates": "1912 to 1932, on a castle destroyed in 1719",
+  "range": [
+   1912,
+   1932
+  ],
+  "phases": [
+   [
+    1719,
+    1719
+   ]
+  ],
+  "architect": "Reconstructed for Lieutenant Colonel John MacRae-Gilstrap; architect George Mackie Watson",
+  "materials": "Coursed local rubble with harling, slate roofs, concrete floors behind",
+  "grade": "",
+  "nhle": "",
+  "note": "The most photographed castle in Scotland and almost entirely a twentieth century building. A stronghold stood on the islet from the thirteenth century, but it was blown up by Royal Navy frigates in 1719 during the Jacobite rising and lay as a low heap of rubble for nearly two hundred years. MacRae-Gilstrap bought the island in 1911 and rebuilt from 1912 to 1932, working partly from a set of plans said to have come to a stonemason in a dream. The arched bridge is part of the reconstruction. Behind the medieval manner are concrete floors and twentieth century services.",
+  "tell": "The tells are all in the regularity. Rubble coursed too evenly, window openings of matching size marching across the wall, plate glass in every one of them and crisp square arrises on the dressings. Genuine medieval work is irregular, has very few openings and those are small, deep and unequal. If a castle looks complete and comfortable, suspect a rebuild.",
+  "photo": "photos/58_Eilean_Donan_Castle.jpg",
+  "credit": ""
+ },
+ {
+  "id": "59_Terrace_with_the_Headington_Shark",
+  "title": "Terrace with the Headington Shark",
+  "place": "Oxford",
+  "address": "2 New High Street, Headington, Oxford OX3 7AQ",
+  "lat": 51.7605,
+  "lon": -1.2086,
+  "dates": "c.1860 to 1880, shark installed 1986",
+  "range": [
+   1860,
+   1880
+  ],
+  "phases": [
+   [
+    1986,
+    1986
+   ]
+  ],
+  "architect": "Speculative builder unknown; shark by John Buckley for Bill Heine",
+  "materials": "Red brick with slate roof, timber sash windows and small gabled porches",
+  "grade": "",
+  "nhle": "",
+  "note": "An entirely ordinary Victorian terrace in an Oxford suburb, with a seven metre fibreglass shark head first through the roof. Bill Heine had it installed on 9 August 1986, the forty first anniversary of Nagasaki, without permission. Oxford City Council fought to remove it for six years, and the case went to the Secretary of State, whose inspector ruled that the shark could stay. In 2022 the house was given Grade II listing status by the council as a building of local interest, shark included, which is the only reason most people have ever looked closely at a row like this.",
+  "tell": "Ignore the shark and read the terrace. Two storeys of red brick with segmental arches over the openings, plain stone or brick cills, a low pitched slate roof and paired sashes are the speculative builder's standard from the 1860s onward. Once the glazing bars have gone from the sashes, leaving one or two panes, you are after about 1855.",
+  "photo": "photos/59_Terrace_with_the_Headington_Shark.jpg",
+  "credit": ""
+ },
+ {
+  "id": "60_Trellick_Tower",
+  "title": "Trellick Tower",
+  "place": "London",
+  "address": "Golborne Road, Kensal Town, London W10 5PL",
+  "lat": 51.5241,
+  "lon": -0.2058,
+  "dates": "1968 to 1972",
+  "range": [
+   1968,
+   1972
+  ],
+  "phases": [],
+  "architect": "Ernő Goldfinger for the Greater London Council",
+  "materials": "Board marked in situ and precast reinforced concrete, thirty one storeys",
+  "grade": "II*",
+  "nhle": "",
+  "note": "Goldfinger's last and largest building, and the twin of his earlier Balfron Tower in Poplar. The plan separates living from servicing completely: flats in the slab, and lifts, stairs, rubbish chutes and the boiler house in a detached tower linked by bridges every third floor, which lets the flats run through the building and get light from both sides. It was vandalised and feared through the 1980s, listed in 1998, and is now sought after. The top of the service tower holds the boiler house, which is why the silhouette is so odd.",
+  "tell": "Board marked concrete left raw, a service tower held away from the slab and joined by bridges, and deep recessed balconies are British Brutalism of roughly 1965 to 1975. Fifties towers are lighter and thinner with tiled or rendered panels; eighties towers hide their concrete behind cladding or brick.",
+  "photo": "photos/60_Trellick_Tower.jpg",
+  "credit": ""
+ },
+ {
+  "id": "61_Norfolk_and_Suffolk_Terraces_University_of_East_Anglia",
+  "title": "Norfolk and Suffolk Terraces, University of East Anglia",
+  "place": "Norfolk",
+  "address": "University Drive, Norwich, Norfolk NR4 7TJ",
+  "lat": 52.6222,
+  "lon": 1.241,
+  "dates": "1962 to 1968",
+  "range": [
+   1962,
+   1968
+  ],
+  "phases": [],
+  "architect": "Sir Denys Lasdun for the University of East Anglia",
+  "materials": "Precast and in situ reinforced concrete with continuous glazing to the stepped terraces",
+  "grade": "II*",
+  "nhle": "",
+  "note": "Student residences stepped down the valley of the Yare in a zigzag section, universally known as the Ziggurats. Each study bedroom gets its own terrace from the step of the one below, and the breakfast rooms sit in the projecting glazed prows. Lasdun called his approach architecture as strata and landscape, and it is the same idea he took to the National Theatre a few years later, worked out here first. The service towers rising above the terraces carry the stairs and plant.",
+  "tell": "A stepped section where every floor is set back to make a terrace, in raw concrete with continuous glazing along each step, is British Brutalism of about 1960 to 1972. Lasdun's work is recognisably horizontal, built up in layers rather than composed as towers, which sets it apart from the point blocks of the same years.",
+  "photo": "photos/61_Norfolk_and_Suffolk_Terraces_University_of_East_Anglia.jpg",
+  "credit": ""
+ },
+ {
+  "id": "62_Quay_House_the_Smallest_House_in_Great_Britain",
+  "title": "Quay House, the Smallest House in Great Britain",
+  "place": "Conwy County Borough",
+  "address": "The Quay, Conwy, Conwy County Borough LL32 8BB",
+  "lat": 53.282,
+  "lon": -3.828,
+  "dates": "16th century, last occupied 1900",
+  "range": [
+   1900,
+   1900
+  ],
+  "phases": [],
+  "architect": "Builder unknown",
+  "materials": "Rubble stone with lime render, slate roof, painted red",
+  "grade": "II",
+  "nhle": "",
+  "note": "A one up one down infill house wedged against the town wall on Conwy quay, 3.05 metres by 1.8 metres, with a staircase too narrow for its last tenant, a fisherman of six foot three who could not stand upright in it. Condemned as unfit in 1900 and saved as a curiosity by the owner, who toured Britain to prove nothing smaller existed. It is a scrap of ordinary sixteenth century town building that survived only by being too odd to demolish, which is the opposite of how the rest of this list survived.",
+  "tell": "Small town vernacular barely changes for two hundred years, so read it as a wide bracket rather than a decade. Rubble walls, a steep slate pitch, tiny unequal openings and a chimney enormous in proportion to the plan are pre Georgian, roughly 1500 to 1750. Regular sashes and symmetry on the neighbours are the later refronting.",
+  "photo": "photos/62_Quay_House_the_Smallest_House_in_Great_Britain.jpg",
+  "credit": ""
+ },
+ {
+  "id": "63_Wales_Millennium_Centre",
+  "title": "Wales Millennium Centre",
+  "place": "Cardiff",
+  "address": "Bute Place, Cardiff Bay, Cardiff CF10 5AL",
+  "lat": 51.465,
+  "lon": -3.162,
+  "dates": "2002 to 2004",
+  "range": [
+   2002,
+   2004
+  ],
+  "phases": [],
+  "architect": "Jonathan Adams of Percy Thomas Architects; inscription by Gwyneth Lewis",
+  "materials": "Bronzed stainless steel shell over a steel frame, with banded Welsh slate from Penrhyn, Ffestiniog and Corris, and glass",
+  "grade": "",
+  "nhle": "",
+  "note": "A national arts centre built for Wales after an earlier opera house scheme was abandoned, and designed to look like it grew out of the ground it stands on. The slate is laid in bands of different Welsh quarries so the walls read as strata, and the bronzed shell above is meant to suggest the hull of a ship on a dock that once shipped coal. Gwyneth Lewis's two lines, one Welsh and one English, are cut clean through the shell so they light the foyer by day and glow at night. The lettering is the building's structure, not applied to it.",
+  "tell": "Millennium buildings of about 1998 to 2010 look like this: a curved metal shell over a fully glazed public frontage, regionally sourced material used symbolically rather than structurally, and a big legible gesture aimed at civic identity. It is a generation past High Tech, which exposes its services, and past Postmodernism, which quotes classical form.",
+  "photo": "photos/63_Wales_Millennium_Centre.jpg",
+  "credit": ""
+ },
+ {
+  "id": "64_Raglan_Castle",
+  "title": "Raglan Castle",
+  "place": "Monmouthshire",
+  "address": "Raglan, Usk, Monmouthshire NP15 2BT",
+  "lat": 51.764,
+  "lon": -2.852,
+  "dates": "1432 to 1469, Elizabethan remodelling 1560s to 1580s, slighted 1646",
+  "range": [
+   1432,
+   1469
+  ],
+  "phases": [
+   [
+    1646,
+    1646
+   ]
+  ],
+  "architect": "Begun for Sir William ap Thomas, continued by his son William Herbert, Earl of Pembroke",
+  "materials": "Old Red Sandstone rubble and ashlar with Bath stone dressings",
+  "grade": "I",
+  "nhle": "",
+  "note": "The last true castle built in England or Wales, and one built for magnificence rather than war. Ap Thomas began the hexagonal Great Tower, the Yellow Tower of Gwent, in the 1430s, and his son turned the rest into a courtyard palace with a gatehouse of real swagger. The Somersets added long galleries and formal gardens in the Elizabethan decades. It held out for Parliament's siege in 1646 longer than almost anywhere, and was then deliberately slighted, which is why the Great Tower stands with one side torn away.",
+  "tell": "Look at the windows. Large mullioned and transomed openings in a castle mean the fifteenth century or later, when defence has become display. Machicolations and gunports here are as much ornament as armament, and the tall stacks and traceried hall windows are those of a house wearing a castle's clothes.",
+  "photo": "photos/64_Raglan_Castle.jpg",
+  "credit": ""
+ }
+]

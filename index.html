@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Milestone</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500&family=Manrope:wght@200;300;400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1 class="mark">MILE<span>STONE</span></h1>
+      <div class="tagline">Read the fabric &middot; name the decade &middot; place the building</div>
+    </div>
+    <div class="progress">
+      <span class="roundlab" id="roundlab">Round 1 / 5</span><span id="pips"></span>
+      <button class="zbtn wide" id="reshuffle" title="Skip today's five and draw another set">New five</button>
+    </div>
+  </header>
+
+  <div class="stage">
+    <div class="plate">
+      <div class="plate-img" id="plateimg">
+        <div class="corner tl"></div><div class="corner tr"></div>
+        <div class="corner bl"></div><div class="corner br"></div>
+      </div>
+      <div class="plate-bar">
+        <span id="platecap">Full frame</span>
+        <div class="zoomer">
+          <button class="zbtn" id="pzout" aria-label="Zoom out" disabled>&minus;</button>
+          <span class="zlab" id="pzlab">1.0&times;</span>
+          <button class="zbtn" id="pzin" aria-label="Zoom in">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-card">
+      <div class="map-head">
+        <p class="label" style="margin:0">Where is it?</p>
+        <div class="zoomer">
+          <button class="zbtn wide" id="mapreset">Whole country</button>
+          <button class="zbtn wide" id="mapexpand" aria-pressed="false">Expand</button>
+        </div>
+      </div>
+      <div id="map"></div>
+      <p class="mapnote" id="mapnote">Click the map to drop a pin, then drag it to fine-tune.</p>
+    </div>
+  </div>
+
+  <div class="ruler-card">
+    <div class="ruler-head">
+      <p class="label" style="margin:0">When was it built?</p>
+      <div class="readout" id="readout">1700s<small>decade</small></div>
+    </div>
+    <svg id="ruler" viewBox="0 0 1000 98" role="slider" tabindex="0"
+         aria-label="Date of construction" aria-valuemin="1000" aria-valuemax="2025"></svg>
+  </div>
+
+  <div class="clue-card">
+    <div class="clue-head">
+      <p class="label" style="margin:0">Stuck?</p>
+      <span class="cluecost" id="cluecost">3 clues left this game</span>
+    </div>
+    <div class="clues" id="clues"></div>
+  </div>
+
+  <div class="actions">
+    <button class="btn" id="submit" disabled>Date it</button>
+    <span class="hint" id="hint">Drop a pin and set the date</span>
+  </div>
+
+  <section class="reveal" id="reveal" aria-live="polite">
+    <div>
+      <h2 class="rev-title" id="revtitle"></h2>
+      <p class="rev-sub" id="revsub"></p>
+    </div>
+    <dl class="scores">
+      <div class="score"><dt>Date</dt><dd id="sdate"></dd></div>
+      <div class="score"><dt>Place</dt><dd id="splace"></dd></div>
+      <div class="score"><dt>Round</dt><dd id="sround"></dd></div>
+    </dl>
+    <p class="tell" id="telltext"></p>
+    <p class="revnote" id="revnote"></p>
+    <p class="credit" id="revcredit"></p>
+    <div class="actions"><button class="btn" id="next">Next building</button></div>
+  </section>
+
+  <section class="final" id="final">
+    <div>
+      <p class="label" style="margin:0">Today's score</p>
+      <p class="total" id="totaltxt"></p>
+    </div>
+    <p class="grid-share" id="sharegrid"></p>
+    <p class="legend">Top row: date. Bottom row: place.</p>
+    <div class="actions">
+      <button class="btn" id="copy">Copy result</button>
+      <button class="btn ghost" id="again">Another five</button>
+    </div>
+  </section>
+
+  <footer>
+    <h3>Milestone</h3>
+    <p>A daily game about reading buildings. Guess when it was built and where it stands.
+    Scoring is fifty for the date, fifty for the place, and the day's score is the average
+    of the five rounds.</p>
+    <p id="attrib"></p>
+  </footer>
+</div>
+
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="js/ruler.js"></script>
+<script src="js/scoring.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

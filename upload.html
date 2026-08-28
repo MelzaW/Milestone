@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Milestone · photographs</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400&family=Manrope:wght@200;300;400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .wrap{max-width:880px}
+  .rows{display:flex;flex-direction:column;gap:1px;background:var(--rule);
+    border:1px solid var(--rule);border-radius:2px;overflow:hidden}
+  .row{display:grid;grid-template-columns:74px 1fr auto;gap:14px;align-items:center;
+    background:var(--panel);padding:10px 14px}
+  .row.has{background:var(--plate)}
+  .row.drop{outline:2px dashed var(--accent);outline-offset:-4px}
+  .thumb{width:74px;height:56px;object-fit:cover;border:1px solid var(--rule);
+    background:var(--hair);border-radius:2px}
+  .thumb.empty{display:flex;align-items:center;justify-content:center;
+    font-family:"DM Mono",monospace;font-size:9px;color:var(--lead);letter-spacing:.1em}
+  .who{min-width:0}
+  .who b{font-weight:600;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .who span{font-family:"DM Mono",monospace;font-size:11px;color:var(--lead)}
+  .pick{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.1em;
+    text-transform:uppercase;border:1px solid var(--rule);background:transparent;
+    color:var(--ink);border-radius:2px;padding:7px 12px;cursor:pointer}
+  .pick:hover{border-color:var(--accent);color:var(--accent)}
+  .bar{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .count{font-family:"DM Mono",monospace;font-size:12px;color:var(--lead)}
+  .ok{color:var(--accent)} .bad{color:var(--ochre)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1 class="mark">PHOTO&shy;<span>GRAPHS</span></h1>
+      <div class="tagline">Drag a picture onto a building, or click to choose one</div>
+    </div>
+    <span class="count" id="count"></span>
+  </header>
+
+  <div class="bar">
+    <button class="btn ghost" id="filter">Show only the ones still missing</button>
+    <span class="count" id="status"></span>
+  </div>
+
+  <div class="rows" id="rows"></div>
+
+  <footer>
+    <h3>How this works</h3>
+    <p>Files are saved into <code>photos/</code> named after the building, downscaled to
+    1600px if Pillow is installed, and <code>build.py</code> is re-run so the game picks
+    them up. Reload the game to see them.</p>
+    <p>Only use pictures you have the right to use. Wikimedia Commons and Geograph are
+    both fine with a credit; search results generally are not. If you fetched them with
+    <code>get_photos.py</code>, keep <code>photos/credits.csv</code> beside them and the
+    credits appear in the game automatically.</p>
+  </footer>
+</div>
+
+<script>
+let all = [], onlyMissing = false;
+
+function render(){
+  const list = onlyMissing ? all.filter(b => !b.photo) : all;
+  document.getElementById('rows').innerHTML = list.map(b => `
+    <div class="row ${b.photo ? 'has' : ''}" data-id="${b.id}">
+      ${b.photo
+        ? `<img class="thumb" src="${b.photo}?t=${Date.now()}" alt="">`
+        : `<div class="thumb empty">NONE</div>`}
+      <div class="who"><b>${b.title}</b><span>${b.dates} · ${b.place}</span></div>
+      <button class="pick" data-id="${b.id}">${b.photo ? 'Replace' : 'Add'}</button>
+    </div>`).join('');
+  const have = all.filter(b => b.photo).length;
+  document.getElementById('count').textContent = `${have} of ${all.length} have a photograph`;
+}
+
+async function send(id, file){
+  const ext = (file.name.match(/\.[a-z0-9]+$/i) || ['.jpg'])[0].toLowerCase();
+  const status = document.getElementById('status');
+  status.textContent = `uploading ${file.name}…`;
+  status.className = 'count';
+  try {
+    const res = await fetch(`/upload/${id}${ext}`, {method:'PUT', body:file});
+    const out = await res.json();
+    if (!res.ok) throw new Error(out.error || res.statusText);
+    status.textContent = `saved ${out.saved} (${Math.round(out.bytes/1024)} KB)`;
+    status.className = 'count ok';
+    await load();
+  } catch (e){
+    status.textContent = 'failed: ' + e.message;
+    status.className = 'count bad';
+  }
+}
+
+document.addEventListener('click', e=>{
+  const btn = e.target.closest('.pick');
+  if (!btn) return;
+  const input = document.createElement('input');
+  input.type = 'file'; input.accept = 'image/*';
+  input.onchange = () => { if (input.files[0]) send(btn.dataset.id, input.files[0]); };
+  input.click();
+});
+document.addEventListener('dragover', e=>{
+  const row = e.target.closest('.row');
+  if (row){ e.preventDefault(); row.classList.add('drop'); }
+});
+document.addEventListener('dragleave', e=>{
+  const row = e.target.closest('.row'); if (row) row.classList.remove('drop');
+});
+document.addEventListener('drop', e=>{
+  const row = e.target.closest('.row');
+  if (!row) return;
+  e.preventDefault(); row.classList.remove('drop');
+  const f = e.dataTransfer.files[0];
+  if (f) send(row.dataset.id, f);
+});
+document.getElementById('filter').addEventListener('click', e=>{
+  onlyMissing = !onlyMissing;
+  e.target.textContent = onlyMissing ? 'Show all buildings' : 'Show only the ones still missing';
+  render();
+});
+
+async function load(){
+  const res = await fetch('/api/buildings');
+  all = await res.json();
+  render();
+}
+load().catch(()=> {
+  document.getElementById('rows').innerHTML =
+    '<div class="row"><div class="who"><b>Could not reach the server.</b>' +
+    '<span>Run python3 serve.py and open this page from localhost.</span></div></div>';
+});
+</script>
+</body>
+</html>
