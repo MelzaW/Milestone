@@ -239,6 +239,11 @@ function noteClues(){
 
 /* ---------- rounds ---------- */
 const seedDay = () => Math.floor(Date.parse(new Date().toDateString())/86400000);
+
+/* Bump this to re-deal every day's hand, including today's. Useful when the
+   pool has grown and you want the daily puzzle to pick up the new material
+   rather than waiting for tomorrow. */
+const SEED_SALT = 3;
 let seen = new Set();
 
 /* The day's hand is seeded off the date, so offset 0 is the same five for
@@ -247,7 +252,7 @@ let seen = new Set();
    work through the whole collection instead of drawing blind each time. */
 function pickRound(offset){
   const ordered = POOL
-    .map((b,i)=>({b, k:(Math.sin(seedDay() + offset*97 + i*31.7)*10000)%1}))
+    .map((b,i)=>({b, k:(Math.sin(seedDay() + SEED_SALT + offset*97 + i*31.7)*10000)%1}))
     .sort((x,y)=>x.k-y.k)
     .map(o=>o.b);
   const fresh = ordered.filter(b => !seen.has(b.id));

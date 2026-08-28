@@ -60,9 +60,11 @@ body{
 /* ---------- header ---------- */
 header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;
   border-bottom:1px solid var(--rule);padding-bottom:14px}
-.mark{font-family:"Bricolage Grotesque",Manrope,sans-serif;font-weight:400;font-size:clamp(28px,4.8vw,42px);
-  letter-spacing:-.005em;line-height:1;margin:0}
-.mark span{color:var(--accent)}
+/* The wordmark is laid in brick: every letter is built from courses in running
+   bond, alternate courses offset half a brick, mortar joints left as gaps.
+   currentColor, so it is simply the ink colour and inverts with the theme. */
+.markwrap{margin:0;line-height:0;color:var(--ink)}
+.mark{display:block;width:clamp(210px,32vw,330px);height:auto}
 .tagline{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--lead);margin-top:8px}
 .progress{display:flex;gap:6px;align-items:center}
