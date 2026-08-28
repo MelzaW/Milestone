@@ -95,10 +95,14 @@ tested directly.
 
 ### The ruler
 
-Linear time wastes the slider. Half of what stands in Britain went up after
-1945 and almost nothing survives from before 1600, so the ruler compresses the
-early centuries and expands the modern decades: centuries before 1300, decades
-to 1945, half-decades after. It snaps to whichever grain you are in.
+One even scale from 1000 to 2025. Every century occupies the same width and the
+grain is a decade throughout, so a year is worth the same distance wherever you
+are on it.
+
+It used to be non-linear, compressing the early centuries and expanding the
+modern decades on the grounds that most of what stands in Britain is recent.
+That was defensible but it made the slider behave differently depending on where
+you were holding it, which is worse than the problem it solved.
 
 ### The map
 

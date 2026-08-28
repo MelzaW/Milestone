@@ -10,6 +10,9 @@
   --accent:#9E7C38;
   --accent-dim:#9E7C3822;
   --ochre:#A4442B;
+  --go:#2E7D4F;
+  --go-dim:#2E7D4F14;
+  --stop-dim:#A4442B14;
   --gold:#8A6A22;
   --shadow:0 1px 0 #FFFFFFAA, 0 10px 30px -18px #1B1E2055;
 }
@@ -25,6 +28,9 @@
     --accent:#E0C48F;
     --accent-dim:#E0C48F22;
     --ochre:#DE8264;
+    --go:#78C494;
+    --go-dim:#78C49418;
+    --stop-dim:#DE826418;
     --gold:#C8A44E;
     --shadow:0 1px 0 #FFFFFF08, 0 12px 34px -20px #000000AA;
   }
@@ -40,6 +46,9 @@
   --accent:#E0C48F;
   --accent-dim:#E0C48F22;
   --ochre:#DE8264;
+  --go:#78C494;
+  --go-dim:#78C49418;
+  --stop-dim:#DE826418;
   --gold:#C8A44E;
   --shadow:0 1px 0 #FFFFFF08, 0 12px 34px -20px #000000AA;
 }
@@ -82,7 +91,25 @@ header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
 @media (max-width:960px){.stage{grid-template-columns:1fr}}
 /* expanded: the map takes the full width and the photograph drops below it */
 .stage.mapfull{grid-template-columns:1fr}
-.stage.mapfull .map-card{order:-1}
+.stage.mapfull .map-card{order:-1;position:relative}
+/* Expanded, the photograph would otherwise scroll off below the map, which is
+   no use when you are trying to place the building you are looking at. Pin a
+   thumbnail into the corner of the map instead; click it to zoom it up. */
+.stage.mapfull .plate{display:none}
+.minishot{display:none}
+.stage.mapfull .minishot{
+  display:block;position:absolute;right:22px;top:60px;z-index:500;
+  width:clamp(150px,20vw,240px);aspect-ratio:4/3;overflow:hidden;
+  border:1px solid var(--rule);background:var(--plate);
+  box-shadow:0 6px 22px -10px #00000066;border-radius:2px;cursor:zoom-in;padding:0}
+.stage.mapfull .minishot.big{width:clamp(280px,42vw,520px);cursor:zoom-out}
+.minishot img{width:100%;height:100%;object-fit:cover;display:block}
+.minishot .msbar{position:absolute;left:0;right:0;bottom:0;padding:3px 6px;
+  font-family:"DM Mono",monospace;font-size:9px;letter-spacing:.1em;
+  text-transform:uppercase;color:#fff;background:#00000099;text-align:left}
+@media (max-width:700px){
+  .stage.mapfull .minishot{right:10px;top:52px;width:120px}
+}
 
 /* ---------- plate ---------- */
 .plate{background:var(--plate);border:1px solid var(--rule);box-shadow:var(--shadow);
@@ -225,24 +252,31 @@ footer p{max-width:72ch}
 .clue{border:1px solid var(--rule);border-radius:2px;background:transparent;color:var(--ink);
   padding:10px;text-align:left;cursor:pointer;font-family:inherit;font-size:13px;line-height:1.4;
   min-height:64px;display:flex;flex-direction:column;gap:5px}
-.clue:hover:not(:disabled){border-color:var(--accent)}
+.clue:hover:not(:disabled){border-color:var(--go);background:var(--go-dim)}
 .clue:disabled{cursor:default}
 .clue .ct{font-family:"DM Mono",monospace;font-size:9.5px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--lead)}
-.clue.open{border-color:var(--accent);background:var(--accent-dim)}
-.clue.open .ct{color:var(--accent)}
+
+/* Green while the clue is still yours to spend, red once it is spent. Clues the
+   game has simply run out of are neither: they read as unavailable, not used. */
+.clue{border-color:var(--go)}
+.clue .ct{color:var(--go)}
+.clue.open{border-color:var(--ochre);background:var(--stop-dim)}
+.clue.open .ct{color:var(--ochre)}
+.clue:disabled:not(.open){border-color:var(--rule);opacity:.45}
+.clue:disabled:not(.open) .ct{color:var(--lead)}
 
 /* ---------- background ----------
    White, with a scattered course of bricks rather than a whole wall. Faint
    enough to read as texture at arm's length and to vanish once you are actually
    looking at a photograph. Fixed, so it does not slide about as the page moves. */
 body{
-  background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22384%22%20height%3D%22176%22%20viewBox%3D%220%200%20384%20176%22%3E%3Cg%20fill%3D%22%23000000%22%20fill-opacity%3D%220.055%22%3E%3Crect%20x%3D%2296.0%22%20y%3D%2222.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22224.0%22%20y%3D%2222.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22416.0%22%20y%3D%2222.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22192.0%22%20y%3D%2244.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22256.0%22%20y%3D%2244.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22384.0%22%20y%3D%2244.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2296.0%22%20y%3D%2266.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22160.0%22%20y%3D%22110.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2264.0%22%20y%3D%22132.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22-32.0%22%20y%3D%22154.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22224.0%22%20y%3D%22154.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22384%22%20height%3D%22176%22%20viewBox%3D%220%200%20384%20176%22%3E%3Cg%20fill%3D%22%23000000%22%20fill-opacity%3D%220.055%22%3E%3Cpath%20d%3D%22M-65.2%2C-0.3%20Q-33.3%2C-0.3%20-2.4%2C-1.2%20L-4.2%2C18.1%20Q-34.4%2C18.1%20-63.2%2C17.9%20Z%22%2F%3E%3Cpath%20d%3D%22M190.5%2C1.4%20Q221.0%2C0.4%20252.7%2C-1.0%20L252.5%2C18.6%20Q223.1%2C19.5%20193.5%2C18.1%20Z%22%2F%3E%3Cpath%20d%3D%22M96.8%2C23.2%20Q126.6%2C20.9%20157.5%2C21.1%20L157.9%2C41.7%20Q126.2%2C41.2%2095.0%2C41.5%20Z%22%2F%3E%3Cpath%20d%3D%22M383.0%2C45.3%20Q415.2%2C44.2%20445.3%2C44.6%20L443.7%2C62.7%20Q414.4%2C63.9%20385.3%2C63.5%20Z%22%2F%3E%3Cpath%20d%3D%22M158.7%2C67.5%20Q189.2%2C67.0%20219.8%2C65.0%20L220.5%2C85.7%20Q190.4%2C85.0%20161.1%2C84.9%20Z%22%2F%3E%3Cpath%20d%3D%22M350.8%2C64.8%20Q383.2%2C65.3%20413.7%2C66.6%20L414.5%2C85.9%20Q381.9%2C85.5%20351.2%2C85.8%20Z%22%2F%3E%3Cpath%20d%3D%22M-1.2%2C89.2%20Q28.5%2C88.6%2059.6%2C88.4%20L60.1%2C106.0%20Q30.9%2C106.3%201.0%2C106.4%20Z%22%2F%3E%3Cpath%20d%3D%22M30.8%2C110.9%20Q61.5%2C111.0%2093.8%2C111.4%20L93.6%2C129.3%20Q61.6%2C129.4%2030.9%2C130.1%20Z%22%2F%3E%3Cpath%20d%3D%22M64.4%2C133.3%20Q94.1%2C131.4%20124.2%2C131.0%20L126.0%2C150.6%20Q94.3%2C150.9%2063.7%2C152.0%20Z%22%2F%3E%3Cpath%20d%3D%22M319.2%2C132.4%20Q350.0%2C131.7%20380.9%2C132.0%20L382.4%2C150.3%20Q350.6%2C148.6%20319.0%2C149.5%20Z%22%2F%3E%3Cpath%20d%3D%22M383.6%2C132.8%20Q414.2%2C134.0%20444.4%2C133.3%20L445.3%2C150.7%20Q415.2%2C149.9%20384.9%2C150.1%20Z%22%2F%3E%3Cpath%20d%3D%22M-31.8%2C153.0%20Q-2.0%2C153.3%2028.6%2C154.1%20L30.4%2C173.6%20Q-0.4%2C174.0%20-31.9%2C174.1%20Z%22%2F%3E%3Cpath%20d%3D%22M353.5%2C154.6%20Q383.9%2C154.1%20412.4%2C155.5%20L413.9%2C171.6%20Q381.7%2C171.8%20351.2%2C173.0%20Z%22%2F%3E%3Cpath%20d%3D%22M415.7%2C154.1%20Q446.2%2C154.0%20476.8%2C152.9%20L475.5%2C174.0%20Q446.4%2C174.3%20415.8%2C172.9%20Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
   background-size:384px 176px;
   background-repeat:repeat;
   background-attachment:fixed;
 }
-:root[data-theme="dark"] body{ background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22384%22%20height%3D%22176%22%20viewBox%3D%220%200%20384%20176%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.07%22%3E%3Crect%20x%3D%2296.0%22%20y%3D%2222.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22224.0%22%20y%3D%2222.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22416.0%22%20y%3D%2222.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22192.0%22%20y%3D%2244.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22256.0%22%20y%3D%2244.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22384.0%22%20y%3D%2244.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2296.0%22%20y%3D%2266.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22160.0%22%20y%3D%22110.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2264.0%22%20y%3D%22132.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22-32.0%22%20y%3D%22154.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22224.0%22%20y%3D%22154.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
+:root[data-theme="dark"] body{ background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22384%22%20height%3D%22176%22%20viewBox%3D%220%200%20384%20176%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.07%22%3E%3Cpath%20d%3D%22M-65.2%2C-0.3%20Q-33.3%2C-0.3%20-2.4%2C-1.2%20L-4.2%2C18.1%20Q-34.4%2C18.1%20-63.2%2C17.9%20Z%22%2F%3E%3Cpath%20d%3D%22M190.5%2C1.4%20Q221.0%2C0.4%20252.7%2C-1.0%20L252.5%2C18.6%20Q223.1%2C19.5%20193.5%2C18.1%20Z%22%2F%3E%3Cpath%20d%3D%22M96.8%2C23.2%20Q126.6%2C20.9%20157.5%2C21.1%20L157.9%2C41.7%20Q126.2%2C41.2%2095.0%2C41.5%20Z%22%2F%3E%3Cpath%20d%3D%22M383.0%2C45.3%20Q415.2%2C44.2%20445.3%2C44.6%20L443.7%2C62.7%20Q414.4%2C63.9%20385.3%2C63.5%20Z%22%2F%3E%3Cpath%20d%3D%22M158.7%2C67.5%20Q189.2%2C67.0%20219.8%2C65.0%20L220.5%2C85.7%20Q190.4%2C85.0%20161.1%2C84.9%20Z%22%2F%3E%3Cpath%20d%3D%22M350.8%2C64.8%20Q383.2%2C65.3%20413.7%2C66.6%20L414.5%2C85.9%20Q381.9%2C85.5%20351.2%2C85.8%20Z%22%2F%3E%3Cpath%20d%3D%22M-1.2%2C89.2%20Q28.5%2C88.6%2059.6%2C88.4%20L60.1%2C106.0%20Q30.9%2C106.3%201.0%2C106.4%20Z%22%2F%3E%3Cpath%20d%3D%22M30.8%2C110.9%20Q61.5%2C111.0%2093.8%2C111.4%20L93.6%2C129.3%20Q61.6%2C129.4%2030.9%2C130.1%20Z%22%2F%3E%3Cpath%20d%3D%22M64.4%2C133.3%20Q94.1%2C131.4%20124.2%2C131.0%20L126.0%2C150.6%20Q94.3%2C150.9%2063.7%2C152.0%20Z%22%2F%3E%3Cpath%20d%3D%22M319.2%2C132.4%20Q350.0%2C131.7%20380.9%2C132.0%20L382.4%2C150.3%20Q350.6%2C148.6%20319.0%2C149.5%20Z%22%2F%3E%3Cpath%20d%3D%22M383.6%2C132.8%20Q414.2%2C134.0%20444.4%2C133.3%20L445.3%2C150.7%20Q415.2%2C149.9%20384.9%2C150.1%20Z%22%2F%3E%3Cpath%20d%3D%22M-31.8%2C153.0%20Q-2.0%2C153.3%2028.6%2C154.1%20L30.4%2C173.6%20Q-0.4%2C174.0%20-31.9%2C174.1%20Z%22%2F%3E%3Cpath%20d%3D%22M353.5%2C154.6%20Q383.9%2C154.1%20412.4%2C155.5%20L413.9%2C171.6%20Q381.7%2C171.8%20351.2%2C173.0%20Z%22%2F%3E%3Cpath%20d%3D%22M415.7%2C154.1%20Q446.2%2C154.0%20476.8%2C152.9%20L475.5%2C174.0%20Q446.4%2C174.3%20415.8%2C172.9%20Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]) body{ background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22384%22%20height%3D%22176%22%20viewBox%3D%220%200%20384%20176%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.07%22%3E%3Crect%20x%3D%2296.0%22%20y%3D%2222.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22224.0%22%20y%3D%2222.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22416.0%22%20y%3D%2222.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22192.0%22%20y%3D%2244.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22256.0%22%20y%3D%2244.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22384.0%22%20y%3D%2244.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2296.0%22%20y%3D%2266.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22160.0%22%20y%3D%22110.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%2264.0%22%20y%3D%22132.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22-32.0%22%20y%3D%22154.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3Crect%20x%3D%22224.0%22%20y%3D%22154.0%22%20width%3D%2261%22%20height%3D%2219%22%20rx%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
+  :root:not([data-theme="light"]) body{ background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22384%22%20height%3D%22176%22%20viewBox%3D%220%200%20384%20176%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.07%22%3E%3Cpath%20d%3D%22M-65.2%2C-0.3%20Q-33.3%2C-0.3%20-2.4%2C-1.2%20L-4.2%2C18.1%20Q-34.4%2C18.1%20-63.2%2C17.9%20Z%22%2F%3E%3Cpath%20d%3D%22M190.5%2C1.4%20Q221.0%2C0.4%20252.7%2C-1.0%20L252.5%2C18.6%20Q223.1%2C19.5%20193.5%2C18.1%20Z%22%2F%3E%3Cpath%20d%3D%22M96.8%2C23.2%20Q126.6%2C20.9%20157.5%2C21.1%20L157.9%2C41.7%20Q126.2%2C41.2%2095.0%2C41.5%20Z%22%2F%3E%3Cpath%20d%3D%22M383.0%2C45.3%20Q415.2%2C44.2%20445.3%2C44.6%20L443.7%2C62.7%20Q414.4%2C63.9%20385.3%2C63.5%20Z%22%2F%3E%3Cpath%20d%3D%22M158.7%2C67.5%20Q189.2%2C67.0%20219.8%2C65.0%20L220.5%2C85.7%20Q190.4%2C85.0%20161.1%2C84.9%20Z%22%2F%3E%3Cpath%20d%3D%22M350.8%2C64.8%20Q383.2%2C65.3%20413.7%2C66.6%20L414.5%2C85.9%20Q381.9%2C85.5%20351.2%2C85.8%20Z%22%2F%3E%3Cpath%20d%3D%22M-1.2%2C89.2%20Q28.5%2C88.6%2059.6%2C88.4%20L60.1%2C106.0%20Q30.9%2C106.3%201.0%2C106.4%20Z%22%2F%3E%3Cpath%20d%3D%22M30.8%2C110.9%20Q61.5%2C111.0%2093.8%2C111.4%20L93.6%2C129.3%20Q61.6%2C129.4%2030.9%2C130.1%20Z%22%2F%3E%3Cpath%20d%3D%22M64.4%2C133.3%20Q94.1%2C131.4%20124.2%2C131.0%20L126.0%2C150.6%20Q94.3%2C150.9%2063.7%2C152.0%20Z%22%2F%3E%3Cpath%20d%3D%22M319.2%2C132.4%20Q350.0%2C131.7%20380.9%2C132.0%20L382.4%2C150.3%20Q350.6%2C148.6%20319.0%2C149.5%20Z%22%2F%3E%3Cpath%20d%3D%22M383.6%2C132.8%20Q414.2%2C134.0%20444.4%2C133.3%20L445.3%2C150.7%20Q415.2%2C149.9%20384.9%2C150.1%20Z%22%2F%3E%3Cpath%20d%3D%22M-31.8%2C153.0%20Q-2.0%2C153.3%2028.6%2C154.1%20L30.4%2C173.6%20Q-0.4%2C174.0%20-31.9%2C174.1%20Z%22%2F%3E%3Cpath%20d%3D%22M353.5%2C154.6%20Q383.9%2C154.1%20412.4%2C155.5%20L413.9%2C171.6%20Q381.7%2C171.8%20351.2%2C173.0%20Z%22%2F%3E%3Cpath%20d%3D%22M415.7%2C154.1%20Q446.2%2C154.0%20476.8%2C152.9%20L475.5%2C174.0%20Q446.4%2C174.3%20415.8%2C172.9%20Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
 }

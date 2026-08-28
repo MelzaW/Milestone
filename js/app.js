@@ -70,6 +70,19 @@ document.getElementById('mapreset').addEventListener('click', ()=>
 /* Expand: the map takes the full column width and the photograph drops below
    it. Leaflet has to be told the box changed size, and it must be told after
    the CSS transition has actually applied, hence the rAF. */
+/* The corner thumbnail shown while the map is expanded. Click to zoom it up,
+   click again to shrink; it never blocks the map for long. */
+function paintMiniShot(){
+  const b = deck[idx], img = document.getElementById('minishotimg');
+  const shot = document.getElementById('minishot');
+  if (b && b.photo){ img.src = b.photo; img.alt = 'The building in this round'; shot.hidden = false; }
+  else { shot.hidden = true; }
+  shot.classList.remove('big');
+}
+document.getElementById('minishot').addEventListener('click', e=>{
+  e.currentTarget.classList.toggle('big');
+});
+
 document.getElementById('mapexpand').addEventListener('click', e=>{
   const stage = document.querySelector('.stage');
   const on = stage.classList.toggle('mapfull');
@@ -275,7 +288,7 @@ function newRound(){
   document.getElementById('roundlab').textContent = `Round ${idx+1} / ${deck.length}`;
   document.getElementById('pips').innerHTML =
     deck.map((_,i)=>`<span class="pip ${i<idx?'done':(i===idx?'now':'')}"></span>`).join('');
-  clearMap(); drawPlate(); paintRuler(); paintClues(); refresh();
+  clearMap(); drawPlate(); paintRuler(); paintClues(); paintMiniShot(); refresh();
   window.scrollTo({top:0, behavior:'smooth'});
 }
 
