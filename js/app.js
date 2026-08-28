@@ -318,7 +318,31 @@ document.getElementById('next').addEventListener('click', ()=>{
 
 /* ---------- final ---------- */
 function band(pts){ return pts >= 42 ? 3 : pts >= 30 ? 2 : pts >= 15 ? 1 : 0; }
-const SQ = ['⬜','🟧','🟨','🟩'];
+/* Red for a bad round rather than white. A blank square reads as "no result"
+   next to the coloured ones; red reads as the result being bad, which is what
+   it is, and the four together run as a traffic light. */
+const SQ = ['🟥','🟧','🟨','🟩'];
+
+/* Whoever you send this to has to be able to get to the game, so the link goes
+   in the shared text. Use wherever the page is actually served from, unless
+   that is a local dev server, which is no use to anyone else. */
+const PUBLIC_URL = 'https://melzaw.github.io/Milestone/';
+const shareUrl = () =>
+  /^https?:$/.test(location.protocol) && !/^(localhost$|127\.|0\.0\.0\.0$|\[?::1)/.test(location.hostname)
+    ? location.origin + location.pathname.replace(/index\.html$/, '')
+    : PUBLIC_URL;
+
+const LAUNCH_DAY = 20692;          /* day zero, so the first puzzle is #1 */
+function shareText(){
+  const avg = Math.round(results.reduce((a,r)=>a+r.total,0)/results.length);
+  /* Only the untouched daily deal gets a number; a reshuffled set is not the
+     puzzle anyone else played today, so numbering it would be a small lie. */
+  const head = setNo === 0 ? `Milestone #${seedDay() - LAUNCH_DAY + 1}` : 'Milestone';
+  return `${head}  ${avg}/100\n`
+    + results.map(r=>SQ[band(r.d.pts)]).join('') + '\n'
+    + results.map(r=>SQ[band(r.p.pts)]).join('') + '\n'
+    + shareUrl();
+}
 function showFinal(){
   const avg = Math.round(results.reduce((a,r)=>a+r.total,0)/results.length);
   document.getElementById('final').classList.add('on');
@@ -329,14 +353,16 @@ function showFinal(){
   document.getElementById('final').scrollIntoView({behavior:'smooth', block:'center'});
 }
 document.getElementById('copy').addEventListener('click', async ()=>{
-  const avg = Math.round(results.reduce((a,r)=>a+r.total,0)/results.length);
-  const txt = `Milestone ${avg}/100\n`
-    + results.map(r=>SQ[band(r.d.pts)]).join('') + '\n'
-    + results.map(r=>SQ[band(r.p.pts)]).join('');
-  const btn = document.getElementById('copy');
-  try { await navigator.clipboard.writeText(txt); btn.textContent = 'Copied'; }
-  catch { btn.textContent = 'Copy failed'; }
-  setTimeout(()=>{ btn.textContent = 'Copy result'; }, 1800);
+  const btn = document.getElementById('copy'), txt = shareText();
+  const done = msg => { btn.textContent = msg; setTimeout(()=>{ btn.textContent = 'Share result'; }, 1800); };
+  /* On a phone this opens the real share sheet, so it can go straight into
+     WhatsApp or Messages. Everywhere else it falls back to the clipboard. */
+  if (navigator.share){
+    try { await navigator.share({text: txt}); return done('Shared'); }
+    catch (e) { if (e && e.name === 'AbortError') return; }   /* they cancelled */
+  }
+  try { await navigator.clipboard.writeText(txt); done('Copied, now paste it'); }
+  catch { done('Copy failed'); }
 });
 /* The day's five are seeded off the date, so every reload gives the same
    buildings — that is the point of a daily game, but you need a way out of it
