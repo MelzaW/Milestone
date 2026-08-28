@@ -303,7 +303,12 @@ document.getElementById('submit').addEventListener('click', ()=>{
       p.grace ? `${prettyDistance(p.km)}, inside the 500 m` : prettyDistance(p.km)}</span>`;
   document.getElementById('sround').innerHTML =
     `${total}<span class="den">/100</span><span class="sub">date plus place</span>`;
-  document.getElementById('telltext').innerHTML = `<b>How to date it.</b> ${b.tell}`;
+  /* Never let a general period note read as an observation about this
+     building. Written tells say "How to date it"; period notes say what they
+     are, so the player always knows which they are being given. */
+  document.getElementById('telltext').innerHTML = b.tellkind === 'period'
+    ? `<b>Dating ${b.period ? b.period.toLowerCase() + ' work' : 'work of this period'}.</b> ${b.tell}`
+    : `<b>How to date it.</b> ${b.tell}`;
   document.getElementById('revnote').textContent = b.note;
   document.getElementById('revcredit').textContent = b.credit ? `Photograph: ${b.credit}` : '';
   document.getElementById('reveal').classList.add('on');

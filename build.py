@@ -18,6 +18,70 @@ IMG_EXT = (".jpg", ".jpeg", ".png", ".webp")
 COUNTY_FIX = {"County Durham": "Durham", "Richmond upon Thames": "London",
               "City of London": "London", "Westminster": "London"}
 
+# ---------------------------------------------------------------------------
+# Period notes.
+#
+# Every building in the original set carries a tell written for it: a specific
+# observation about that fabric. Bulk-added buildings cannot, so where the tell
+# is blank they get one of these instead, keyed to the build date. They are
+# honest general guidance on dating a British building of that period rather
+# than a claim about this one, and the reveal labels them differently so the
+# difference is never hidden from the player.
+PERIOD_NOTES = [
+ (1066, 1200, "Norman", "Round arches, walls thick enough to show their depth in every opening, "
+  "small windows set high, flat pilaster buttresses that die into the wall, and cushion "
+  "capitals with no carved foliage. Ornament is geometric: chevron, billet, lozenge."),
+ (1200, 1300, "Early English", "Pointed arches with tall narrow lancet windows and no tracery "
+  "in them at all. Deeply cut mouldings, slender detached shafts often in dark marble, and "
+  "stiff leaf foliage carved as though it grew out of the capital."),
+ (1300, 1350, "Decorated", "Tracery becomes curvilinear and starts to flow. Look for the ogee, "
+  "the double curve, in arch heads and canopies, and for naturalistic carved foliage where "
+  "you can identify the species. Ballflower ornament runs in the mouldings."),
+ (1350, 1550, "Perpendicular", "Mullions run straight up into the arch head and grids of panels "
+  "cover the wall. Arches flatten to four centres, windows grow very large, and the roof is "
+  "often a low pitch hidden behind a battlemented parapet."),
+ (1550, 1620, "Elizabethan and Jacobean", "Symmetry arrives but the detail is still native. "
+  "Mullioned and transomed windows in long ranges, shaped or stepped gables, strapwork carved "
+  "like cut leather, and tall chimneystacks treated as ornament."),
+ (1620, 1700, "Stuart", "Classical proportion applied for the first time with real correctness: "
+  "hipped roofs, dormers, modillion cornices, and sash windows appearing late in the period with "
+  "thick glazing bars. Brick becomes fashionable, often with rubbed brick dressings."),
+ (1700, 1765, "Early Georgian and Palladian", "Flat, regular, and calm. Sash windows in plain "
+  "openings diminishing storey by storey, a string course between floors, a pedimented centre, "
+  "and almost no carved ornament. Venetian windows are the giveaway detail."),
+ (1765, 1830, "Late Georgian and Regency", "Glazing bars thin markedly, fanlights appear over "
+  "doorways, and stucco scored to imitate ashlar spreads across whole terraces. Cast iron "
+  "balconies and railings, shallow bow windows, and a low parapet hiding the roof."),
+ (1830, 1875, "Early Victorian", "Sharply cut, machine-finished stone or hard red and blue brick "
+  "used in bands. Steep roofs, plate tracery, and archaeologically correct Gothic detail applied "
+  "to buildings that are planned symmetrically underneath. Plate glass replaces glazing bars."),
+ (1875, 1901, "Late Victorian", "Red brick and moulded terracotta, gables and turrets, tall "
+  "chimneys, and sash windows with a single large pane over one below. Repeated identical "
+  "ornament means it was moulded rather than carved, which itself dates the technique."),
+ (1901, 1918, "Edwardian", "Baroque revival at civic scale: heavy stone dressings against red "
+  "brick, banded rustication, segmental pediments and domed corner turrets. Faience and glazed "
+  "tile appear on commercial buildings because they wash clean of soot."),
+ (1918, 1939, "Interwar", "Flat roofs, white render and horizontal window bands where the mood "
+  "is modern; brick, tile hanging and leaded lights where it is not. Steel Crittall windows, "
+  "and Art Deco stepping and fluting on anything public."),
+ (1939, 1970, "Post-war", "Reinforced concrete left exposed, often board marked so the timber "
+  "shuttering grain is printed into it. Curtain walling, repetitive bays, and flat roofs. "
+  "Brick infill panels within a visible frame rather than load-bearing walls."),
+ (1970, 2000, "Late twentieth century", "Brown brick and mansard-ish roofs on housing; exposed "
+  "steel, glass and externalised services on commercial work. Postmodern buildings quote "
+  "classical detail at the wrong scale and usually in the wrong material."),
+ (2000, 2030, "Contemporary", "Large sealed glazed panels with minimal framing, flush detailing "
+  "with no visible sills or lintels, and cladding in zinc, timber or render laid as flat planes. "
+  "Nothing is load-bearing that looks it."),
+]
+
+def period_note(year):
+    for lo, hi, name, text in PERIOD_NOTES:
+        if lo <= year < hi:
+            return name, text
+    return "", ""
+
+
 def slug(no, name):
     return f'{int(no):02d}_' + re.sub(r"[^A-Za-z0-9]+", "_", name).strip("_")
 
@@ -69,6 +133,17 @@ def find_photos():
             out[int(m.group(1))] = "photos/" + base
     return out
 
+def _tell_fields(r, rng):
+    """A written tell if the CSV has one, otherwise a period note for the build
+       date. `tellkind` lets the reveal label the two differently."""
+    written = (r.get("how_to_date_it") or "").strip()
+    if written:
+        return {"tell": written, "tellkind": "written", "period": ""}
+    year = rng[0][0] if rng else 0
+    name, text = period_note(year)
+    return {"tell": text, "tellkind": "period", "period": name}
+
+
 def main():
     rows = []
     for name in ("fifty_buildings.csv", "extra_buildings.csv"):
@@ -98,7 +173,8 @@ def main():
             "architect": r["architect"], "materials": r["materials"],
             "use": r.get("function", ""),
             "grade": r.get("grade", ""), "nhle": r.get("nhle_list_entry", ""),
-            "note": r["description"], "tell": r["how_to_date_it"],
+            "note": r["description"],
+            **_tell_fields(r, rng),
             "photo": photo,
             "credit": credits.get(os.path.splitext(os.path.basename(photo))[0], "") if photo else "",
         })
