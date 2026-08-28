@@ -175,7 +175,7 @@
   "note": "Henry III's rebuilding of the Confessor's abbey as a coronation church and royal mausoleum, and the most French building in England. It has an apse with radiating chapels, bar tracery imported almost immediately from Reims and Amiens, and at 31 metres the tallest Gothic vault in the country. The Henry VII Lady Chapel at the east end is the opposite pole of the same tradition: a Perpendicular casket with a pendant fan vault whose stone cones hang free of any visible support. The west towers are Hawksmoor's, Gothic in outline but classical in proportion.",
   "tell": "French plan plus early bar tracery equals 1245 to 1270. The Lady Chapel's pendant fan vault and panelled wall surfaces mean about 1500. The west towers, too regular and too crisply cut, are eighteenth century Gothic Survival.",
   "photo": "photos/07_Westminster_Abbey.jpg",
-  "credit": "Tristan Surtel, CC BY-SA 4.0"
+  "credit": "Suicasmo, CC BY-SA 4.0"
  },
  {
   "id": "08_Exeter_Cathedral",
@@ -304,7 +304,7 @@
   "note": "The climax of English Perpendicular and the largest fan vault in the world, 88 metres long and unsupported by any intermediate pier. Founded by Henry VI in 1441, the work stopped during the Wars of the Roses and was finished under Henry VII and Henry VIII, so the building spans three quarters of a century and two dynasties. The walls are effectively a glass cage between buttresses, with 26 windows of early sixteenth century Flemish glass. The Tudor heraldry on the antechapel screen dates that phase precisely to about 1508 to 1515.",
   "tell": "Fan vaulting, four centred arches and window mullions running straight into the arch head are Perpendicular. Where the stone changes colour partway up the walls you can see the break between the fifteenth and sixteenth century campaigns.",
   "photo": "photos/12_Kings_College_Chapel.jpg",
-  "credit": "Rijksmuseum, CC0"
+  "credit": "seier+seier, CC BY 2.0"
  },
  {
   "id": "13_Little_Moreton_Hall",
@@ -380,7 +380,7 @@
   "note": "The tallest Tudor gatehouse in Britain at eight storeys, and an unfinished fragment of a house that was never built because both Lord Marney and his son died within two years. It matters because of the terracotta: the window mullions, the dolphin and shell cresting and the classical detail on the tombs inside the church are among the earliest Renaissance ornament in England, made by craftsmen working in an Italian idiom for an English brick building. The result is a Gothic silhouette wearing Renaissance jewellery, which is exactly what English architecture was doing in the 1520s.",
   "tell": "Moulded terracotta cresting with dolphins and putti alongside four centred brick arches gives a narrow window of about 1515 to 1530. This combination barely exists in England outside a handful of East Anglian houses.",
   "photo": "photos/15_Layer_Marney_Tower.jpg",
-  "credit": "Unknown authorUnknown author, Public domain"
+  "credit": "Poliphilo, CC0"
  },
  {
   "id": "16_Burghley_House",
@@ -675,8 +675,8 @@
   "nhle": "1373659",
   "note": "Palladianism at full country house scale, built over 30 years and finished after its patron's death. The plan is a central block with four detached pavilions linked by corridors, a strictly Palladian arrangement, and the exterior is austere to the point of severity, with almost no carved ornament and a pale brick that was chosen to imitate ancient stone. The Marble Hall is the great set piece, an apsed space modelled on a Roman basilica, lined in Derbyshire alabaster with a colonnade of fluted Ionic columns and a coffered ceiling.",
   "tell": "Pale brick, a rigidly symmetrical block and pavilion plan, tripartite Venetian windows and pedimented centrepieces without Baroque movement place this at 1730 to 1765. Compare the flatness here with Vanbrugh's modelling a generation earlier.",
-  "photo": "photos/28_Holkham_Hall.png",
-  "credit": "Brettingham, Matthew, Public domain"
+  "photo": "photos/28_Holkham_Hall.jpg",
+  "credit": ""
  },
  {
   "id": "29_Strawberry_Hill_House",
@@ -822,7 +822,7 @@
   "note": "The largest Greek Revival building in Britain, built round a hollow quadrangle over nearly 30 years. The south front presents 44 giant Ionic columns copied from the Temple of Athena Polias at Priene, with a pediment carved by Sir Richard Westmacott. Smirke was an early and systematic user of concrete foundations and cast iron framing, so the archaeological Greek dress conceals thoroughly modern construction. The Round Reading Room, begun in 1854 by Sydney Smirke and opened in 1857, sits in the courtyard, and Foster's glazed lattice roof of 2000 finally covered the space around it.",
   "tell": "Correct Greek Ionic columns copied from a named ancient source, a shallow pediment and no arches anywhere means Greek Revival, roughly 1810 to 1840. Roman detail with round arches would push the date earlier or later.",
   "photo": "photos/34_British_Museum.jpg",
-  "credit": "Dale Cruse from San Francisco, CA, USA, CC BY 2.0"
+  "credit": "Daderot, CC0"
  },
  {
   "id": "35_Cumberland_Terrace",
@@ -1598,50 +1598,6 @@
   "tell": "Greek Revival detail on a working structure dates it. A plain ashlar tower on a stepped square base, a correct cornice, and no ornament beyond mouldings: classical proportion applied to infrastructure is 1820 to 1845.",
   "photo": "photos/67_Beach_Lighthouse__Fleetwood.jpg",
   "credit": "Tom Richardson, CC BY-SA 2.0"
- },
- {
-  "id": "68_Norwich_Thorpe_Station",
-  "title": "Norwich Thorpe Station",
-  "place": "Norwich",
-  "address": "Thorpe Road, Norwich NR1 1EF",
-  "lat": 52.627,
-  "lon": 1.307,
-  "dates": "1886 to 1887",
-  "range": [
-   1886,
-   1887
-  ],
-  "phases": [],
-  "architect": "John Wilson and William Neville Ashbee for the Great Eastern Railway",
-  "materials": "Red brick with Bath stone dressings, slate roofs and a copper dome",
-  "grade": "II",
-  "nhle": "",
-  "note": "The third station on the site and the grandest, built when the Great Eastern wanted Norwich to look like a destination. A French Renaissance frontage with a domed centre, pavilion roofs and a porte cochere.",
-  "tell": "A railway terminus wearing a French chateau is late Victorian confidence, roughly 1875 to 1900. Look for mansard and pavilion roofs, a rusticated ground storey and round-arched openings, then check the brick: machine-made and perfectly regular.",
-  "photo": "photos/68_Norwich_Thorpe_Station.jpg",
-  "credit": "Original uploader was Bluemoose at en.wikipedia, CC BY-SA 3.0"
- },
- {
-  "id": "69_King_s_Lynn_Railway_Station",
-  "title": "King's Lynn Railway Station",
-  "place": "Norfolk",
-  "address": "Blackfriars Road, King's Lynn, Norfolk PE30 1NB",
-  "lat": 52.75383,
-  "lon": 0.40317,
-  "dates": "1846 to 1847",
-  "range": [
-   1846,
-   1847
-  ],
-  "phases": [],
-  "architect": "Built for the Lynn and Ely Railway",
-  "materials": "Norfolk brick with stone dressings and a slate roof",
-  "grade": "II",
-  "nhle": "",
-  "note": "An early main line station surviving close to its original form, low and domestic rather than monumental, from the decade when railway companies were still working out what a station should look like.",
-  "tell": "Early stations borrow from the country house, not from engineering. Two storeys, sash windows, a shallow hipped roof and a modest frontage put this in the 1840s. The swagger of Norwich Thorpe is forty years later.",
-  "photo": "photos/69_King_s_Lynn_Railway_Station.jpg",
-  "credit": "Jonathan Thacker, CC BY-SA 2.0"
  },
  {
   "id": "70_Young_V_A_Bethnal_Green",

@@ -144,6 +144,26 @@ def is_free(lic):
     return any(f in l for f in FREE)
 
 
+def looks_like_artwork(path):
+    """True for engravings, lithographs and scanned book plates.
+
+    Commons is full of Victorian steel engravings of exactly these buildings,
+    and the filenames rarely say so. They are almost colourless and use very
+    few distinct colours compared with a photograph, which is enough to tell
+    them apart. Needs Pillow; without it we let everything through."""
+    try:
+        from PIL import Image, ImageStat
+    except ImportError:
+        return False
+    try:
+        im = Image.open(path).convert("RGB"); im.thumbnail((260, 260))
+        sat = ImageStat.Stat(im.convert("HSV")).mean[1]
+        variety = len(set(im.getdata())) / float(im.width * im.height)
+        return sat < 42 and variety < 0.55
+    except Exception:
+        return False
+
+
 def looks_wrong(title, must=()):
     """Reject interiors and details, matching whole words only.
 
@@ -163,12 +183,13 @@ def looks_wrong(title, must=()):
 
 
 def pick(term, must_contain):
-    """Search Commons and return the best free, large, exterior-looking image."""
+    """Search Commons and return every free, large, exterior-looking candidate,
+       best first, so the caller can reject one and fall through to the next."""
     try:
         res = api({"action": "query", "list": "search", "srsearch": term,
                    "srnamespace": 6, "srlimit": 30})
     except Exception as e:
-        print("   search failed:", e); return None
+        print("   search failed:", e); return []
     titles = [h["title"] for h in res.get("query", {}).get("search", [])]
     must = (must_contain,) if isinstance(must_contain, str) else must_contain
     titles = [t for t in titles
@@ -176,8 +197,8 @@ def pick(term, must_contain):
               and all(m in t.lower() for m in must)
               and not looks_wrong(t, must)]
     if not titles:
-        return None
-    best = None
+        return []
+    out = []
     for chunk in [titles[i:i+20] for i in range(0, len(titles), 20)]:
         try:
             info = api({"action": "query", "titles": "|".join(chunk),
@@ -208,10 +229,10 @@ def pick(term, must_contain):
                 "width": w, "height": ii.get("height", 0),
             }
             # prefer the widest, capped so we do not grab a 60MB panorama
-            score = min(w, 6000)
-            if best is None or score > best["_score"]:
-                cand["_score"] = score; best = cand
-    return best
+            cand["_score"] = min(w, 6000)   # widest wins, capped
+            out.append(cand)
+    out.sort(key=lambda c: -c["_score"])
+    return out
 
 
 def main():
@@ -224,22 +245,33 @@ def main():
             print(f"[{i:2}/50] {stem} ... already have one, skipping", flush=True)
             continue
         print(f"[{i:2}/50] {stem} ...", flush=True)
-        got = pick(term, must)
-        if not got:
+        cands = pick(term, must)
+        if not cands:
             print("   nothing suitable found"); missing.append(stem); continue
+        got = None
         # Commons urls carry a ?utm_source=... query, so split the path alone —
         # otherwise the extension comes out as ".org&utm_campaign=..." and
         # build.py never matches the file to its building.
-        path = urllib.parse.urlsplit(got["full_url"]).path
-        ext = os.path.splitext(path)[1].lower()
-        if ext not in (".jpg", ".jpeg", ".png"):
-            ext = ".jpg"
-        dest = os.path.join(OUT, stem + ext)
-        try:
-            with open(dest, "wb") as f:
-                f.write(fetch(got["url"], timeout=120))
-        except Exception as e:
-            print("   download failed:", e); missing.append(stem); continue
+        # Try candidates in order and keep the first that is a real photograph.
+        dest = None
+        for cand in cands[:6]:
+            path = urllib.parse.urlsplit(cand["full_url"]).path
+            ext = os.path.splitext(path)[1].lower()
+            if ext not in (".jpg", ".jpeg", ".png"):
+                ext = ".jpg"
+            trial = os.path.join(OUT, stem + ext)
+            try:
+                with open(trial, "wb") as f:
+                    f.write(fetch(cand["url"], timeout=120))
+            except Exception as e:
+                print("   download failed:", e); continue
+            if looks_like_artwork(trial):
+                print(f"   skipped an engraving: {os.path.basename(cand['full_url'])[:52]}")
+                os.remove(trial); time.sleep(1.5); continue
+            got, dest = cand, trial
+            break
+        if not dest:
+            print("   nothing suitable found"); missing.append(stem); continue
         size = os.path.getsize(dest) // 1024
         print(f"   {os.path.basename(dest)}  {got['width']}x{got['height']}  {size} KB  {got['licence']}")
         rows.append({
