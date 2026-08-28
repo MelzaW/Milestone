@@ -285,7 +285,7 @@ document.getElementById('submit').addEventListener('click', ()=>{
   noteClues();
 
   if (pinMarker && pinMarker.dragging) pinMarker.dragging.disable();
-  truthMarker = L.marker([b.lat, b.lon], {icon: pinIcon('#8A7040', b.place)}).addTo(map);
+  truthMarker = L.marker([b.lat, b.lon], {icon: pinIcon('#9E7C38', b.place)}).addTo(map);
   missLine = L.polyline([pin, [b.lat, b.lon]],
     {color:'#A4442B', weight:2, dashArray:'5 6'}).addTo(map);
   map.fitBounds(L.latLngBounds([pin, [b.lat, b.lon]]).pad(0.35), {maxZoom: 16});

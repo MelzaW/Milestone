@@ -7,8 +7,8 @@
   --lead:#697077;
   --rule:#C3CAD1;
   --hair:#DCE1E6;
-  --accent:#8A7040;
-  --accent-dim:#8A704022;
+  --accent:#9E7C38;
+  --accent-dim:#9E7C3822;
   --ochre:#A4442B;
   --gold:#8A6A22;
   --shadow:0 1px 0 #FFFFFFAA, 0 10px 30px -18px #1B1E2055;
@@ -22,8 +22,8 @@
     --lead:#8D9498;
     --rule:#39403F;
     --hair:#2B3134;
-    --accent:#D3BA92;
-    --accent-dim:#D3BA9222;
+    --accent:#E0C48F;
+    --accent-dim:#E0C48F22;
     --ochre:#DE8264;
     --gold:#C8A44E;
     --shadow:0 1px 0 #FFFFFF08, 0 12px 34px -20px #000000AA;
@@ -37,8 +37,8 @@
   --lead:#8D9498;
   --rule:#39403F;
   --hair:#2B3134;
-  --accent:#D3BA92;
-  --accent-dim:#D3BA9222;
+  --accent:#E0C48F;
+  --accent-dim:#E0C48F22;
   --ochre:#DE8264;
   --gold:#C8A44E;
   --shadow:0 1px 0 #FFFFFF08, 0 12px 34px -20px #000000AA;
@@ -69,7 +69,7 @@ header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
 #pips{display:inline-flex;gap:6px;align-items:center}
 .pip{display:inline-block;width:26px;height:6px;background:var(--hair);
   border:1px solid var(--rule);border-radius:1px}
-.pip.done{background:var(--accent);border-color:var(--accent)}
+.pip.done{background:var(--lead);border-color:var(--lead)}
 .pip.now{background:var(--ink);border-color:var(--ink)}
 .roundlab{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--lead);margin-right:10px}
