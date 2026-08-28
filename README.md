@@ -61,7 +61,7 @@ matter:
 | `latitude`, `longitude` | where the pin goes, and what place is scored |
 | `location` | the last segment becomes the place label |
 | `description` | shown under the tell on the reveal |
-| `how_to_date_it` | the tell — the most important column in the file |
+| `how_to_date_it` | the tell, the most important column in the file. Leave it blank and the building gets a period note for its build date instead, labelled differently on the reveal so a general note never reads as a specific observation |
 
 ### How dates are parsed
 
