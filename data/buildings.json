@@ -1532,5 +1532,137 @@
   "tell": "Look at the windows. Large mullioned and transomed openings in a castle mean the fifteenth century or later, when defence has become display. Machicolations and gunports here are as much ornament as armament, and the tall stacks and traceried hall windows are those of a house wearing a castle's clothes.",
   "photo": "photos/64_Raglan_Castle.jpg",
   "credit": ""
+ },
+ {
+  "id": "65_Broadway_Tower",
+  "title": "Broadway Tower",
+  "place": "Worcestershire",
+  "address": "Broadway, Worcestershire WR12 7LB",
+  "lat": 52.02421,
+  "lon": -1.83576,
+  "dates": "1797 to 1799",
+  "range": [
+   1797,
+   1799
+  ],
+  "phases": [],
+  "architect": "James Wyatt for the 6th Earl of Coventry",
+  "materials": "Cotswold limestone rubble with ashlar dressings",
+  "grade": "II",
+  "nhle": "",
+  "note": "A folly on the second highest point of the Cotswolds, built so the Countess of Coventry could see whether a beacon lit there was visible from her house twenty two miles away. Three round turrets, battlements and gargoyles, none of it defensive.",
+  "tell": "Castle language used ornamentally rather than structurally is the tell. Battlements too thin to stand behind, turrets carrying nothing, and neatly squared ashlar dressings mean Georgian Gothick of about 1780 to 1810, not a real medieval tower.",
+  "photo": "photos/65_Broadway_Tower.jpg",
+  "credit": "The author is Newton2 (cropped by Yummifruitbat), CC BY 2.5"
+ },
+ {
+  "id": "66_House_in_the_Clouds",
+  "title": "House in the Clouds",
+  "place": "Suffolk",
+  "address": "Thorpeness, Suffolk IP16 4NX",
+  "lat": 52.1819,
+  "lon": 1.60944,
+  "dates": "1923",
+  "range": [
+   1923,
+   1923
+  ],
+  "phases": [],
+  "architect": "F Forbes Glennie for Glencairn Stuart Ogilvie",
+  "materials": "Weatherboarded timber casing on a steel water tank over a rendered base",
+  "grade": "II",
+  "nhle": "",
+  "note": "A water tower for a purpose-built holiday village, disguised as a cottage hoisted seventy feet into the air. The weatherboarded box at the top is the casing round the tank; the rooms are in the tower beneath it.",
+  "tell": "The proportions give it away: no cottage is that narrow and that tall. Weatherboarding, casements and a hipped tiled roof are 1920s cottage vocabulary wrapped round a structure whose real job is engineering.",
+  "photo": "photos/66_House_in_the_Clouds.jpg",
+  "credit": "Unknown, CC BY-SA 2.0"
+ },
+ {
+  "id": "67_Beach_Lighthouse_Fleetwood",
+  "title": "Beach Lighthouse, Fleetwood",
+  "place": "Lancashire",
+  "address": "The Esplanade, Fleetwood, Lancashire FY7 6QH",
+  "lat": 53.92855,
+  "lon": -3.00909,
+  "dates": "1840",
+  "range": [
+   1840,
+   1840
+  ],
+  "phases": [],
+  "architect": "Decimus Burton for Sir Peter Hesketh-Fleetwood",
+  "materials": "Sandstone ashlar",
+  "grade": "II",
+  "nhle": "",
+  "note": "The lower of two lighthouses set inland along a street, so a ship lining them up is running the safe channel into the Wyre. Part of Burton's planned new town, which is why a navigation light looks like civic architecture.",
+  "tell": "Greek Revival detail on a working structure dates it. A plain ashlar tower on a stepped square base, a correct cornice, and no ornament beyond mouldings: classical proportion applied to infrastructure is 1820 to 1845.",
+  "photo": "photos/67_Beach_Lighthouse__Fleetwood.jpg",
+  "credit": "Tom Richardson, CC BY-SA 2.0"
+ },
+ {
+  "id": "68_Norwich_Thorpe_Station",
+  "title": "Norwich Thorpe Station",
+  "place": "Norwich",
+  "address": "Thorpe Road, Norwich NR1 1EF",
+  "lat": 52.627,
+  "lon": 1.307,
+  "dates": "1886 to 1887",
+  "range": [
+   1886,
+   1887
+  ],
+  "phases": [],
+  "architect": "John Wilson and William Neville Ashbee for the Great Eastern Railway",
+  "materials": "Red brick with Bath stone dressings, slate roofs and a copper dome",
+  "grade": "II",
+  "nhle": "",
+  "note": "The third station on the site and the grandest, built when the Great Eastern wanted Norwich to look like a destination. A French Renaissance frontage with a domed centre, pavilion roofs and a porte cochere.",
+  "tell": "A railway terminus wearing a French chateau is late Victorian confidence, roughly 1875 to 1900. Look for mansard and pavilion roofs, a rusticated ground storey and round-arched openings, then check the brick: machine-made and perfectly regular.",
+  "photo": "photos/68_Norwich_Thorpe_Station.jpg",
+  "credit": "Original uploader was Bluemoose at en.wikipedia, CC BY-SA 3.0"
+ },
+ {
+  "id": "69_King_s_Lynn_Railway_Station",
+  "title": "King's Lynn Railway Station",
+  "place": "Norfolk",
+  "address": "Blackfriars Road, King's Lynn, Norfolk PE30 1NB",
+  "lat": 52.75383,
+  "lon": 0.40317,
+  "dates": "1846 to 1847",
+  "range": [
+   1846,
+   1847
+  ],
+  "phases": [],
+  "architect": "Built for the Lynn and Ely Railway",
+  "materials": "Norfolk brick with stone dressings and a slate roof",
+  "grade": "II",
+  "nhle": "",
+  "note": "An early main line station surviving close to its original form, low and domestic rather than monumental, from the decade when railway companies were still working out what a station should look like.",
+  "tell": "Early stations borrow from the country house, not from engineering. Two storeys, sash windows, a shallow hipped roof and a modest frontage put this in the 1840s. The swagger of Norwich Thorpe is forty years later.",
+  "photo": "photos/69_King_s_Lynn_Railway_Station.jpg",
+  "credit": "Jonathan Thacker, CC BY-SA 2.0"
+ },
+ {
+  "id": "70_Young_V_A_Bethnal_Green",
+  "title": "Young V&A, Bethnal Green",
+  "place": "London",
+  "address": "Cambridge Heath Road, Bethnal Green, London E2 9PA",
+  "lat": 51.52906,
+  "lon": -0.05489,
+  "dates": "1872",
+  "range": [
+   1872,
+   1872
+  ],
+  "phases": [],
+  "architect": "James William Wild, re-using the iron frame of the 1856 Brompton Boilers",
+  "materials": "Red brick casing over a prefabricated wrought iron and glass frame",
+  "grade": "II",
+  "nhle": "",
+  "note": "The iron structure was built at South Kensington in 1856, dismantled, re-erected here and wrapped in a brick shell. The inside is fifteen years older than the outside, and the two are of quite different tempers.",
+  "tell": "Read the inside and outside as separate buildings. Exposed iron columns and roof are prefabricated 1850s exhibition engineering; the plain round-arched brick box round them, with its terracotta frieze, is 1870s.",
+  "photo": "photos/70_Young_V_A__Bethnal_Green.jpg",
+  "credit": "David Hawgood, CC BY-SA 2.0"
  }
 ]
