@@ -7,7 +7,7 @@
 const SEGMENTS = [
   {from:1000, to:2025, frac:1.0, step:10, tickEvery:100, labelEvery:100, name:'decades'}
 ];
-const R_W = 1000, R_PAD = 26, R_TRACK = R_W - R_PAD*2, R_Y = 52;
+const R_W = 1000, R_PAD = 26, R_TRACK = R_W - R_PAD*2, R_Y = 78;
 (function(){
   let acc = 0;
   for (const s of SEGMENTS){ s.x0 = R_PAD + acc*R_TRACK; acc += s.frac; s.x1 = R_PAD + acc*R_TRACK; }
@@ -59,27 +59,32 @@ function drawRuler(el, year, truth){
     s += `<line x1="${a.toFixed(1)}" y1="${R_Y-24}" x2="${a.toFixed(1)}" y2="${R_Y+14}" class="truth-line"/>`;
     s += `<circle cx="${a.toFixed(1)}" cy="${R_Y-24}" r="4" fill="var(--accent)"/>`;
   }
-  /* The handle is a little clock. Its hands are not decorative: the long hand
-     sweeps once a century and the short hand once a millennium, so they move as
-     you drag and read the year you are on. */
+  /* The cursor is the Elizabeth Tower, which is both a building and a clock,
+     and so is the whole game in one mark. Loose rather than accurate: a shaft,
+     a clock stage, a belfry and a spire. The hands are live, the long one
+     sweeping once a century and the short one once a millennium, so they turn
+     as you drag and read the year you are standing on. */
   const hx = yearToX(year);
-  const cy = R_Y - 27, R = 10;
-  const hand = (turns, len, cls) => {
+  const cy = R_Y - 43, R = 5.6;
+  const p = (...pts) => pts.map(([x,y],i)=>`${i?'L':'M'}${(hx+x).toFixed(1)},${(R_Y+y).toFixed(1)}`).join(' ')+' Z';
+
+  s += `<line x1="${hx.toFixed(1)}" y1="${R_Y-14}" x2="${hx.toFixed(1)}" y2="${R_Y+14}" class="handle-line"/>`;
+  s += `<path class="bb-body" d="${p([-4.8,-2],[4.8,-2],[4.5,-36],[-4.5,-36])}"/>`;      // shaft: slender
+  s += `<path class="bb-body" d="${p([-7.4,-36],[7.4,-36],[7.4,-50],[-7.4,-50])}"/>`;    // clock stage
+  s += `<path class="bb-body" d="${p([-8.2,-50],[8.2,-50],[8.2,-52.5],[-8.2,-52.5])}"/>`;// cornice
+  s += `<path class="bb-body" d="${p([-6.4,-52.5],[6.4,-52.5],[6.4,-59],[-6.4,-59])}"/>`;// belfry
+  s += `<path class="bb-body" d="${p([-6.4,-59],[6.4,-59],[0,-69])}"/>`;                 // spire
+  s += `<circle cx="${hx.toFixed(1)}" cy="${(R_Y-70.5).toFixed(1)}" r="1.1" class="bb-body"/>`;
+  s += `<circle cx="${hx.toFixed(1)}" cy="${cy}" r="${R}" class="bb-face"/>`;
+
+  const hand = (turns, len, w) => {
     const a = turns*2*Math.PI - Math.PI/2;
     return `<line x1="${hx.toFixed(1)}" y1="${cy}" x2="${(hx+Math.cos(a)*len).toFixed(1)}"`
-         + ` y2="${(cy+Math.sin(a)*len).toFixed(1)}" class="${cls}"/>`;
+         + ` y2="${(cy+Math.sin(a)*len).toFixed(1)}" class="bb-hand" stroke-width="${w}"/>`;
   };
-  s += `<line x1="${hx.toFixed(1)}" y1="${R_Y-14}" x2="${hx.toFixed(1)}" y2="${R_Y+14}" class="handle-line"/>`;
-  s += `<line x1="${hx.toFixed(1)}" y1="${cy+R}" x2="${hx.toFixed(1)}" y2="${R_Y-13}" class="handle-line"/>`;
-  s += `<circle cx="${hx.toFixed(1)}" cy="${cy}" r="${R}" class="clockface"/>`;
-  for (let i = 0; i < 4; i++){                      // quarter marks at 12, 3, 6, 9
-    const a = i*Math.PI/2 - Math.PI/2;
-    s += `<line x1="${(hx+Math.cos(a)*(R-3.2)).toFixed(1)}" y1="${(cy+Math.sin(a)*(R-3.2)).toFixed(1)}"`
-       + ` x2="${(hx+Math.cos(a)*(R-1.2)).toFixed(1)}" y2="${(cy+Math.sin(a)*(R-1.2)).toFixed(1)}" class="clocktick"/>`;
-  }
-  s += hand(((year % 1000) / 1000), R-5.5, 'clockhand short');   // once a millennium
-  s += hand(((year % 100)  / 100),  R-2.5, 'clockhand long');    // once a century
-  s += `<circle cx="${hx.toFixed(1)}" cy="${cy}" r="1.5" class="handle"/>`;
+  s += hand((year % 1000)/1000, R-3.0, 1.5);   // once a millennium
+  s += hand((year % 100)/100,  R-1.4, 1.0);    // once a century
+
   el.innerHTML = s;
   el.setAttribute('aria-valuenow', year);
   el.setAttribute('aria-valuetext', labelForYear(year));
