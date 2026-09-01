@@ -207,6 +207,25 @@ function strike(freq, at, gain, dur){
   }
 }
 
+/* The opposite of the chime: a low, damped thud with a dissonant second under
+   it, cut off short. A bell that will not ring. */
+function clunk(){
+  const ac = audio(); if (!ac) return;
+  if (ac.state === 'suspended') ac.resume();
+  const t0 = ac.currentTime + 0.02;
+  for (const [f, amp, dur] of [[104, 0.22, 0.55], [110, 0.13, 0.42], [69, 0.18, 0.7]]){
+    const osc = ac.createOscillator(), g = ac.createGain(), lp = ac.createBiquadFilter();
+    osc.type = 'triangle'; osc.frequency.setValueAtTime(f, t0);
+    osc.frequency.exponentialRampToValueAtTime(f*0.72, t0 + dur);   // sags, like a dud
+    lp.type = 'lowpass'; lp.frequency.value = 420;
+    g.gain.setValueAtTime(0, t0);
+    g.gain.linearRampToValueAtTime(amp, t0 + 0.014);
+    g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+    osc.connect(lp).connect(g).connect(ac.destination);
+    osc.start(t0); osc.stop(t0 + dur + 0.05);
+  }
+}
+
 /* The Westminster Quarters, which is what the Elizabeth Tower actually plays:
    the first quarter phrase, G#-F#-E-B, in the bells' own key. */
 const CHIME = [415.30, 369.99, 329.63, 246.94];   // G#4 F#4 E4 B3
@@ -219,9 +238,9 @@ function chime(){
 
 /* ---------- ruler ---------- */
 const rulerEl = document.getElementById('ruler');
-let benLit = false;
+let benState = null;          // 'hit' | 'miss' | null
 function paintRuler(){
-  drawRuler(rulerEl, year, locked ? deck[idx].range : null, benLit);
+  drawRuler(rulerEl, year, locked ? deck[idx].range : null, benState);
   document.getElementById('readout').innerHTML =
     labelForYear(year) + `<small>${grainName(year)}</small>`;
 }
@@ -344,7 +363,7 @@ function refresh(){
     : (pin ? 'Adjust either guess, then commit' : 'Drop a pin and set the date');
 }
 function newRound(){
-  pin = null; locked = false; year = 1780; benLit = false;
+  pin = null; locked = false; year = 1780; benState = null;
   pk = 1; pc = {x: PW/2, y: PH/2};
   document.getElementById('reveal').classList.remove('on');
   document.getElementById('mapnote').textContent = 'Click the map to drop a pin, then drag it to fine-tune.';
@@ -373,14 +392,16 @@ document.getElementById('submit').addEventListener('click', ()=>{
 
   /* Dead right on the date: light the clock face and ring the quarters. The
      click that got here is the gesture browsers require before audio. */
-  benLit = d.err === 0;
+  benState = d.err === 0 ? 'hit' : 'miss';
   pk = 1; pc = {x: PW/2, y: PH/2}; drawPlate(); paintRuler();
-  if (benLit){
+  if (benState === 'hit'){
     chime();
     buzz([14, 70, 14, 70, 22]);
-    setTimeout(()=>{ benLit = false; paintRuler(); }, 4200);
+    setTimeout(()=>{ benState = null; paintRuler(); }, 4200);
   } else {
-    buzz(18);
+    clunk();
+    buzz([60, 90, 60]);          // two heavy knocks, quite unlike the hit
+    setTimeout(()=>{ benState = null; paintRuler(); }, 2600);
   }
 
   document.getElementById('revtitle').textContent = `${b.title}, ${b.dates}`;

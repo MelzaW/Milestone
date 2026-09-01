@@ -35,7 +35,7 @@ function grainName(y){ return 'decade'; }
 
 /* Draws the ruler into an <svg>. `truth` is the principal build range, or null
    while the player is still guessing. */
-function drawRuler(el, year, truth, lit){
+function drawRuler(el, year, truth, state){
   let s = `<line x1="${R_PAD}" y1="${R_Y}" x2="${R_W-R_PAD}" y2="${R_Y}" class="tick major" stroke-width="1.2"/>`;
   for (const seg of SEGMENTS){
     s += `<line x1="${seg.x0}" y1="${R_Y-16}" x2="${seg.x0}" y2="${R_Y+16}" class="tick major" stroke-width="1.2"/>`;
@@ -51,31 +51,46 @@ function drawRuler(el, year, truth, lit){
   s += `<text class="ticklab" x="${R_W-R_PAD}" y="${R_Y+25}">2025</text>`;
 
   if (truth){
+    /* On a miss this has to be legible at a glance: where the answer was, where
+       you were, and how far apart. The old version drew a faint band and a
+       hairline, which said almost nothing. */
     const a = yearToX(truth[0]), b = yearToX(truth[1]), gx = yearToX(year);
-    s += `<rect x="${Math.min(a,b).toFixed(1)}" y="${R_Y-8}" width="${Math.max(2,Math.abs(b-a)).toFixed(1)}"`
-       + ` height="16" fill="var(--accent)" opacity=".28"/>`;
+    const inside = year >= truth[0] && year <= truth[1];
     const near = year < truth[0] ? a : (year > truth[1] ? b : gx);
-    s += `<line x1="${gx.toFixed(1)}" y1="${R_Y-14}" x2="${near.toFixed(1)}" y2="${R_Y-14}" class="gap-line"/>`;
-    s += `<line x1="${a.toFixed(1)}" y1="${R_Y-24}" x2="${a.toFixed(1)}" y2="${R_Y+14}" class="truth-line"/>`;
-    s += `<circle cx="${a.toFixed(1)}" cy="${R_Y-24}" r="4" fill="var(--accent)"/>`;
+    const err = year < truth[0] ? truth[0]-year : (year > truth[1] ? year-truth[1] : 0);
+
+    // the answer: a solid green band, labelled
+    s += `<rect x="${Math.min(a,b).toFixed(1)}" y="${R_Y-9}" width="${Math.max(3,Math.abs(b-a)).toFixed(1)}"`
+       + ` height="18" rx="2" class="truth-band"/>`;
+    s += `<line x1="${a.toFixed(1)}" y1="${R_Y-22}" x2="${a.toFixed(1)}" y2="${R_Y+16}" class="truth-line"/>`;
+    s += `<text class="truthlab" x="${((Math.min(a,b)+Math.max(a,b))/2).toFixed(1)}" y="${R_Y+31}">`
+       + `${truth[0]}${truth[1]!==truth[0] ? '\u2013'+truth[1] : ''}</text>`;
+
+    if (!inside){
+      // and the miss: a heavy red bar from your guess to the nearer edge, with
+      // the gap written on it
+      const mid = (gx+near)/2;
+      s += `<line x1="${gx.toFixed(1)}" y1="${R_Y-17}" x2="${near.toFixed(1)}" y2="${R_Y-17}" class="gap-line"/>`;
+      for (const x of [gx, near])
+        s += `<line x1="${x.toFixed(1)}" y1="${R_Y-22}" x2="${x.toFixed(1)}" y2="${R_Y-12}" class="gap-cap"/>`;
+      s += `<text class="gaplab" x="${mid.toFixed(1)}" y="${R_Y-25}">`
+         + `${err} ${err===1?'year':'years'} out</text>`;
+    }
   }
-  /* The cursor is the Elizabeth Tower, which is both a building and a clock,
-     and so is the whole game in one mark. Loose rather than accurate: a shaft,
-     a clock stage, a belfry and a spire. The hands are live, the long one
-     sweeping once a century and the short one once a millennium, so they turn
-     as you drag and read the year you are standing on. */
   const hx = yearToX(year);
   const cy = R_Y - 43, R = 5.6;
   const p = (...pts) => pts.map(([x,y],i)=>`${i?'L':'M'}${(hx+x).toFixed(1)},${(R_Y+y).toFixed(1)}`).join(' ')+' Z';
 
   s += `<line x1="${hx.toFixed(1)}" y1="${R_Y-14}" x2="${hx.toFixed(1)}" y2="${R_Y+14}" class="handle-line"/>`;
+  s += `<g class="ben${state ? ' ' + state : ''}">`;
   s += `<path class="bb-body" d="${p([-4.8,-2],[4.8,-2],[4.5,-36],[-4.5,-36])}"/>`;      // shaft: slender
   s += `<path class="bb-body" d="${p([-7.4,-36],[7.4,-36],[7.4,-50],[-7.4,-50])}"/>`;    // clock stage
   s += `<path class="bb-body" d="${p([-8.2,-50],[8.2,-50],[8.2,-52.5],[-8.2,-52.5])}"/>`;// cornice
   s += `<path class="bb-body" d="${p([-6.4,-52.5],[6.4,-52.5],[6.4,-59],[-6.4,-59])}"/>`;// belfry
   s += `<path class="bb-body" d="${p([-6.4,-59],[6.4,-59],[0,-69])}"/>`;                 // spire
   s += `<circle cx="${hx.toFixed(1)}" cy="${(R_Y-70.5).toFixed(1)}" r="1.1" class="bb-body"/>`;
-  s += `<circle cx="${hx.toFixed(1)}" cy="${cy}" r="${R}" class="bb-face${lit ? ' lit' : ''}"/>`;
+  s += `<circle cx="${hx.toFixed(1)}" cy="${cy}" r="${R}" class="bb-face${
+      state === 'hit' ? ' lit' : state === 'miss' ? ' dark' : ''}"/>`;
 
   const hand = (turns, len, w) => {
     const a = turns*2*Math.PI - Math.PI/2;
@@ -84,6 +99,7 @@ function drawRuler(el, year, truth, lit){
   };
   s += hand((year % 1000)/1000, R-3.0, 1.5);   // once a millennium
   s += hand((year % 100)/100,  R-1.4, 1.0);    // once a century
+  s += `</g>`;
 
   el.innerHTML = s;
   el.setAttribute('aria-valuenow', year);

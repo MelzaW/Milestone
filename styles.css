@@ -187,9 +187,26 @@ header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
   animation:benglow 1.6s ease-in-out 2}
 @keyframes benglow{0%,100%{opacity:1}50%{opacity:.72}}
 @media (prefers-reduced-motion:reduce){.bb-face.lit{animation:none}}
+/* Wrong: the face goes dark and red-rimmed, and the tower shakes its head. */
+.bb-face.dark{fill:var(--stop);stroke:var(--stop);opacity:.92}
+.ben.miss{animation:benshake .5s ease-in-out 1;transform-origin:center bottom}
+@keyframes benshake{
+  0%,100%{transform:translateX(0) rotate(0)}
+  15%{transform:translateX(-3px) rotate(-2.5deg)}
+  38%{transform:translateX(3px) rotate(2.5deg)}
+  62%{transform:translateX(-2px) rotate(-1.6deg)}
+  84%{transform:translateX(2px) rotate(1deg)}
+}
+@media (prefers-reduced-motion:reduce){.ben.miss{animation:none}}
 .bb-hand{stroke:var(--ink);stroke-linecap:round}
-.truth-line{stroke:var(--accent);stroke-width:1.5;stroke-dasharray:3 3}
-.gap-line{stroke:var(--ochre);stroke-width:1}
+.truth-band{fill:var(--go);opacity:.9}
+.truth-line{stroke:var(--go);stroke-width:2}
+.truthlab{font-family:"DM Mono",monospace;font-size:11px;fill:var(--go);
+  text-anchor:middle;font-weight:500;letter-spacing:.06em}
+.gap-line{stroke:var(--stop);stroke-width:4;stroke-linecap:round}
+.gap-cap{stroke:var(--stop);stroke-width:2.4;stroke-linecap:round}
+.gaplab{font-family:"DM Mono",monospace;font-size:12px;fill:var(--stop);
+  text-anchor:middle;font-weight:500;letter-spacing:.06em}
 
 /* ---------- actions ---------- */
 .actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
