@@ -1,12 +1,12 @@
 
 :root{
-  --ground:#FFFFFF;
-  --panel:#FBFCFC;
-  --plate:#FFFFFF;
-  --ink:#171A1D;
-  --lead:#697077;
-  --rule:#C3CAD1;
-  --hair:#DCE1E6;
+  --ground:#FBF6EF;
+  --panel:#FFFBF5;
+  --plate:#FFFDF9;
+  --ink:#241E19;
+  --lead:#7A6E63;
+  --rule:#D8CDBE;
+  --hair:#EDE4D8;
   --accent:#9E7C38;
   --accent-dim:#9E7C3822;
   --ochre:#A4442B;
@@ -17,17 +17,17 @@
   --go-dim:#2E7D4F14;
   --stop-dim:#A4442B14;
   --gold:#8A6A22;
-  --shadow:0 1px 0 #FFFFFFAA, 0 10px 30px -18px #1B1E2055;
+  --shadow:0 1px 0 #FFFFFFCC, 0 10px 30px -18px #4A3A2855;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --ground:#15181A;
-    --panel:#1D2124;
-    --plate:#23282B;
-    --ink:#E6E3DB;
-    --lead:#8D9498;
-    --rule:#39403F;
-    --hair:#2B3134;
+    --ground:#1A1613;
+    --panel:#221D18;
+    --plate:#29231D;
+    --ink:#EFE7DA;
+    --lead:#9A8D7F;
+    --rule:#413830;
+    --hair:#2F2822;
     --accent:#E0C48F;
     --accent-dim:#E0C48F22;
     --ochre:#DE8264;
@@ -42,13 +42,13 @@
   }
 }
 :root[data-theme="dark"]{
-  --ground:#15181A;
-  --panel:#1D2124;
-  --plate:#23282B;
-  --ink:#E6E3DB;
-  --lead:#8D9498;
-  --rule:#39403F;
-  --hair:#2B3134;
+  --ground:#1A1613;
+  --panel:#221D18;
+  --plate:#29231D;
+  --ink:#EFE7DA;
+  --lead:#9A8D7F;
+  --rule:#413830;
+  --hair:#2F2822;
   --accent:#E0C48F;
   --accent-dim:#E0C48F22;
   --ochre:#DE8264;
@@ -250,18 +250,25 @@ a{color:var(--accent)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
 /* ---------- Leaflet map ---------- */
-#map{height:min(620px,68vh);border:1px solid var(--hair);border-radius:2px;background:var(--hair);
+#map{height:min(620px,68vh);border:1px solid var(--rule);border-radius:2px;background:var(--hair);
   cursor:crosshair;z-index:0}
 .stage.mapfull #map{height:min(780px,78vh)}
 @media (max-width:960px){#map{height:min(460px,60vh)}}
 .leaflet-container{font-family:"DM Mono",monospace;background:var(--hair)}
 .leaflet-control-attribution{font-size:9px;background:var(--panel)!important;color:var(--lead)}
 .leaflet-control-attribution a{color:var(--lead)}
-/* the tiles are photographic; in dark mode knock them back so the page holds together */
-:root[data-theme="dark"] .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(.85) contrast(.9)}
+/* Warm the basemap into the paper palette and soften it, so the map sits with
+   the rest of the page instead of glowing blue-grey out of it. */
+/* Desaturate so the road colouring and green fills stop shouting, but leave
+   contrast almost alone: building footprints are drawn as fine grey outlines at
+   high zoom and flattening the contrast wipes them out, which would take away
+   the thing you need to place a pin on a doorstep. */
+.leaflet-tile-pane{filter:grayscale(.62) sepia(.34) saturate(.9) contrast(.98) brightness(1.04)}
+:root[data-theme="dark"] .leaflet-tile-pane{
+  filter:invert(1) hue-rotate(180deg) grayscale(.6) sepia(.3) brightness(.8) contrast(.8)}
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]) .leaflet-tile-pane{
-    filter:invert(1) hue-rotate(180deg) brightness(.85) contrast(.9)}
+    filter:invert(1) hue-rotate(180deg) grayscale(.6) sepia(.3) brightness(.8) contrast(.8)}
 }
 .zbtn.wide{width:auto;padding:0 10px;height:22px;font-size:10.5px;letter-spacing:.1em;
   text-transform:uppercase}

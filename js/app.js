@@ -33,6 +33,11 @@ function pinIcon(colour, caption){
 function initMap(){
   map = L.map('map', {zoomControl:true, worldCopyJump:false})
         .setView(UK_VIEW.center, UK_VIEW.zoom);
+  /* Standard OpenStreetMap tiles. Carto's plainer Positron style would suit the
+     game better but now needs an API key, and a key is not worth taking on for
+     a basemap. The simplification is done in CSS instead: the road colouring
+     and green fills are washed out of the tiles so what is left reads as a
+     drawn outline of the country rather than a road atlas. */
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; OpenStreetMap contributors'
