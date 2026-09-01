@@ -171,16 +171,67 @@ plateHost.addEventListener('wheel', e=>{
 document.getElementById('pzin').addEventListener('click',  ()=> setPlateZoom(pk*1.8, null));
 document.getElementById('pzout').addEventListener('click', ()=> setPlateZoom(pk/1.8, null));
 
+/* ---------- feel: haptics and the chime ----------
+
+   Vibration is Android only. iOS Safari has never shipped navigator.vibrate,
+   so on an iPhone the ruler simply will not buzz; there is no way round that
+   from a web page, and pretending otherwise would be worse than saying so. */
+const canBuzz = typeof navigator !== 'undefined' && typeof navigator.vibrate === 'function';
+function buzz(ms){ if (canBuzz) { try { navigator.vibrate(ms); } catch {} } }
+
+/* One shared AudioContext, created on the first real gesture because browsers
+   refuse to start audio before one. */
+let actx = null;
+function audio(){
+  if (actx) return actx;
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if (!AC) return null;
+  try { actx = new AC(); } catch { return null; }
+  return actx;
+}
+
+/* A struck bell, roughly: a few inharmonic partials over a long decay. A plain
+   sine sounds like a test tone, which is not what a bell sounds like at all. */
+function strike(freq, at, gain, dur){
+  const ac = audio(); if (!ac) return;
+  const PARTIALS = [[1,1],[2.02,0.5],[2.99,0.3],[4.12,0.16],[5.43,0.09]];
+  for (const [mult, amp] of PARTIALS){
+    const osc = ac.createOscillator(), g = ac.createGain();
+    osc.type = 'sine';
+    osc.frequency.value = freq*mult;
+    g.gain.setValueAtTime(0, at);
+    g.gain.linearRampToValueAtTime(gain*amp, at + 0.012);          // hammer
+    g.gain.exponentialRampToValueAtTime(0.0001, at + dur*(1/mult)); // higher partials die first
+    osc.connect(g).connect(ac.destination);
+    osc.start(at); osc.stop(at + dur + 0.1);
+  }
+}
+
+/* The Westminster Quarters, which is what the Elizabeth Tower actually plays:
+   the first quarter phrase, G#-F#-E-B, in the bells' own key. */
+const CHIME = [415.30, 369.99, 329.63, 246.94];   // G#4 F#4 E4 B3
+function chime(){
+  const ac = audio(); if (!ac) return;
+  if (ac.state === 'suspended') ac.resume();
+  const t0 = ac.currentTime + 0.05;
+  CHIME.forEach((f, i) => strike(f, t0 + i*0.62, 0.20, 3.4));
+}
+
 /* ---------- ruler ---------- */
 const rulerEl = document.getElementById('ruler');
+let benLit = false;
 function paintRuler(){
-  drawRuler(rulerEl, year, locked ? deck[idx].range : null);
+  drawRuler(rulerEl, year, locked ? deck[idx].range : null, benLit);
   document.getElementById('readout').innerHTML =
     labelForYear(year) + `<small>${grainName(year)}</small>`;
 }
 function setFromClientX(cx){
   const r = rulerEl.getBoundingClientRect();
+  const was = year;
   year = snapYear(xToYear((cx - r.left)/r.width*R_W));
+  /* One short tick per decade crossed, like a detent on a dial. Buzzing on
+     every pointermove would be a continuous rattle. */
+  if (year !== was) buzz(8);
   paintRuler(); refresh();
 }
 let dragging = false;
@@ -293,7 +344,7 @@ function refresh(){
     : (pin ? 'Adjust either guess, then commit' : 'Drop a pin and set the date');
 }
 function newRound(){
-  pin = null; locked = false; year = 1780;
+  pin = null; locked = false; year = 1780; benLit = false;
   pk = 1; pc = {x: PW/2, y: PH/2};
   document.getElementById('reveal').classList.remove('on');
   document.getElementById('mapnote').textContent = 'Click the map to drop a pin, then drag it to fine-tune.';
@@ -320,7 +371,17 @@ document.getElementById('submit').addEventListener('click', ()=>{
     {color:'#A4442B', weight:2, dashArray:'5 6'}).addTo(map);
   map.fitBounds(L.latLngBounds([pin, [b.lat, b.lon]]).pad(0.35), {maxZoom: 16});
 
+  /* Dead right on the date: light the clock face and ring the quarters. The
+     click that got here is the gesture browsers require before audio. */
+  benLit = d.err === 0;
   pk = 1; pc = {x: PW/2, y: PH/2}; drawPlate(); paintRuler();
+  if (benLit){
+    chime();
+    buzz([14, 70, 14, 70, 22]);
+    setTimeout(()=>{ benLit = false; paintRuler(); }, 4200);
+  } else {
+    buzz(18);
+  }
 
   document.getElementById('revtitle').textContent = `${b.title}, ${b.dates}`;
   document.getElementById('revsub').textContent =

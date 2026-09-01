@@ -178,7 +178,15 @@ header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
 .handle{fill:var(--ink)}
 .handle-line{stroke:var(--ink);stroke-width:1.5}
 .bb-body{fill:var(--ink)}
-.bb-face{fill:var(--panel);stroke:var(--ink);stroke-width:1.2}
+.bb-face{fill:var(--panel);stroke:var(--ink);stroke-width:1.2;transition:fill .18s}
+/* The clock face lights up when the date is right. Real clock faces on the
+   Elizabeth Tower are lit from behind, so this glows rather than changing
+   colour flatly. */
+.bb-face.lit{fill:#FFD34D;stroke:#8A6A22;
+  filter:drop-shadow(0 0 3px #FFC83099) drop-shadow(0 0 7px #FFB80066);
+  animation:benglow 1.6s ease-in-out 2}
+@keyframes benglow{0%,100%{opacity:1}50%{opacity:.72}}
+@media (prefers-reduced-motion:reduce){.bb-face.lit{animation:none}}
 .bb-hand{stroke:var(--ink);stroke-linecap:round}
 .truth-line{stroke:var(--accent);stroke-width:1.5;stroke-dasharray:3 3}
 .gap-line{stroke:var(--ochre);stroke-width:1}

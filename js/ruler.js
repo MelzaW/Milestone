@@ -35,7 +35,7 @@ function grainName(y){ return 'decade'; }
 
 /* Draws the ruler into an <svg>. `truth` is the principal build range, or null
    while the player is still guessing. */
-function drawRuler(el, year, truth){
+function drawRuler(el, year, truth, lit){
   let s = `<line x1="${R_PAD}" y1="${R_Y}" x2="${R_W-R_PAD}" y2="${R_Y}" class="tick major" stroke-width="1.2"/>`;
   for (const seg of SEGMENTS){
     s += `<line x1="${seg.x0}" y1="${R_Y-16}" x2="${seg.x0}" y2="${R_Y+16}" class="tick major" stroke-width="1.2"/>`;
@@ -75,7 +75,7 @@ function drawRuler(el, year, truth){
   s += `<path class="bb-body" d="${p([-6.4,-52.5],[6.4,-52.5],[6.4,-59],[-6.4,-59])}"/>`;// belfry
   s += `<path class="bb-body" d="${p([-6.4,-59],[6.4,-59],[0,-69])}"/>`;                 // spire
   s += `<circle cx="${hx.toFixed(1)}" cy="${(R_Y-70.5).toFixed(1)}" r="1.1" class="bb-body"/>`;
-  s += `<circle cx="${hx.toFixed(1)}" cy="${cy}" r="${R}" class="bb-face"/>`;
+  s += `<circle cx="${hx.toFixed(1)}" cy="${cy}" r="${R}" class="bb-face${lit ? ' lit' : ''}"/>`;
 
   const hand = (turns, len, w) => {
     const a = turns*2*Math.PI - Math.PI/2;
