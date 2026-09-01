@@ -1,5 +1,5 @@
 /* ============================================================
-   Milestone
+   Vernacular Chums
    ============================================================ */
 
 const ROUNDS = 5;
@@ -372,7 +372,7 @@ function shareText(){
   const avg = Math.round(results.reduce((a,r)=>a+r.total,0)/results.length);
   /* Only the untouched daily deal gets a number; a reshuffled set is not the
      puzzle anyone else played today, so numbering it would be a small lie. */
-  const head = setNo === 0 ? `Milestone #${seedDay() - LAUNCH_DAY + 1}` : 'Milestone';
+  const head = setNo === 0 ? `Vernacular Chums #${seedDay() - LAUNCH_DAY + 1}` : 'Vernacular Chums';
   return `${head}  ${avg}/100\n`
     + results.map(r=>SQ[band(r.d.pts)]).join('') + '\n'
     + results.map(r=>SQ[band(r.p.pts)]).join('') + '\n'

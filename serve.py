@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Dev server for Milestone. Serves the game, and accepts photograph uploads so
+Dev server for Vernacular Chums. Serves the game, and accepts photograph uploads so
 you can drag pictures in from the browser instead of copying files by hand.
 
     python3 serve.py            then open http://localhost:8000
@@ -111,7 +111,7 @@ class Server(socketserver.ThreadingTCPServer):
 
 
 if __name__ == "__main__":
-    print(f"Milestone on http://localhost:{PORT}")
+    print(f"Vernacular Chums on http://localhost:{PORT}")
     print(f"Uploader     http://localhost:{PORT}/upload.html")
     if not HAVE_PIL:
         print("Pillow not installed, uploads will not be downscaled "

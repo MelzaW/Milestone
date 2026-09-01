@@ -1,4 +1,4 @@
-# Milestone
+# Vernacular Chums
 
 A daily guessing game about reading buildings. You see a photograph, you say
 when it was built and where it stands. Fifty marks for the date, fifty for the

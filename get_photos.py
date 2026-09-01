@@ -14,7 +14,7 @@ usable in a published project provided you carry the credit line from credits.cs
 import csv, json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
 
 API = "https://commons.wikimedia.org/w/api.php"
-UA = "Milestone-photo-fetch/1.0 (educational project; contact via GitHub)"
+UA = "VernacularChums-photo-fetch/1.0 (educational project; contact via GitHub)"
 OUT = "photos"
 THUMB_W = 1600   # ask Commons to downscale; the originals run to 50MB
 
