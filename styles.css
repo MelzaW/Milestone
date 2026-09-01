@@ -80,11 +80,12 @@ header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
   border-bottom:1px solid var(--rule);padding-bottom:14px}
 /* Two buildings leaning in for a kiss, pints raised, drawn as hand-made line
    work rather than a solid silhouette: every edge nudged and bowed, so nothing
-   is quite straight. Beside them the name in spray paint. */
+   is quite straight. Beside them the name in marker pen. */
 .markwrap{margin:0;display:flex;align-items:center;gap:16px;color:var(--ink);line-height:1}
 .kissmark{display:block;width:clamp(88px,13vw,140px);height:auto;flex:0 0 auto}
-.wordmark{font-family:"Rubik Spray Paint",Manrope,sans-serif;
-  font-size:clamp(30px,6.2vw,60px);line-height:.98;letter-spacing:.01em;color:var(--ink)}
+.wordmark{font-family:"Permanent Marker",Manrope,sans-serif;
+  font-size:clamp(32px,6.4vw,62px);line-height:1.04;letter-spacing:.01em;
+  color:var(--stop)}
 .tagline{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--lead);margin-top:8px}
 .progress{display:flex;gap:6px;align-items:center}
