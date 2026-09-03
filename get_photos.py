@@ -164,6 +164,18 @@ def looks_like_artwork(path):
         return False
 
 
+def badly_shaped(path):
+    """The plate is 4:3. A 5:1 panorama or a very tall portrait crops down to a
+       sliver of the building, which defeats the point of showing it."""
+    try:
+        from PIL import Image
+        w, h = Image.open(path).size
+        r = w / float(h)
+        return r > 2.4 or r < 0.62
+    except Exception:
+        return False
+
+
 def looks_wrong(title, must=()):
     """Reject interiors and details, matching whole words only.
 
@@ -267,6 +279,9 @@ def main():
                 print("   download failed:", e); continue
             if looks_like_artwork(trial):
                 print(f"   skipped an engraving: {os.path.basename(cand['full_url'])[:52]}")
+                os.remove(trial); time.sleep(1.5); continue
+            if badly_shaped(trial):
+                print(f"   skipped a panorama: {os.path.basename(cand['full_url'])[:52]}")
                 os.remove(trial); time.sleep(1.5); continue
             got, dest = cand, trial
             break
